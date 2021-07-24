@@ -20,7 +20,7 @@ namespace AppUI
             LastWindowSize = new Size(500, 800);
             RememberUser = false;
             LastAccessToken = null;
-            PermissionsToRequest = new string[] { "email", "public_profile", "user_photos", "user_location",
+            PermissionsToRequest = new string[] { "email", "public_profile", "user_photos", "user_hometown",
                 "groups_access_member_info", "user_birthday", "publish_to_groups",
                 "user_gender", "user_friends", "user_likes", "page_events", "user_posts" };
 
