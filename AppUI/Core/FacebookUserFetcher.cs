@@ -62,6 +62,18 @@ namespace AppUI
             return posts;
         }
 
+        public List<User> FetchFriends()
+        {
+            List<User> friends = new List<User>(User.Friends.Count);
+
+            foreach (User friend in User.Friends)
+            {
+                friends.Add(friend);
+            }
+
+            return friends;
+        }
+
         internal List<Album> FetchAlbums()
         {
             List<Album> albums = new List<Album>(User.Albums.Count);

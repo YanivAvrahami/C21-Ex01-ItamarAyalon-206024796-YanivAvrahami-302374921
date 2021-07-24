@@ -21,9 +21,17 @@ namespace AppUI
             m_Friends = new List<User>();
         }
 
-        private void btnFetchPosts_Click(object sender, EventArgs e)
+        private void btnFetchFriends_Click(object sender, EventArgs e)
         {
+            m_Friends = FacebookUserFetcher.sr_Instance.FetchFriends();
 
+            //listBoxEvents.Items.Clear();
+            //for (int i = 0; i < m_Events.Count; i++)
+            //{
+            //    listBoxEvents.Items.Add(m_Events[i].Name);
+            //}
+            //
+            //labelEventsCounted.Text = m_Events.Count.ToString();*/
         }
 
         /*private void listBoxPosts_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,19 +57,6 @@ namespace AppUI
             writeComments(chosen);
         }*/
 
-        private void writeComments(Post i_ThisPostComments)
-        {
-            //listBoxComments.Items.Clear();
-            foreach (Comment comment in i_ThisPostComments.Comments)
-            {
-                if (comment.Message != null)
-                {
-                    //listBoxComments.Items.Add(comment.Message);
-                } else
-                {
-                    //listBoxComments.Items.Add("*Hidden comment*");
-                }
-            }
-        }
+
     }
 }
