@@ -44,10 +44,28 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelProfileUsername = new System.Windows.Forms.Label();
+            this.labelProfileGender = new System.Windows.Forms.Label();
+            this.labelProfileEmail = new System.Windows.Forms.Label();
+            this.labelProfileLocation = new System.Windows.Forms.Label();
+            this.labelProfileBirthday = new System.Windows.Forms.Label();
+            this.labelProfileStatus = new System.Windows.Forms.Label();
+            this.labelProfilePhone = new System.Windows.Forms.Label();
+            this.labelProfileEducation = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -289,11 +307,210 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Linen;
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(74, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(920, 532);
             this.panel1.TabIndex = 55;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileUsername, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileGender, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileBirthday, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileEmail, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileEducation, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileStatus, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfileLocation, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.labelProfilePhone, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(546, 38);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(323, 433);
+            this.tableLayoutPanel1.TabIndex = 56;
+            // 
+            // labelProfileUsername
+            // 
+            this.labelProfileUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileUsername.AutoSize = true;
+            this.labelProfileUsername.Location = new System.Drawing.Point(165, 36);
+            this.labelProfileUsername.Name = "labelProfileUsername";
+            this.labelProfileUsername.Size = new System.Drawing.Size(86, 18);
+            this.labelProfileUsername.TabIndex = 0;
+            this.labelProfileUsername.Text = "User name";
+            // 
+            // labelProfileGender
+            // 
+            this.labelProfileGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileGender.AutoSize = true;
+            this.labelProfileGender.Location = new System.Drawing.Point(165, 90);
+            this.labelProfileGender.Name = "labelProfileGender";
+            this.labelProfileGender.Size = new System.Drawing.Size(65, 18);
+            this.labelProfileGender.TabIndex = 0;
+            this.labelProfileGender.Text = "Gender";
+            // 
+            // labelProfileEmail
+            // 
+            this.labelProfileEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileEmail.AutoSize = true;
+            this.labelProfileEmail.Location = new System.Drawing.Point(165, 306);
+            this.labelProfileEmail.Name = "labelProfileEmail";
+            this.labelProfileEmail.Size = new System.Drawing.Size(48, 18);
+            this.labelProfileEmail.TabIndex = 0;
+            this.labelProfileEmail.Text = "Email";
+            // 
+            // labelProfileLocation
+            // 
+            this.labelProfileLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileLocation.AutoSize = true;
+            this.labelProfileLocation.Location = new System.Drawing.Point(165, 198);
+            this.labelProfileLocation.Name = "labelProfileLocation";
+            this.labelProfileLocation.Size = new System.Drawing.Size(72, 18);
+            this.labelProfileLocation.TabIndex = 0;
+            this.labelProfileLocation.Text = "Location";
+            // 
+            // labelProfileBirthday
+            // 
+            this.labelProfileBirthday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileBirthday.AutoSize = true;
+            this.labelProfileBirthday.Location = new System.Drawing.Point(165, 360);
+            this.labelProfileBirthday.Name = "labelProfileBirthday";
+            this.labelProfileBirthday.Size = new System.Drawing.Size(68, 18);
+            this.labelProfileBirthday.TabIndex = 0;
+            this.labelProfileBirthday.Text = "Birthday";
+            // 
+            // labelProfileStatus
+            // 
+            this.labelProfileStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileStatus.AutoSize = true;
+            this.labelProfileStatus.Location = new System.Drawing.Point(165, 144);
+            this.labelProfileStatus.Name = "labelProfileStatus";
+            this.labelProfileStatus.Size = new System.Drawing.Size(49, 18);
+            this.labelProfileStatus.TabIndex = 0;
+            this.labelProfileStatus.Text = "Status";
+            // 
+            // labelProfilePhone
+            // 
+            this.labelProfilePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfilePhone.AutoSize = true;
+            this.labelProfilePhone.Location = new System.Drawing.Point(165, 252);
+            this.labelProfilePhone.Name = "labelProfilePhone";
+            this.labelProfilePhone.Size = new System.Drawing.Size(54, 18);
+            this.labelProfilePhone.TabIndex = 0;
+            this.labelProfilePhone.Text = "Phone";
+            // 
+            // labelProfileEducation
+            // 
+            this.labelProfileEducation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelProfileEducation.AutoSize = true;
+            this.labelProfileEducation.Location = new System.Drawing.Point(165, 414);
+            this.labelProfileEducation.Name = "labelProfileEducation";
+            this.labelProfileEducation.Size = new System.Drawing.Size(82, 18);
+            this.labelProfileEducation.TabIndex = 0;
+            this.labelProfileEducation.Text = "Education";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User name";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Gender";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 144);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Status";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Location";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Phone";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 18);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Email";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 360);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Birthday";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(4, 414);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 18);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Education";
             // 
             // FormMain
             // 
@@ -311,6 +528,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -331,6 +550,23 @@
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label labelProfileUsername;
+        private System.Windows.Forms.Label labelProfileGender;
+        private System.Windows.Forms.Label labelProfileEmail;
+        private System.Windows.Forms.Label labelProfileLocation;
+        private System.Windows.Forms.Label labelProfileBirthday;
+        private System.Windows.Forms.Label labelProfilePhone;
+        private System.Windows.Forms.Label labelProfileStatus;
+        private System.Windows.Forms.Label labelProfileEducation;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

@@ -99,10 +99,28 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FriendsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FriendsForm.Designer.cs">
+      <DependentUpon>FriendsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostsForm.Designer.cs">
+      <DependentUpon>PostsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FriendsForm.resx">
+      <DependentUpon>FriendsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostsForm.resx">
+      <DependentUpon>PostsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
