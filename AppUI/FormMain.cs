@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using System.Collections.Generic;
+using AppUI.Forms;
 
 namespace AppUI
 {
@@ -35,6 +36,7 @@ namespace AppUI
             applicationForms.Add(eFormType.Friends, new FriendsForm());
             applicationForms.Add(eFormType.Posts, new PostsForm());
             applicationForms.Add(eFormType.Albums, new AlbumsForm());
+            applicationForms.Add(eFormType.Groups, new GroupsForm());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -59,11 +61,10 @@ namespace AppUI
         private void profileFetch()
         {
             pictureBoxProfilePicture.Image = facebookUserFetcher.User.ImageLarge;
-
             labelProfileFirstName.Text = facebookUserFetcher.User.FirstName;
             labelProfileLastName.Text = facebookUserFetcher.User.LastName;
             labelProfileGender.Text = facebookUserFetcher.User.Gender.ToString();
-            labelProfileLocation.Text = facebookUserFetcher.User.Location.Name;
+            labelProfileLocation.Text = facebookUserFetcher.User.Location?.Name;
             labelProfileEmail.Text = facebookUserFetcher.User.Email;
             labelProfileBirthday.Text = facebookUserFetcher.User.Birthday;
         }
@@ -91,6 +92,7 @@ namespace AppUI
             btnFriends.Enabled = i_IsActive;
             btnPosts.Enabled = i_IsActive;
             btnAlbums.Enabled = i_IsActive;
+            btnGroups.Enabled = i_IsActive;
             btnLogout.Enabled = i_IsActive;
             btnLogin.Enabled = !i_IsActive;
         }
@@ -136,6 +138,12 @@ namespace AppUI
             applicationForms[eFormType.Albums].ShowDialog();
         }
 
+        private void btnGroups_Click(object sender, EventArgs e)
+        {
+            SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.Groups].ShowDialog();
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -177,5 +185,7 @@ namespace AppUI
         {
             mouseDown = false;
         }
+
+        
     }
 }

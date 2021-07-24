@@ -33,6 +33,8 @@
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnAlbums = new System.Windows.Forms.Button();
+            this.btnGroups = new System.Windows.Forms.Button();
             this.btnPosts = new System.Windows.Forms.Button();
             this.selectionBar = new System.Windows.Forms.Panel();
             this.btnFriends = new System.Windows.Forms.Button();
@@ -54,8 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
-            this.btnAlbums = new System.Windows.Forms.Button();
-            this.btnGroups = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
@@ -141,6 +141,46 @@
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnAlbums
+            // 
+            this.btnAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlbums.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlbums.FlatAppearance.BorderSize = 0;
+            this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlbums.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlbums.Location = new System.Drawing.Point(705, 0);
+            this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAlbums.Name = "btnAlbums";
+            this.btnAlbums.Size = new System.Drawing.Size(106, 43);
+            this.btnAlbums.TabIndex = 56;
+            this.btnAlbums.Text = "Albums";
+            this.btnAlbums.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlbums.UseVisualStyleBackColor = false;
+            this.btnAlbums.Click += new System.EventHandler(this.btnAlbums_Click);
+            // 
+            // btnGroups
+            // 
+            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGroups.BackColor = System.Drawing.Color.Transparent;
+            this.btnGroups.FlatAppearance.BorderSize = 0;
+            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnGroups.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGroups.Location = new System.Drawing.Point(811, 0);
+            this.btnGroups.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGroups.Name = "btnGroups";
+            this.btnGroups.Size = new System.Drawing.Size(105, 43);
+            this.btnGroups.TabIndex = 56;
+            this.btnGroups.Text = "Groups";
+            this.btnGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGroups.UseVisualStyleBackColor = false;
+            this.btnGroups.Click += new System.EventHandler(this.btnGroups_Click);
             // 
             // btnPosts
             // 
@@ -456,46 +496,6 @@
             this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
-            // 
-            // btnAlbums
-            // 
-            this.btnAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAlbums.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlbums.FlatAppearance.BorderSize = 0;
-            this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlbums.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
-            this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlbums.Location = new System.Drawing.Point(705, 0);
-            this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAlbums.Name = "btnAlbums";
-            this.btnAlbums.Size = new System.Drawing.Size(106, 43);
-            this.btnAlbums.TabIndex = 56;
-            this.btnAlbums.Text = "Albums";
-            this.btnAlbums.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlbums.UseVisualStyleBackColor = false;
-            this.btnAlbums.Click += new System.EventHandler(this.btnAlbums_Click);
-            // 
-            // btnGroups
-            // 
-            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGroups.BackColor = System.Drawing.Color.Transparent;
-            this.btnGroups.FlatAppearance.BorderSize = 0;
-            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnGroups.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
-            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGroups.Location = new System.Drawing.Point(811, 0);
-            this.btnGroups.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGroups.Name = "btnGroups";
-            this.btnGroups.Size = new System.Drawing.Size(105, 43);
-            this.btnGroups.TabIndex = 56;
-            this.btnGroups.Text = "Groups";
-            this.btnGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGroups.UseVisualStyleBackColor = false;
-            this.btnGroups.Click += new System.EventHandler(this.btnPosts_Click);
             // 
             // FormMain
             // 

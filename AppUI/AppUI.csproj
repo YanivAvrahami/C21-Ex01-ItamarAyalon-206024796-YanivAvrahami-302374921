@@ -139,6 +139,12 @@
     <Compile Include="Forms\FriendsForm.Designer.cs">
       <DependentUpon>FriendsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GroupsForm.Designer.cs">
+      <DependentUpon>GroupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PostsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FriendsForm.resx">
       <DependentUpon>FriendsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GroupsForm.resx">
+      <DependentUpon>GroupsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PostsForm.resx">
       <DependentUpon>PostsForm.cs</DependentUpon>
