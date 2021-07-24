@@ -21,7 +21,8 @@ namespace AppUI.Forms
             get => m_AlbumShown;
             set
             {
-
+                m_AlbumShown = value;
+                fetchPhotos();
             }
         }
 
@@ -31,11 +32,14 @@ namespace AppUI.Forms
 
             m_AlbumShown = null;
 
-            //m_Photos = FacebookUserFetcher.sr_Instance.FetchPhotos();
+            m_Photos = FacebookUserFetcher.sr_Instance.FetchPhotos(AlbumShown);
 
 
         }
 
+        private void fetchPhotos()
+        {
 
+        }
     }
 }
