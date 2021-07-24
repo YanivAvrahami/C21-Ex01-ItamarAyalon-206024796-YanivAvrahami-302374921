@@ -39,12 +39,14 @@ namespace AppUI
             this.labelName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
-            this.labelPhotos = new System.Windows.Forms.Label();
-            this.labelPrivacy = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxAlbums = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnOpenAlbum = new System.Windows.Forms.Button();
+            this.labelPhotos = new System.Windows.Forms.Label();
+            this.labelPrivacy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -171,8 +173,10 @@ namespace AppUI
             this.tableLayoutFriends.Controls.Add(this.labelName, 1, 0);
             this.tableLayoutFriends.Controls.Add(this.label3, 0, 1);
             this.tableLayoutFriends.Controls.Add(this.labelCreateDate, 1, 1);
-            this.tableLayoutFriends.Controls.Add(this.labelPhotos, 0, 2);
-            this.tableLayoutFriends.Controls.Add(this.labelPrivacy, 0, 3);
+            this.tableLayoutFriends.Controls.Add(this.label4, 0, 2);
+            this.tableLayoutFriends.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutFriends.Controls.Add(this.labelPhotos, 1, 2);
+            this.tableLayoutFriends.Controls.Add(this.labelPrivacy, 1, 3);
             this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutFriends.Location = new System.Drawing.Point(582, 140);
             this.tableLayoutFriends.Name = "tableLayoutFriends";
@@ -186,31 +190,31 @@ namespace AppUI
             this.tableLayoutFriends.Size = new System.Drawing.Size(271, 238);
             this.tableLayoutFriends.TabIndex = 70;
             // 
-            // labelPhotos
+            // label4
             // 
-            this.labelPhotos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPhotos.AutoSize = true;
-            this.labelPhotos.Location = new System.Drawing.Point(4, 79);
-            this.labelPhotos.Name = "labelPhotos";
-            this.labelPhotos.Size = new System.Drawing.Size(103, 38);
-            this.labelPhotos.TabIndex = 0;
-            this.labelPhotos.Text = "Photos";
-            this.labelPhotos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 38);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Photos";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelPrivacy
+            // label5
             // 
-            this.labelPrivacy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPrivacy.AutoSize = true;
-            this.labelPrivacy.Location = new System.Drawing.Point(4, 118);
-            this.labelPrivacy.Name = "labelPrivacy";
-            this.labelPrivacy.Size = new System.Drawing.Size(103, 38);
-            this.labelPrivacy.TabIndex = 0;
-            this.labelPrivacy.Text = "Privacy";
-            this.labelPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 38);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Privacy";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox1
             // 
@@ -259,6 +263,31 @@ namespace AppUI
             this.btnOpenAlbum.TabIndex = 64;
             this.btnOpenAlbum.Text = "Open Album";
             this.btnOpenAlbum.UseVisualStyleBackColor = true;
+            this.btnOpenAlbum.Click += new System.EventHandler(this.btnOpenAlbum_Click);
+            // 
+            // labelPhotos
+            // 
+            this.labelPhotos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPhotos.AutoSize = true;
+            this.labelPhotos.Location = new System.Drawing.Point(114, 79);
+            this.labelPhotos.Name = "labelPhotos";
+            this.labelPhotos.Size = new System.Drawing.Size(153, 38);
+            this.labelPhotos.TabIndex = 0;
+            this.labelPhotos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPrivacy
+            // 
+            this.labelPrivacy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPrivacy.AutoSize = true;
+            this.labelPrivacy.Location = new System.Drawing.Point(114, 118);
+            this.labelPrivacy.Name = "labelPrivacy";
+            this.labelPrivacy.Size = new System.Drawing.Size(153, 38);
+            this.labelPrivacy.TabIndex = 0;
+            this.labelPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AlbumsForm
             // 
@@ -301,6 +330,8 @@ namespace AppUI
         private System.Windows.Forms.ListBox listBoxAlbums;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnOpenAlbum;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelPhotos;
         private System.Windows.Forms.Label labelPrivacy;
     }

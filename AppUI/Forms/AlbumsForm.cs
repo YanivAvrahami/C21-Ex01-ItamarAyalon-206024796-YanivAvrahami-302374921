@@ -39,6 +39,7 @@ namespace AppUI
         {
             if (listBoxAlbums.SelectedIndex == -1)
             {
+                btnOpenAlbum.Enabled = false;
                 return;
             }
 
@@ -46,12 +47,19 @@ namespace AppUI
 
             labelName.Text = chosen.Name;
             labelCreateDate.Text = chosen.CreatedTime.Value.ToString("dd/MM/yy HH:mm");
-            labelPhotos.Text = chosen.Count.ToString();
+            labelPhotos.Text = chosen.Photos.Count.ToString();
             labelPrivacy.Text = chosen.PrivcaySettings.ToString();
 
             pictureBoxCover.LoadAsync(chosen.PictureAlbumURL);
 
             btnOpenAlbum.Enabled = chosen.Count > 0;
+        }
+
+        private void btnOpenAlbum_Click(object sender, EventArgs e)
+        {
+            AlbumForm album = new AlbumForm();
+            album.AlbumShown = m_Albums[listBoxAlbums.SelectedIndex];
+            album.ShowDialog();
         }
     }
 }
