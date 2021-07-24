@@ -26,7 +26,7 @@ namespace AppUI
 
         }
 
-        private void listBoxPosts_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void listBoxPosts_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBoxPosts.SelectedIndex == -1)
             {
@@ -47,19 +47,19 @@ namespace AppUI
             }
 
             writeComments(chosen);
-        }
+        }*/
 
         private void writeComments(Post i_ThisPostComments)
         {
-            listBoxComments.Items.Clear();
+            //listBoxComments.Items.Clear();
             foreach (Comment comment in i_ThisPostComments.Comments)
             {
                 if (comment.Message != null)
                 {
-                    listBoxComments.Items.Add(comment.Message);
+                    //listBoxComments.Items.Add(comment.Message);
                 } else
                 {
-                    listBoxComments.Items.Add("*Hidden comment*");
+                    //listBoxComments.Items.Add("*Hidden comment*");
                 }
             }
         }
