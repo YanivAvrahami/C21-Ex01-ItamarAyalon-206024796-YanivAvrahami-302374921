@@ -40,10 +40,10 @@ namespace AppUI
             this.listBoxPosts = new System.Windows.Forms.ListBox();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxDescption = new System.Windows.Forms.TextBox();
-            this.listBoxComments = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.labelComments = new System.Windows.Forms.Label();
+            this.textBoxDescption = new System.Windows.Forms.TextBox();
+            this.listBoxComments = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutFriends.SuspendLayout();
             this.SuspendLayout();
@@ -196,31 +196,6 @@ namespace AppUI
             this.label3.Text = "Posted Date";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBoxDescption
-            // 
-            this.textBoxDescption.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxDescption.BackColor = System.Drawing.Color.White;
-            this.textBoxDescption.Enabled = false;
-            this.textBoxDescption.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescption.Location = new System.Drawing.Point(242, 52);
-            this.textBoxDescption.Multiline = true;
-            this.textBoxDescption.Name = "textBoxDescption";
-            this.textBoxDescption.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDescption.Size = new System.Drawing.Size(326, 168);
-            this.textBoxDescption.TabIndex = 73;
-            // 
-            // listBoxComments
-            // 
-            this.listBoxComments.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.listBoxComments.BackColor = System.Drawing.Color.White;
-            this.listBoxComments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxComments.FormattingEnabled = true;
-            this.listBoxComments.ItemHeight = 19;
-            this.listBoxComments.Location = new System.Drawing.Point(242, 226);
-            this.listBoxComments.Name = "listBoxComments";
-            this.listBoxComments.Size = new System.Drawing.Size(612, 156);
-            this.listBoxComments.TabIndex = 71;
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -246,6 +221,31 @@ namespace AppUI
             this.labelComments.TabIndex = 0;
             this.labelComments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBoxDescption
+            // 
+            this.textBoxDescption.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxDescption.BackColor = System.Drawing.Color.White;
+            this.textBoxDescption.Enabled = false;
+            this.textBoxDescption.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescption.Location = new System.Drawing.Point(242, 52);
+            this.textBoxDescption.Multiline = true;
+            this.textBoxDescption.Name = "textBoxDescption";
+            this.textBoxDescption.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxDescption.Size = new System.Drawing.Size(326, 168);
+            this.textBoxDescption.TabIndex = 73;
+            // 
+            // listBoxComments
+            // 
+            this.listBoxComments.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listBoxComments.BackColor = System.Drawing.Color.White;
+            this.listBoxComments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxComments.FormattingEnabled = true;
+            this.listBoxComments.ItemHeight = 19;
+            this.listBoxComments.Location = new System.Drawing.Point(242, 226);
+            this.listBoxComments.Name = "listBoxComments";
+            this.listBoxComments.Size = new System.Drawing.Size(612, 156);
+            this.listBoxComments.TabIndex = 71;
+            // 
             // PostsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +260,7 @@ namespace AppUI
             this.Controls.Add(this.tableLayoutFriends);
             this.Controls.Add(this.textBoxDescption);
             this.Name = "PostsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PostsForm";
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutFriends.ResumeLayout(false);

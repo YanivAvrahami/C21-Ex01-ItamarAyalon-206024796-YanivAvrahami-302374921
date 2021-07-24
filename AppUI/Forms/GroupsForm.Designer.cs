@@ -151,6 +151,7 @@ namespace AppUI.Forms
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxGroups);
             this.Name = "GroupsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GroupsForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

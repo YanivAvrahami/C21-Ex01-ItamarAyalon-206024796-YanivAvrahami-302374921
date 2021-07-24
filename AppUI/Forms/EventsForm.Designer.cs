@@ -33,23 +33,23 @@ namespace AppUI
             this.label9 = new System.Windows.Forms.Label();
             this.listBoxEvents = new System.Windows.Forms.ListBox();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
-            this.labelEventName = new System.Windows.Forms.Label();
             this.labelEventLocation = new System.Windows.Forms.Label();
             this.labelEventStartDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnFetchEvents = new System.Windows.Forms.Button();
-            this.comboBoxEventType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelEventsCounted = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelEventEndDate = new System.Windows.Forms.Label();
-            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelEventInterested = new System.Windows.Forms.Label();
             this.labelEventPrivacy = new System.Windows.Forms.Label();
+            this.labelEventName = new System.Windows.Forms.Label();
+            this.btnFetchEvents = new System.Windows.Forms.Button();
+            this.comboBoxEventType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelEventsCounted = new System.Windows.Forms.Label();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutFriends.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
@@ -128,18 +128,6 @@ namespace AppUI
             this.tableLayoutFriends.Size = new System.Drawing.Size(271, 238);
             this.tableLayoutFriends.TabIndex = 60;
             // 
-            // labelEventName
-            // 
-            this.labelEventName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventName.AutoSize = true;
-            this.labelEventName.Location = new System.Drawing.Point(114, 1);
-            this.labelEventName.Name = "labelEventName";
-            this.labelEventName.Size = new System.Drawing.Size(153, 38);
-            this.labelEventName.TabIndex = 0;
-            this.labelEventName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelEventLocation
             // 
             this.labelEventLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -203,53 +191,6 @@ namespace AppUI
             this.label3.Text = "Start Date";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnFetchEvents
-            // 
-            this.btnFetchEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFetchEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFetchEvents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFetchEvents.Location = new System.Drawing.Point(59, 11);
-            this.btnFetchEvents.Name = "btnFetchEvents";
-            this.btnFetchEvents.Size = new System.Drawing.Size(162, 43);
-            this.btnFetchEvents.TabIndex = 64;
-            this.btnFetchEvents.Text = "Fetch";
-            this.btnFetchEvents.UseVisualStyleBackColor = true;
-            this.btnFetchEvents.Click += new System.EventHandler(this.btnFetchEvents_Click);
-            // 
-            // comboBoxEventType
-            // 
-            this.comboBoxEventType.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxEventType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEventType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxEventType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBoxEventType.FormattingEnabled = true;
-            this.comboBoxEventType.Location = new System.Drawing.Point(59, 60);
-            this.comboBoxEventType.Name = "comboBoxEventType";
-            this.comboBoxEventType.Size = new System.Drawing.Size(162, 27);
-            this.comboBoxEventType.TabIndex = 65;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 363);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 19);
-            this.label2.TabIndex = 66;
-            this.label2.Text = "Events found:";
-            // 
-            // labelEventsCounted
-            // 
-            this.labelEventsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelEventsCounted.AutoSize = true;
-            this.labelEventsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.labelEventsCounted.Location = new System.Drawing.Point(127, 363);
-            this.labelEventsCounted.Name = "labelEventsCounted";
-            this.labelEventsCounted.Size = new System.Drawing.Size(18, 19);
-            this.labelEventsCounted.TabIndex = 67;
-            this.labelEventsCounted.Text = "0";
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -274,16 +215,6 @@ namespace AppUI
             this.labelEventEndDate.Size = new System.Drawing.Size(153, 38);
             this.labelEventEndDate.TabIndex = 0;
             this.labelEventEndDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBoxCover
-            // 
-            this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxCover.Location = new System.Drawing.Point(241, 52);
-            this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(326, 203);
-            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCover.TabIndex = 68;
-            this.pictureBoxCover.TabStop = false;
             // 
             // label5
             // 
@@ -335,6 +266,75 @@ namespace AppUI
             this.labelEventPrivacy.TabIndex = 0;
             this.labelEventPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelEventName
+            // 
+            this.labelEventName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEventName.AutoSize = true;
+            this.labelEventName.Location = new System.Drawing.Point(114, 1);
+            this.labelEventName.Name = "labelEventName";
+            this.labelEventName.Size = new System.Drawing.Size(153, 38);
+            this.labelEventName.TabIndex = 0;
+            this.labelEventName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnFetchEvents
+            // 
+            this.btnFetchEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFetchEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFetchEvents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFetchEvents.Location = new System.Drawing.Point(59, 11);
+            this.btnFetchEvents.Name = "btnFetchEvents";
+            this.btnFetchEvents.Size = new System.Drawing.Size(162, 43);
+            this.btnFetchEvents.TabIndex = 64;
+            this.btnFetchEvents.Text = "Fetch";
+            this.btnFetchEvents.UseVisualStyleBackColor = true;
+            this.btnFetchEvents.Click += new System.EventHandler(this.btnFetchEvents_Click);
+            // 
+            // comboBoxEventType
+            // 
+            this.comboBoxEventType.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxEventType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEventType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEventType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBoxEventType.FormattingEnabled = true;
+            this.comboBoxEventType.Location = new System.Drawing.Point(59, 60);
+            this.comboBoxEventType.Name = "comboBoxEventType";
+            this.comboBoxEventType.Size = new System.Drawing.Size(162, 27);
+            this.comboBoxEventType.TabIndex = 65;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(12, 363);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 19);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "Events found:";
+            // 
+            // labelEventsCounted
+            // 
+            this.labelEventsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelEventsCounted.AutoSize = true;
+            this.labelEventsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.labelEventsCounted.Location = new System.Drawing.Point(127, 363);
+            this.labelEventsCounted.Name = "labelEventsCounted";
+            this.labelEventsCounted.Size = new System.Drawing.Size(18, 19);
+            this.labelEventsCounted.TabIndex = 67;
+            this.labelEventsCounted.Text = "0";
+            // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxCover.Location = new System.Drawing.Point(241, 52);
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.Size = new System.Drawing.Size(326, 203);
+            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCover.TabIndex = 68;
+            this.pictureBoxCover.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -362,6 +362,7 @@ namespace AppUI
             this.Controls.Add(this.tableLayoutFriends);
             this.MaximizeBox = false;
             this.Name = "EventsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventsForm";
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();

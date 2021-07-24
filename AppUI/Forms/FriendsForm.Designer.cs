@@ -208,6 +208,7 @@ namespace AppUI
             this.ClientSize = new System.Drawing.Size(755, 539);
             this.Controls.Add(this.panel1);
             this.Name = "FriendsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FriendsForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
