@@ -16,7 +16,9 @@ namespace AppUI
         {
             Events,
             Friends,
-            Posts
+            Posts,
+            Albums,
+            Groups
         }
 
         public FormMain()
@@ -32,6 +34,7 @@ namespace AppUI
             applicationForms.Add(eFormType.Events, new EventsForm());
             applicationForms.Add(eFormType.Friends, new FriendsForm());
             applicationForms.Add(eFormType.Posts, new PostsForm());
+            applicationForms.Add(eFormType.Albums, new AlbumsForm());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -63,6 +66,33 @@ namespace AppUI
             labelProfileLocation.Text = facebookUserFetcher.User.Location.Name;
             labelProfileEmail.Text = facebookUserFetcher.User.Email;
             labelProfileBirthday.Text = facebookUserFetcher.User.Birthday;
+        }
+
+        private void clear()
+        {
+            pictureBoxProfilePicture.Image = null;
+
+            labelProfileFirstName.Text = String.Empty;
+            labelProfileLastName.Text = String.Empty;
+            labelProfileGender.Text = String.Empty;
+            labelProfileLocation.Text = String.Empty;
+            labelProfileEmail.Text = String.Empty;
+            labelProfileBirthday.Text = String.Empty;
+
+            applicationForms[eFormType.Events] = new EventsForm();
+            applicationForms[eFormType.Friends] = new FriendsForm();
+            applicationForms[eFormType.Posts] = new PostsForm();
+            applicationForms[eFormType.Albums] = new AlbumsForm();
+        }
+
+        private void setButtons(bool i_IsActive)
+        {
+            btnEvents.Enabled = i_IsActive;
+            btnFriends.Enabled = i_IsActive;
+            btnPosts.Enabled = i_IsActive;
+            btnAlbums.Enabled = i_IsActive;
+            btnLogout.Enabled = i_IsActive;
+            btnLogin.Enabled = !i_IsActive;
         }
 
         private void toolbarFetch()
@@ -100,16 +130,22 @@ namespace AppUI
             applicationForms[eFormType.Posts].ShowDialog();
         }
 
-        public void SetSelectionBarOnButton(Button i_Button) 
+        private void btnAlbums_Click(object sender, EventArgs e)
         {
-            selectionBar.Width = i_Button.Width;
-            selectionBar.Location = new Point(i_Button.Location.X, selectionBar.Location.Y);
-            selectionBar.BringToFront();
+            SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.Albums].ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void SetSelectionBarOnButton(Button i_Button) 
+        {
+            selectionBar.Width = i_Button.Width;
+            selectionBar.Location = new Point(i_Button.Location.X, selectionBar.Location.Y);
+            selectionBar.BringToFront();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -140,27 +176,6 @@ namespace AppUI
         private void panelMenu_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
-        }
-
-        private void clear()
-        {
-            pictureBoxProfilePicture.Image = null;
-
-            labelProfileFirstName.Text = String.Empty;
-            labelProfileLastName.Text = String.Empty;
-            labelProfileGender.Text = String.Empty;
-            labelProfileLocation.Text = String.Empty;
-            labelProfileEmail.Text = String.Empty;
-            labelProfileBirthday.Text = String.Empty;
-        }
-
-        private void setButtons(bool i_IsActive)
-        {
-            btnEvents.Enabled = i_IsActive;
-            btnFriends.Enabled = i_IsActive;
-            btnPosts.Enabled = i_IsActive;
-            btnLogout.Enabled = i_IsActive;
-            btnLogin.Enabled = !i_IsActive;
         }
     }
 }

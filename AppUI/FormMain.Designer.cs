@@ -54,6 +54,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
+            this.btnAlbums = new System.Windows.Forms.Button();
+            this.btnGroups = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
@@ -68,6 +70,8 @@
             this.panelMenu.Controls.Add(this.pictureBoxProfile);
             this.panelMenu.Controls.Add(this.btnMinimize);
             this.panelMenu.Controls.Add(this.btnExit);
+            this.panelMenu.Controls.Add(this.btnAlbums);
+            this.panelMenu.Controls.Add(this.btnGroups);
             this.panelMenu.Controls.Add(this.btnPosts);
             this.panelMenu.Controls.Add(this.selectionBar);
             this.panelMenu.Controls.Add(this.btnFriends);
@@ -148,7 +152,7 @@
             this.btnPosts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnPosts.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
             this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPosts.Location = new System.Drawing.Point(698, 0);
+            this.btnPosts.Location = new System.Drawing.Point(626, 0);
             this.btnPosts.Margin = new System.Windows.Forms.Padding(0);
             this.btnPosts.Name = "btnPosts";
             this.btnPosts.Size = new System.Drawing.Size(79, 43);
@@ -176,7 +180,7 @@
             this.btnFriends.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnFriends.Image = global::AppUI.Properties.Resources.icons8_group_25_2;
             this.btnFriends.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFriends.Location = new System.Drawing.Point(602, 0);
+            this.btnFriends.Location = new System.Drawing.Point(530, 0);
             this.btnFriends.Margin = new System.Windows.Forms.Padding(0);
             this.btnFriends.Name = "btnFriends";
             this.btnFriends.Size = new System.Drawing.Size(96, 43);
@@ -196,7 +200,7 @@
             this.btnEvents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnEvents.Image = global::AppUI.Properties.Resources.icons8_event_25;
             this.btnEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEvents.Location = new System.Drawing.Point(506, 0);
+            this.btnEvents.Location = new System.Drawing.Point(434, 0);
             this.btnEvents.Margin = new System.Windows.Forms.Padding(0);
             this.btnEvents.Name = "btnEvents";
             this.btnEvents.Size = new System.Drawing.Size(96, 43);
@@ -216,7 +220,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnLogout.Image = global::AppUI.Properties.Resources.icons8_logout_rounded_left_25_3;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(410, 0);
+            this.btnLogout.Location = new System.Drawing.Point(338, 0);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(96, 43);
@@ -236,7 +240,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnLogin.Image = global::AppUI.Properties.Resources.icons8_login_25_5;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(328, 0);
+            this.btnLogin.Location = new System.Drawing.Point(256, 0);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(82, 43);
@@ -453,12 +457,52 @@
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
             // 
+            // btnAlbums
+            // 
+            this.btnAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlbums.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlbums.FlatAppearance.BorderSize = 0;
+            this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlbums.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlbums.Location = new System.Drawing.Point(705, 0);
+            this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAlbums.Name = "btnAlbums";
+            this.btnAlbums.Size = new System.Drawing.Size(106, 43);
+            this.btnAlbums.TabIndex = 56;
+            this.btnAlbums.Text = "Albums";
+            this.btnAlbums.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlbums.UseVisualStyleBackColor = false;
+            this.btnAlbums.Click += new System.EventHandler(this.btnAlbums_Click);
+            // 
+            // btnGroups
+            // 
+            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGroups.BackColor = System.Drawing.Color.Transparent;
+            this.btnGroups.FlatAppearance.BorderSize = 0;
+            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnGroups.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGroups.Location = new System.Drawing.Point(811, 0);
+            this.btnGroups.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGroups.Name = "btnGroups";
+            this.btnGroups.Size = new System.Drawing.Size(105, 43);
+            this.btnGroups.TabIndex = 56;
+            this.btnGroups.Text = "Groups";
+            this.btnGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGroups.UseVisualStyleBackColor = false;
+            this.btnGroups.Click += new System.EventHandler(this.btnPosts_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1161, 654);
+            this.ClientSize = new System.Drawing.Size(1161, 552);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -502,6 +546,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelProfileGender;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnAlbums;
+        private System.Windows.Forms.Button btnGroups;
     }
 }
 

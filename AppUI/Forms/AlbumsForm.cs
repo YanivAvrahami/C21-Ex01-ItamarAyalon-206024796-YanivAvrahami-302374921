@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppUI.Forms
+namespace AppUI
 {
     public partial class AlbumsForm : Form
     {
@@ -22,7 +22,7 @@ namespace AppUI.Forms
             m_Albums = new List<Album>();
         }
 
-        private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnFetchEvents_Click(object sender, EventArgs e)
         {
             m_Albums = FacebookUserFetcher.sr_Instance.FetchAlbums();
 
@@ -32,7 +32,19 @@ namespace AppUI.Forms
                 listBoxAlbums.Items.Add(m_Albums[i].Name);
             }
 
-            labelEventsCounted.Text = m_Albums.Count.ToString();
+            labelAlbumsCounted.Text = m_Albums.Count.ToString();
+        }
+
+        private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxAlbums.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            Album chosen = m_Albums[listBoxAlbums.SelectedIndex];
+
+
         }
     }
 }

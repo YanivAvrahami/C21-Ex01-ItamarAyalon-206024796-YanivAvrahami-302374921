@@ -1,5 +1,5 @@
 ﻿
-namespace AppUI.Forms
+namespace AppUI
 {
     partial class AlbumsForm
     {
@@ -40,7 +40,7 @@ namespace AppUI.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.labelEventEndDate = new System.Windows.Forms.Label();
             this.labelEventInterested = new System.Windows.Forms.Label();
-            this.labelEventsCounted = new System.Windows.Forms.Label();
+            this.labelAlbumsCounted = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelEventPrivacy = new System.Windows.Forms.Label();
             this.btnFetchEvents = new System.Windows.Forms.Button();
@@ -57,8 +57,8 @@ namespace AppUI.Forms
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 79);
@@ -70,8 +70,8 @@ namespace AppUI.Forms
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(4, 157);
@@ -83,8 +83,8 @@ namespace AppUI.Forms
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(4, 196);
@@ -106,8 +106,8 @@ namespace AppUI.Forms
             // 
             // labelEventLocation
             // 
-            this.labelEventLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelEventLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventLocation.AutoSize = true;
             this.labelEventLocation.Location = new System.Drawing.Point(114, 40);
@@ -118,8 +118,8 @@ namespace AppUI.Forms
             // 
             // labelEventStartDate
             // 
-            this.labelEventStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelEventStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventStartDate.AutoSize = true;
             this.labelEventStartDate.Location = new System.Drawing.Point(114, 79);
@@ -130,8 +130,8 @@ namespace AppUI.Forms
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 1);
@@ -143,8 +143,8 @@ namespace AppUI.Forms
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(4, 40);
@@ -156,8 +156,8 @@ namespace AppUI.Forms
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(4, 118);
@@ -169,8 +169,8 @@ namespace AppUI.Forms
             // 
             // labelEventEndDate
             // 
-            this.labelEventEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelEventEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventEndDate.AutoSize = true;
             this.labelEventEndDate.Location = new System.Drawing.Point(114, 118);
@@ -181,8 +181,8 @@ namespace AppUI.Forms
             // 
             // labelEventInterested
             // 
-            this.labelEventInterested.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelEventInterested.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventInterested.AutoSize = true;
             this.labelEventInterested.Location = new System.Drawing.Point(114, 157);
@@ -191,16 +191,16 @@ namespace AppUI.Forms
             this.labelEventInterested.TabIndex = 0;
             this.labelEventInterested.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEventsCounted
+            // labelAlbumsCounted
             // 
-            this.labelEventsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelEventsCounted.AutoSize = true;
-            this.labelEventsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.labelEventsCounted.Location = new System.Drawing.Point(127, 363);
-            this.labelEventsCounted.Name = "labelEventsCounted";
-            this.labelEventsCounted.Size = new System.Drawing.Size(18, 19);
-            this.labelEventsCounted.TabIndex = 75;
-            this.labelEventsCounted.Text = "0";
+            this.labelAlbumsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelAlbumsCounted.AutoSize = true;
+            this.labelAlbumsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.labelAlbumsCounted.Location = new System.Drawing.Point(127, 363);
+            this.labelAlbumsCounted.Name = "labelAlbumsCounted";
+            this.labelAlbumsCounted.Size = new System.Drawing.Size(18, 19);
+            this.labelAlbumsCounted.TabIndex = 75;
+            this.labelAlbumsCounted.Text = "0";
             // 
             // label2
             // 
@@ -215,8 +215,8 @@ namespace AppUI.Forms
             // 
             // labelEventPrivacy
             // 
-            this.labelEventPrivacy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelEventPrivacy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventPrivacy.AutoSize = true;
             this.labelEventPrivacy.Location = new System.Drawing.Point(114, 196);
@@ -236,11 +236,12 @@ namespace AppUI.Forms
             this.btnFetchEvents.TabIndex = 64;
             this.btnFetchEvents.Text = "Fetch";
             this.btnFetchEvents.UseVisualStyleBackColor = true;
+            this.btnFetchEvents.Click += new System.EventHandler(this.btnFetchEvents_Click);
             // 
             // labelEventName
             // 
-            this.labelEventName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelEventName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventName.AutoSize = true;
             this.labelEventName.Location = new System.Drawing.Point(114, 1);
@@ -338,7 +339,7 @@ namespace AppUI.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 391);
             this.Controls.Add(this.pictureBoxCover);
-            this.Controls.Add(this.labelEventsCounted);
+            this.Controls.Add(this.labelAlbumsCounted);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxEventDesc);
             this.Controls.Add(this.label9);
@@ -369,7 +370,7 @@ namespace AppUI.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelEventEndDate;
         private System.Windows.Forms.Label labelEventInterested;
-        private System.Windows.Forms.Label labelEventsCounted;
+        private System.Windows.Forms.Label labelAlbumsCounted;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelEventPrivacy;
         private System.Windows.Forms.Button btnFetchEvents;
