@@ -31,6 +31,7 @@ namespace AppUI
                 "user_posts",
                 "user_likes",
                 //"user_photos", - TODO: Albums
+                "user_friends"
             };
 
             AppID = "644877859803597";

@@ -70,7 +70,7 @@ namespace AppUI
             {
                 friends.Add(friend);
             }
-
+        
             return friends;
         }
 
