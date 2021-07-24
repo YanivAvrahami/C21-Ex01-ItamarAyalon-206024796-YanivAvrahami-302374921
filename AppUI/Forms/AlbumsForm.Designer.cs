@@ -30,108 +30,66 @@ namespace AppUI
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBoxCover = new System.Windows.Forms.PictureBox();
-            this.labelEventLocation = new System.Windows.Forms.Label();
-            this.labelEventStartDate = new System.Windows.Forms.Label();
+            this.labelCreateDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelEventEndDate = new System.Windows.Forms.Label();
-            this.labelEventInterested = new System.Windows.Forms.Label();
             this.labelAlbumsCounted = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelEventPrivacy = new System.Windows.Forms.Label();
-            this.btnFetchEvents = new System.Windows.Forms.Button();
-            this.labelEventName = new System.Windows.Forms.Label();
-            this.textBoxEventDesc = new System.Windows.Forms.TextBox();
+            this.btnFetchAlbums = new System.Windows.Forms.Button();
+            this.labelName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
+            this.labelPhotos = new System.Windows.Forms.Label();
+            this.labelPrivacy = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxAlbums = new System.Windows.Forms.ListBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnOpenAlbum = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 79);
+            this.label3.Location = new System.Drawing.Point(4, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 38);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Start Date";
+            this.label3.Text = "Create Date";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 157);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 38);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Interested";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 196);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 41);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Privacy";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBoxCover
             // 
             this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxCover.Location = new System.Drawing.Point(242, 50);
             this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(326, 203);
+            this.pictureBoxCover.Size = new System.Drawing.Size(326, 255);
             this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCover.TabIndex = 76;
             this.pictureBoxCover.TabStop = false;
             // 
-            // labelEventLocation
+            // labelCreateDate
             // 
-            this.labelEventLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.labelCreateDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventLocation.AutoSize = true;
-            this.labelEventLocation.Location = new System.Drawing.Point(114, 40);
-            this.labelEventLocation.Name = "labelEventLocation";
-            this.labelEventLocation.Size = new System.Drawing.Size(153, 38);
-            this.labelEventLocation.TabIndex = 0;
-            this.labelEventLocation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelEventStartDate
-            // 
-            this.labelEventStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventStartDate.AutoSize = true;
-            this.labelEventStartDate.Location = new System.Drawing.Point(114, 79);
-            this.labelEventStartDate.Name = "labelEventStartDate";
-            this.labelEventStartDate.Size = new System.Drawing.Size(153, 38);
-            this.labelEventStartDate.TabIndex = 0;
-            this.labelEventStartDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCreateDate.AutoSize = true;
+            this.labelCreateDate.Location = new System.Drawing.Point(114, 40);
+            this.labelCreateDate.Name = "labelCreateDate";
+            this.labelCreateDate.Size = new System.Drawing.Size(153, 38);
+            this.labelCreateDate.TabIndex = 0;
+            this.labelCreateDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 1);
@@ -140,56 +98,6 @@ namespace AppUI
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 38);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Location";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 38);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "End Date";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelEventEndDate
-            // 
-            this.labelEventEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventEndDate.AutoSize = true;
-            this.labelEventEndDate.Location = new System.Drawing.Point(114, 118);
-            this.labelEventEndDate.Name = "labelEventEndDate";
-            this.labelEventEndDate.Size = new System.Drawing.Size(153, 38);
-            this.labelEventEndDate.TabIndex = 0;
-            this.labelEventEndDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelEventInterested
-            // 
-            this.labelEventInterested.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventInterested.AutoSize = true;
-            this.labelEventInterested.Location = new System.Drawing.Point(114, 157);
-            this.labelEventInterested.Name = "labelEventInterested";
-            this.labelEventInterested.Size = new System.Drawing.Size(153, 38);
-            this.labelEventInterested.TabIndex = 0;
-            this.labelEventInterested.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelAlbumsCounted
             // 
@@ -213,55 +121,30 @@ namespace AppUI
             this.label2.TabIndex = 74;
             this.label2.Text = "Events found:";
             // 
-            // labelEventPrivacy
+            // btnFetchAlbums
             // 
-            this.labelEventPrivacy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.btnFetchAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFetchAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFetchAlbums.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFetchAlbums.Location = new System.Drawing.Point(57, 30);
+            this.btnFetchAlbums.Name = "btnFetchAlbums";
+            this.btnFetchAlbums.Size = new System.Drawing.Size(162, 43);
+            this.btnFetchAlbums.TabIndex = 64;
+            this.btnFetchAlbums.Text = "Fetch";
+            this.btnFetchAlbums.UseVisualStyleBackColor = true;
+            this.btnFetchAlbums.Click += new System.EventHandler(this.btnFetchAlbums_Click);
+            // 
+            // labelName
+            // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventPrivacy.AutoSize = true;
-            this.labelEventPrivacy.Location = new System.Drawing.Point(114, 196);
-            this.labelEventPrivacy.Name = "labelEventPrivacy";
-            this.labelEventPrivacy.Size = new System.Drawing.Size(153, 41);
-            this.labelEventPrivacy.TabIndex = 0;
-            this.labelEventPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnFetchEvents
-            // 
-            this.btnFetchEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFetchEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFetchEvents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFetchEvents.Location = new System.Drawing.Point(57, 30);
-            this.btnFetchEvents.Name = "btnFetchEvents";
-            this.btnFetchEvents.Size = new System.Drawing.Size(162, 43);
-            this.btnFetchEvents.TabIndex = 64;
-            this.btnFetchEvents.Text = "Fetch";
-            this.btnFetchEvents.UseVisualStyleBackColor = true;
-            this.btnFetchEvents.Click += new System.EventHandler(this.btnFetchEvents_Click);
-            // 
-            // labelEventName
-            // 
-            this.labelEventName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEventName.AutoSize = true;
-            this.labelEventName.Location = new System.Drawing.Point(114, 1);
-            this.labelEventName.Name = "labelEventName";
-            this.labelEventName.Size = new System.Drawing.Size(153, 38);
-            this.labelEventName.TabIndex = 0;
-            this.labelEventName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxEventDesc
-            // 
-            this.textBoxEventDesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxEventDesc.BackColor = System.Drawing.Color.White;
-            this.textBoxEventDesc.Enabled = false;
-            this.textBoxEventDesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEventDesc.Location = new System.Drawing.Point(242, 259);
-            this.textBoxEventDesc.Multiline = true;
-            this.textBoxEventDesc.Name = "textBoxEventDesc";
-            this.textBoxEventDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxEventDesc.Size = new System.Drawing.Size(326, 118);
-            this.textBoxEventDesc.TabIndex = 73;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(114, 1);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(153, 38);
+            this.labelName.TabIndex = 0;
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -284,18 +167,12 @@ namespace AppUI
             this.tableLayoutFriends.ColumnCount = 2;
             this.tableLayoutFriends.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.74074F));
             this.tableLayoutFriends.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.25926F));
-            this.tableLayoutFriends.Controls.Add(this.labelEventLocation, 1, 1);
-            this.tableLayoutFriends.Controls.Add(this.labelEventStartDate, 1, 2);
             this.tableLayoutFriends.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutFriends.Controls.Add(this.label10, 0, 1);
-            this.tableLayoutFriends.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutFriends.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutFriends.Controls.Add(this.labelEventEndDate, 1, 3);
-            this.tableLayoutFriends.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutFriends.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutFriends.Controls.Add(this.labelEventInterested, 1, 4);
-            this.tableLayoutFriends.Controls.Add(this.labelEventPrivacy, 1, 5);
-            this.tableLayoutFriends.Controls.Add(this.labelEventName, 1, 0);
+            this.tableLayoutFriends.Controls.Add(this.labelName, 1, 0);
+            this.tableLayoutFriends.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutFriends.Controls.Add(this.labelCreateDate, 1, 1);
+            this.tableLayoutFriends.Controls.Add(this.labelPhotos, 0, 2);
+            this.tableLayoutFriends.Controls.Add(this.labelPrivacy, 0, 3);
             this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutFriends.Location = new System.Drawing.Point(582, 140);
             this.tableLayoutFriends.Name = "tableLayoutFriends";
@@ -309,11 +186,37 @@ namespace AppUI
             this.tableLayoutFriends.Size = new System.Drawing.Size(271, 238);
             this.tableLayoutFriends.TabIndex = 70;
             // 
+            // labelPhotos
+            // 
+            this.labelPhotos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPhotos.AutoSize = true;
+            this.labelPhotos.Location = new System.Drawing.Point(4, 79);
+            this.labelPhotos.Name = "labelPhotos";
+            this.labelPhotos.Size = new System.Drawing.Size(103, 38);
+            this.labelPhotos.TabIndex = 0;
+            this.labelPhotos.Text = "Photos";
+            this.labelPhotos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelPrivacy
+            // 
+            this.labelPrivacy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPrivacy.AutoSize = true;
+            this.labelPrivacy.Location = new System.Drawing.Point(4, 118);
+            this.labelPrivacy.Name = "labelPrivacy";
+            this.labelPrivacy.Size = new System.Drawing.Size(103, 38);
+            this.labelPrivacy.TabIndex = 0;
+            this.labelPrivacy.Text = "Privacy";
+            this.labelPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnFetchEvents);
+            this.groupBox1.Controls.Add(this.btnFetchAlbums);
             this.groupBox1.Location = new System.Drawing.Point(583, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(271, 90);
@@ -333,6 +236,30 @@ namespace AppUI
             this.listBoxAlbums.TabIndex = 71;
             this.listBoxAlbums.SelectedIndexChanged += new System.EventHandler(this.listBoxAlbums_SelectedIndexChanged);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btnOpenAlbum);
+            this.groupBox2.Location = new System.Drawing.Point(242, 311);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(326, 66);
+            this.groupBox2.TabIndex = 77;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnOpenAlbum
+            // 
+            this.btnOpenAlbum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnOpenAlbum.Enabled = false;
+            this.btnOpenAlbum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenAlbum.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOpenAlbum.Location = new System.Drawing.Point(90, 17);
+            this.btnOpenAlbum.Name = "btnOpenAlbum";
+            this.btnOpenAlbum.Size = new System.Drawing.Size(152, 43);
+            this.btnOpenAlbum.TabIndex = 64;
+            this.btnOpenAlbum.Text = "Open Album";
+            this.btnOpenAlbum.UseVisualStyleBackColor = true;
+            // 
             // AlbumsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,10 +268,10 @@ namespace AppUI
             this.Controls.Add(this.pictureBoxCover);
             this.Controls.Add(this.labelAlbumsCounted);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxEventDesc);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxAlbums);
             this.Controls.Add(this.tableLayoutFriends);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AlbumsForm";
             this.Text = "Albums";
@@ -352,6 +279,7 @@ namespace AppUI
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,25 +288,20 @@ namespace AppUI
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBoxCover;
-        private System.Windows.Forms.Label labelEventLocation;
-        private System.Windows.Forms.Label labelEventStartDate;
+        private System.Windows.Forms.Label labelCreateDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelEventEndDate;
-        private System.Windows.Forms.Label labelEventInterested;
         private System.Windows.Forms.Label labelAlbumsCounted;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelEventPrivacy;
-        private System.Windows.Forms.Button btnFetchEvents;
-        private System.Windows.Forms.Label labelEventName;
-        private System.Windows.Forms.TextBox textBoxEventDesc;
+        private System.Windows.Forms.Button btnFetchAlbums;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutFriends;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBoxAlbums;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnOpenAlbum;
+        private System.Windows.Forms.Label labelPhotos;
+        private System.Windows.Forms.Label labelPrivacy;
     }
 }

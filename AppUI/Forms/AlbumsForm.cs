@@ -22,7 +22,7 @@ namespace AppUI
             m_Albums = new List<Album>();
         }
 
-        private void btnFetchEvents_Click(object sender, EventArgs e)
+        private void btnFetchAlbums_Click(object sender, EventArgs e)
         {
             m_Albums = FacebookUserFetcher.sr_Instance.FetchAlbums();
 
@@ -44,7 +44,14 @@ namespace AppUI
 
             Album chosen = m_Albums[listBoxAlbums.SelectedIndex];
 
+            labelName.Text = chosen.Name;
+            labelCreateDate.Text = chosen.CreatedTime.Value.ToString("dd/MM/yy HH:mm");
+            labelPhotos.Text = chosen.Count.ToString();
+            labelPrivacy.Text = chosen.PrivcaySettings.ToString();
 
+            pictureBoxCover.LoadAsync(chosen.PictureAlbumURL);
+
+            btnOpenAlbum.Enabled = chosen.Count > 0;
         }
     }
 }
