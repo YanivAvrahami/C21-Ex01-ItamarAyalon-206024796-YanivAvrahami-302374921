@@ -18,9 +18,17 @@ namespace AppUI
             LastWindowSize = new Size(500, 800);
             RememberUser = false;
             LastAccessToken = null;
-            PermissionsToRequest = new string[] { "email", "public_profile", "user_photos", "user_location",
-                "groups_access_member_info", "user_birthday", "publish_to_groups",
-                "user_gender", "user_friends", "user_likes", "page_events", "user_posts" };
+            PermissionsToRequest = new string[] {
+                // Home Profile
+                "public_profile",
+                "email",
+                "user_location",
+                "user_birthday",
+                "user_gender",
+                "user_events",
+                //"user_photos",
+                //"user_posts"
+            };
 
             AppID = "644877859803597";
         }

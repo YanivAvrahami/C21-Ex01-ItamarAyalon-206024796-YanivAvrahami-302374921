@@ -3,17 +3,35 @@ using System.Drawing;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
+using System.Collections.Generic;
 
 namespace AppUI
 {
     public partial class FormMain : Form
     {
-        private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
+        private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
+        private Dictionary<eFormType, Form> applicationForms = new Dictionary<eFormType, Form>();
+
+        public enum eFormType
+        {
+            Events,
+            Friends,
+            Posts
+        }
 
         public FormMain()
         {
             InitializeComponent();
+            initForms();
+            setButtons(false);
             FacebookService.s_CollectionLimit = 100;
+        }
+
+        private void initForms()
+        {
+            applicationForms.Add(eFormType.Events, new EventsForm());
+            applicationForms.Add(eFormType.Friends, new FriendsForm());
+            applicationForms.Add(eFormType.Posts, new PostsForm());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -25,6 +43,7 @@ namespace AppUI
 
             if (!string.IsNullOrEmpty(loginResult.AccessToken))
             {
+                setButtons(true);
                 toolbarFetch();
                 profileFetch();
             }
@@ -41,7 +60,6 @@ namespace AppUI
             labelProfileFirstName.Text = facebookUserFetcher.User.FirstName;
             labelProfileLastName.Text = facebookUserFetcher.User.LastName;
             labelProfileGender.Text = facebookUserFetcher.User.Gender.ToString();
-            labelProfileStatus.Text = facebookUserFetcher.User.RelationshipStatus.ToString();
             labelProfileLocation.Text = facebookUserFetcher.User.Location.Name;
             labelProfileEmail.Text = facebookUserFetcher.User.Email;
             labelProfileBirthday.Text = facebookUserFetcher.User.Birthday;
@@ -61,21 +79,25 @@ namespace AppUI
             pictureBoxProfile.Image = AppUI.Properties.Resources.icons8_name_25;
             labelUserName.Text = "";
             clear();
+            setButtons(false);
         }
 
         private void btnEvents_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.Events].ShowDialog();
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.Friends].ShowDialog();
         }
 
         private void btnPosts_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.Posts].ShowDialog();
         }
 
         public void SetSelectionBarOnButton(Button i_Button) 
@@ -127,10 +149,18 @@ namespace AppUI
             labelProfileFirstName.Text = String.Empty;
             labelProfileLastName.Text = String.Empty;
             labelProfileGender.Text = String.Empty;
-            labelProfileStatus.Text = String.Empty;
             labelProfileLocation.Text = String.Empty;
             labelProfileEmail.Text = String.Empty;
             labelProfileBirthday.Text = String.Empty;
+        }
+
+        private void setButtons(bool i_IsActive)
+        {
+            btnEvents.Enabled = i_IsActive;
+            btnFriends.Enabled = i_IsActive;
+            btnPosts.Enabled = i_IsActive;
+            btnLogout.Enabled = i_IsActive;
+            btnLogin.Enabled = !i_IsActive;
         }
     }
 }
