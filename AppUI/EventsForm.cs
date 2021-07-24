@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class PostsForm : Form
+    public partial class EventsForm : Form
     {
-        public PostsForm()
+        public EventsForm()
         {
             InitializeComponent();
-        }
-
-        private void labelPostDate_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
