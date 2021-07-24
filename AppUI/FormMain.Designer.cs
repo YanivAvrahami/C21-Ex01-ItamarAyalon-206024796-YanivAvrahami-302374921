@@ -150,7 +150,7 @@
             this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlbums.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_cat_profile_25;
             this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlbums.Location = new System.Drawing.Point(705, 0);
             this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
