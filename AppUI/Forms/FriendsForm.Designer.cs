@@ -30,7 +30,6 @@ namespace AppUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxFriends = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.listBoxFriends = new System.Windows.Forms.ListBox();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
@@ -40,32 +39,26 @@ namespace AppUI
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnFetchFriends = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tableLayoutFriends.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.panel1.Controls.Add(this.textBoxFriends);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnFetchFriends);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.listBoxFriends);
             this.panel1.Controls.Add(this.tableLayoutFriends);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1045, 493);
+            this.panel1.Size = new System.Drawing.Size(867, 466);
             this.panel1.TabIndex = 57;
-            // 
-            // textBoxFriends
-            // 
-            this.textBoxFriends.BackColor = System.Drawing.Color.White;
-            this.textBoxFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFriends.Location = new System.Drawing.Point(283, 132);
-            this.textBoxFriends.Multiline = true;
-            this.textBoxFriends.Name = "textBoxFriends";
-            this.textBoxFriends.Size = new System.Drawing.Size(375, 294);
-            this.textBoxFriends.TabIndex = 59;
             // 
             // label9
             // 
@@ -84,9 +77,9 @@ namespace AppUI
             this.listBoxFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxFriends.FormattingEnabled = true;
             this.listBoxFriends.ItemHeight = 19;
-            this.listBoxFriends.Location = new System.Drawing.Point(34, 82);
+            this.listBoxFriends.Location = new System.Drawing.Point(12, 61);
             this.listBoxFriends.Name = "listBoxFriends";
-            this.listBoxFriends.Size = new System.Drawing.Size(222, 365);
+            this.listBoxFriends.Size = new System.Drawing.Size(158, 365);
             this.listBoxFriends.TabIndex = 57;
             // 
             // tableLayoutFriends
@@ -102,7 +95,7 @@ namespace AppUI
             this.tableLayoutFriends.Controls.Add(this.label10, 0, 1);
             this.tableLayoutFriends.Controls.Add(this.label3, 0, 2);
             this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutFriends.Location = new System.Drawing.Point(691, 187);
+            this.tableLayoutFriends.Location = new System.Drawing.Point(293, 110);
             this.tableLayoutFriends.Name = "tableLayoutFriends";
             this.tableLayoutFriends.RowCount = 3;
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -142,9 +135,9 @@ namespace AppUI
             this.labelFriendWork.AutoSize = true;
             this.labelFriendWork.Location = new System.Drawing.Point(165, 136);
             this.labelFriendWork.Name = "labelFriendWork";
-            this.labelFriendWork.Size = new System.Drawing.Size(45, 19);
+            this.labelFriendWork.Size = new System.Drawing.Size(47, 19);
             this.labelFriendWork.TabIndex = 0;
-            this.labelFriendWork.Text = "Likes";
+            this.labelFriendWork.Text = "Work";
             // 
             // label1
             // 
@@ -176,11 +169,31 @@ namespace AppUI
             this.label3.TabIndex = 0;
             this.label3.Text = "Work";
             // 
+            // btnFetchFriends
+            // 
+            this.btnFetchFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFetchFriends.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFetchFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFetchFriends.Location = new System.Drawing.Point(375, 61);
+            this.btnFetchFriends.Name = "btnFetchFriends";
+            this.btnFetchFriends.Size = new System.Drawing.Size(162, 43);
+            this.btnFetchFriends.TabIndex = 65;
+            this.btnFetchFriends.Text = "Fetch";
+            this.btnFetchFriends.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(176, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 107);
+            this.pictureBox1.TabIndex = 66;
+            this.pictureBox1.TabStop = false;
+            // 
             // FriendsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 493);
+            this.ClientSize = new System.Drawing.Size(867, 466);
             this.Controls.Add(this.panel1);
             this.Name = "FriendsForm";
             this.Text = "FriendsForm";
@@ -188,6 +201,7 @@ namespace AppUI
             this.panel1.PerformLayout();
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,7 +209,6 @@ namespace AppUI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxFriends;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListBox listBoxFriends;
         private System.Windows.Forms.TableLayoutPanel tableLayoutFriends;
@@ -205,5 +218,7 @@ namespace AppUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnFetchFriends;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

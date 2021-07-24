@@ -232,6 +232,9 @@
     <EmbeddedResource Include="Forms\EventsForm.resx">
       <DependentUpon>EventsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FriendsForm.resx">
+      <DependentUpon>FriendsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PostsForm.resx">
       <DependentUpon>PostsForm.cs</DependentUpon>
     </EmbeddedResource>
