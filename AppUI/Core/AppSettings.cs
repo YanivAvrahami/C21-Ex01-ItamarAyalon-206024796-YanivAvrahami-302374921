@@ -25,9 +25,12 @@ namespace AppUI
                 "user_location",
                 "user_birthday",
                 "user_gender",
+                // Events form
                 "user_events",
-                //"user_photos",
-                //"user_posts"
+                // Posts form
+                "user_posts",
+                "user_likes",
+                //"user_photos", - TODO: Albums
             };
 
             AppID = "644877859803597";

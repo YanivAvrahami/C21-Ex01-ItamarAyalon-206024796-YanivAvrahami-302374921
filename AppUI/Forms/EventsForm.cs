@@ -8,35 +8,40 @@ namespace AppUI
 {
     public partial class EventsForm : Form
     {
-        private List<Event> m_Events = new List<Event>();
+        private List<Event> m_Events;
 
         public EventsForm()
         {
             InitializeComponent();
 
+            m_Events = new List<Event>();
+
             comboBoxEventType.Items.AddRange(Enum.GetNames(typeof(eEventType)));
             comboBoxEventType.SelectedIndex = 0;
         }
 
-        private void btnFetchEvents_Click(object sender, System.EventArgs e)
+        private void btnFetchEvents_Click(object sender, EventArgs e)
         {
             eEventType eventsType = (eEventType)Enum.Parse(typeof(eEventType), comboBoxEventType.SelectedItem.ToString());
 
             m_Events = FacebookUserFetcher.sr_Instance.FetchEvents(eventsType);
 
-            string[] eventsTitle = new string[m_Events.Count];
+            listBoxEvents.Items.Clear();
             for (int i = 0; i < m_Events.Count; i++)
             {
-                eventsTitle[i] = m_Events[i].Name;
+                listBoxEvents.Items.Add(m_Events[i].Name);
             }
 
-            listBoxEvents.Items.Clear();
-            listBoxEvents.Items.AddRange(eventsTitle);
-            labelEventsCounted.Text = eventsTitle.Length.ToString();
+            labelEventsCounted.Text = m_Events.Count.ToString();
         }
 
         private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBoxEvents.SelectedIndex == -1)
+            {
+                return;
+            }
+
             Event chosen = m_Events[listBoxEvents.SelectedIndex];
 
             labelEventName.Text = chosen.Name;

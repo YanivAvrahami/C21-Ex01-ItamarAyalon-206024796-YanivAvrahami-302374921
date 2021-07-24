@@ -50,6 +50,18 @@ namespace AppUI
             return events;
         }
 
+        public List<Post> FetchPosts()
+        {
+            List<Post> posts = new List<Post>(User.Posts.Count);
+
+            foreach (Post post in User.Posts)
+            {
+                posts.Add(post);
+            }
+
+            return posts;
+        }
+
         private FacebookObjectCollection<Event> getRequiredEvents(eEventType i_Type)
         {
             FacebookObjectCollection<Event> requiredEvents = null;

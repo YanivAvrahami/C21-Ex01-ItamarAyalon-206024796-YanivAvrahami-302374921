@@ -75,7 +75,7 @@ namespace AppUI
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.label9.Location = new System.Drawing.Point(394, 8);
+            this.label9.Location = new System.Drawing.Point(394, 13);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 23);
             this.label9.TabIndex = 62;
@@ -221,10 +221,11 @@ namespace AppUI
             this.comboBoxEventType.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxEventType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEventType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEventType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.comboBoxEventType.FormattingEnabled = true;
-            this.comboBoxEventType.Location = new System.Drawing.Point(82, 61);
+            this.comboBoxEventType.Location = new System.Drawing.Point(59, 60);
             this.comboBoxEventType.Name = "comboBoxEventType";
-            this.comboBoxEventType.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEventType.Size = new System.Drawing.Size(162, 27);
             this.comboBoxEventType.TabIndex = 65;
             // 
             // label2
@@ -232,18 +233,18 @@ namespace AppUI
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(31, 364);
+            this.label2.Location = new System.Drawing.Point(12, 363);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 19);
+            this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 66;
-            this.label2.Text = "Number of events:";
+            this.label2.Text = "Events found:";
             // 
             // labelEventsCounted
             // 
             this.labelEventsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelEventsCounted.AutoSize = true;
             this.labelEventsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.labelEventsCounted.Location = new System.Drawing.Point(185, 364);
+            this.labelEventsCounted.Location = new System.Drawing.Point(127, 363);
             this.labelEventsCounted.Name = "labelEventsCounted";
             this.labelEventsCounted.Size = new System.Drawing.Size(18, 19);
             this.labelEventsCounted.TabIndex = 67;
