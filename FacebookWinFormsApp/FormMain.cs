@@ -8,18 +8,12 @@ namespace BasicFacebookFeatures
 {
     public partial class FormMain : Form
     {
-        
-
         private User m_CurrentLoggedInUser;
-
-        private AppSettings m_AppSettings;
 
         public FormMain()
         {
             InitializeComponent();
             FacebookService.s_CollectionLimit = 100;
-
-            m_AppSettings = new AppSettings();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -27,7 +21,7 @@ namespace BasicFacebookFeatures
             SetSelectionBarOnButton((Button)sender);
 
             Clipboard.SetText("design.patterns20cc");
-            LoginResult loginResult = FacebookService.Login(m_AppID, m_PermissionsToRequest);
+            LoginResult loginResult = FacebookService.Login(AppSettings.AppID, AppSettings.PermissionsToRequest);
             m_CurrentLoggedInUser = loginResult.LoggedInUser;
             pictureBoxProfile.Image = m_CurrentLoggedInUser.ImageSmall;
             labelUserName.Text = m_CurrentLoggedInUser.FirstName + " " + m_CurrentLoggedInUser.LastName;
