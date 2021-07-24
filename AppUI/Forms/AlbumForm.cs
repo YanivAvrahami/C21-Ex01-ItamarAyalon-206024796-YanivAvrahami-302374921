@@ -14,12 +14,24 @@ namespace AppUI.Forms
     public partial class AlbumForm : Form
     {
         private List<Photo> m_Photos;
+        private Album m_AlbumShown;
+
+        public Album AlbumShown
+        {
+            get => m_AlbumShown;
+            set
+            {
+
+            }
+        }
 
         public AlbumForm()
         {
             InitializeComponent();
 
-            m_Photos = FacebookUserFetcher.sr_Instance.FetchPhotos();
+            m_AlbumShown = null;
+
+            //m_Photos = FacebookUserFetcher.sr_Instance.FetchPhotos();
 
 
         }
