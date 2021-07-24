@@ -43,11 +43,6 @@ namespace AppUI
             labelUserName.Text = "";
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            SetSelectionBarOnButton((Button)sender);
-        }
-
         private void btnEvents_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
@@ -58,17 +53,7 @@ namespace AppUI
             SetSelectionBarOnButton((Button)sender);
         }
 
-        private void btnGroups_Click(object sender, EventArgs e)
-        {
-            SetSelectionBarOnButton((Button)sender);
-        }
-
         private void btnPosts_Click(object sender, EventArgs e)
-        {
-            SetSelectionBarOnButton((Button)sender);
-        }
-
-        private void btnNotifications_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
         }
