@@ -8,7 +8,7 @@ namespace AppUI
 {
     public partial class FormMain : Form
     {
-        private User m_CurrentLoggedInUser;
+        private FacebookUserFetcher facebookUserFetcher;
 
         public FormMain()
         {
@@ -19,25 +19,44 @@ namespace AppUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-
             Clipboard.SetText("design.patterns20cc");
-            LoginResult loginResult = FacebookService.Login(AppSettings.AppID, AppSettings.PermissionsToRequest);
-            if (loginResult.AccessToken == null)
+
+            LoginResult loginResult = facebookUserFetcher.Login();
+
+            if (!string.IsNullOrEmpty(loginResult.AccessToken))
             {
-                return;
+                toolbarFetch();
+                profileFetch();
             }
-            m_CurrentLoggedInUser = loginResult.LoggedInUser;
-            pictureBoxProfile.Image = m_CurrentLoggedInUser.ImageSmall;
-            labelUserName.Text = m_CurrentLoggedInUser.FirstName + " " + m_CurrentLoggedInUser.LastName;
+            else
+            {
+                MessageBox.Show(loginResult.ErrorMessage, "Login Failed");
+            }
+        }
+
+        private void profileFetch()
+        {
+            pictureBoxProfilePicture.Image = facebookUserFetcher.User.ImageLarge;
+
+            labelProfileLastName.Text = facebookUserFetcher.User.FirstName;
+            labelProfileLastName.Text = facebookUserFetcher.User.LastName;
+            labelProfileGender.Text = facebookUserFetcher.User.Gender.ToString();
+            labelProfileStatus.Text = facebookUserFetcher.User.RelationshipStatus.ToString();
+            labelProfileLocation.Text = facebookUserFetcher.User.Location.Name;
+            labelProfileEmail.Text = facebookUserFetcher.User.Email;
+            labelProfileBirthday.Text = facebookUserFetcher.User.Birthday;
+        }
+
+        private void toolbarFetch()
+        {
+            pictureBoxProfile.LoadAsync(facebookUserFetcher.User.PictureSmallURL);
+            labelUserName.Text = facebookUserFetcher.User.Name;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
 
-            FacebookService.LogoutWithUI();
-
-            m_CurrentLoggedInUser = null;
             //DOTO: return to default profile picture
             //pictureBoxProfile.Image = m_LoggedUser.ImageSmall;
             labelUserName.Text = "";
