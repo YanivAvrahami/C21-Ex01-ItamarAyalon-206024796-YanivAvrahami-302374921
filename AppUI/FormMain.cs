@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 
-namespace BasicFacebookFeatures
+namespace AppUI
 {
     public partial class FormMain : Form
     {
@@ -22,6 +22,10 @@ namespace BasicFacebookFeatures
 
             Clipboard.SetText("design.patterns20cc");
             LoginResult loginResult = FacebookService.Login(AppSettings.AppID, AppSettings.PermissionsToRequest);
+            if (loginResult.AccessToken == null)
+            {
+                return;
+            }
             m_CurrentLoggedInUser = loginResult.LoggedInUser;
             pictureBoxProfile.Image = m_CurrentLoggedInUser.ImageSmall;
             labelUserName.Text = m_CurrentLoggedInUser.FirstName + " " + m_CurrentLoggedInUser.LastName;

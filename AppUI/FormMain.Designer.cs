@@ -1,4 +1,4 @@
-﻿namespace BasicFacebookFeatures
+﻿namespace AppUI
 {
     partial class FormMain
     {
