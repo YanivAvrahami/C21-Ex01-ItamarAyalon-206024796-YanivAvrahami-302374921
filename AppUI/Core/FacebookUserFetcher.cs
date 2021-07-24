@@ -110,16 +110,22 @@ namespace AppUI
             return albums;
         }
 
-        internal List<Album> FetchPhotos()
+        internal List<Photo> FetchPhotos(Album i_Album)
         {
-            List<Album> albums = new List<Album>(User.Albums.Count);
-
-            foreach (Album album in User.Albums)
+            int albumIdx = User.Albums.IndexOf(i_Album);
+            if (albumIdx == -1)
             {
-                albums.Add(album);
+                return null;
             }
 
-            return albums;
+            List<Photo> photos = new List<Photo>();
+
+            foreach (Photo photo in User.Albums[albumIdx].Photos)
+            {
+                photos.Add(photo);
+            }
+
+            return photos;
         }
 
         private FacebookObjectCollection<Event> getRequiredEvents(eEventType i_Type)
