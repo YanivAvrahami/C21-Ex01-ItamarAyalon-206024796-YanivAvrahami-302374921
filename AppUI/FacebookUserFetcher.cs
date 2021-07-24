@@ -10,7 +10,7 @@ namespace AppUI
 {
     internal class FacebookUserFetcher
     {
-        public readonly static FacebookUserFetcher facebookUserFetcher = new FacebookUserFetcher();
+        public readonly static FacebookUserFetcher Instance = new FacebookUserFetcher();
 
         public User User { get; private set; }
 
@@ -32,9 +32,7 @@ namespace AppUI
 
         public void Logout()
         {
-            FacebookService.LogoutWithUI();
             User = null;
         }
-
     }
 }

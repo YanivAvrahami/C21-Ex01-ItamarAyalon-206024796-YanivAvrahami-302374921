@@ -8,7 +8,7 @@ namespace AppUI
 {
     public partial class FormMain : Form
     {
-        private FacebookUserFetcher facebookUserFetcher;
+        private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
 
         public FormMain()
         {
@@ -38,7 +38,7 @@ namespace AppUI
         {
             pictureBoxProfilePicture.Image = facebookUserFetcher.User.ImageLarge;
 
-            labelProfileLastName.Text = facebookUserFetcher.User.FirstName;
+            labelProfileFirstName.Text = facebookUserFetcher.User.FirstName;
             labelProfileLastName.Text = facebookUserFetcher.User.LastName;
             labelProfileGender.Text = facebookUserFetcher.User.Gender.ToString();
             labelProfileStatus.Text = facebookUserFetcher.User.RelationshipStatus.ToString();
@@ -56,10 +56,11 @@ namespace AppUI
         private void btnLogout_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-
-            //DOTO: return to default profile picture
-            //pictureBoxProfile.Image = m_LoggedUser.ImageSmall;
+            
+            FacebookService.LogoutWithUI();
+            pictureBoxProfile.Image = AppUI.Properties.Resources.icons8_name_25;
             labelUserName.Text = "";
+            clear();
         }
 
         private void btnEvents_Click(object sender, EventArgs e)
@@ -117,6 +118,19 @@ namespace AppUI
         private void panelMenu_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void clear()
+        {
+            pictureBoxProfilePicture.Image = null;
+
+            labelProfileFirstName.Text = String.Empty;
+            labelProfileLastName.Text = String.Empty;
+            labelProfileGender.Text = String.Empty;
+            labelProfileStatus.Text = String.Empty;
+            labelProfileLocation.Text = String.Empty;
+            labelProfileEmail.Text = String.Empty;
+            labelProfileBirthday.Text = String.Empty;
         }
     }
 }
