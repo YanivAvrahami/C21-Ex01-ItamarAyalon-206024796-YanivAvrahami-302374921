@@ -74,6 +74,18 @@ namespace AppUI
             return friends;
         }
 
+        public List<Group> FetchGroups()
+        {
+            List<Group> groups = new List<Group>(User.Groups.Count);
+
+            foreach (Group group in User.Groups)
+            {
+                groups.Add(group);
+            }
+
+            return groups;
+        }
+
         internal List<Album> FetchAlbums()
         {
             List<Album> albums = new List<Album>(User.Albums.Count);
