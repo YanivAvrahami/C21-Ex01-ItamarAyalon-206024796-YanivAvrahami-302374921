@@ -30,21 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPosts = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
             this.selectionBar = new System.Windows.Forms.Panel();
-            this.btnGroups = new System.Windows.Forms.Button();
             this.btnFriends = new System.Windows.Forms.Button();
             this.btnEvents = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.labelUserName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -57,7 +60,6 @@
             this.panelMenu.Controls.Add(this.btnPosts);
             this.panelMenu.Controls.Add(this.btnNotifications);
             this.panelMenu.Controls.Add(this.selectionBar);
-            this.panelMenu.Controls.Add(this.btnGroups);
             this.panelMenu.Controls.Add(this.btnFriends);
             this.panelMenu.Controls.Add(this.btnEvents);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -66,11 +68,31 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1161, 43);
+            this.panelMenu.Size = new System.Drawing.Size(1142, 43);
             this.panelMenu.TabIndex = 53;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             this.panelMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseMove);
             this.panelMenu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseUp);
+            // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.labelUserName.Location = new System.Drawing.Point(39, 14);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(0, 16);
+            this.labelUserName.TabIndex = 59;
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
+            this.pictureBoxProfile.Location = new System.Drawing.Point(10, 9);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(26, 25);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 54;
+            this.pictureBoxProfile.TabStop = false;
             // 
             // btnMinimize
             // 
@@ -80,7 +102,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnMinimize.Location = new System.Drawing.Point(1091, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1072, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 30);
             this.btnMinimize.TabIndex = 58;
@@ -98,7 +120,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnExit.Location = new System.Drawing.Point(1129, 0);
+            this.btnExit.Location = new System.Drawing.Point(1110, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(32, 30);
             this.btnExit.TabIndex = 57;
@@ -117,7 +139,8 @@
             this.btnPosts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnPosts.Image = ((System.Drawing.Image)(resources.GetObject("btnPosts.Image")));
             this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPosts.Location = new System.Drawing.Point(769, 0);
+            this.btnPosts.Location = new System.Drawing.Point(681, 0);
+            this.btnPosts.Margin = new System.Windows.Forms.Padding(0);
             this.btnPosts.Name = "btnPosts";
             this.btnPosts.Size = new System.Drawing.Size(79, 43);
             this.btnPosts.TabIndex = 56;
@@ -129,14 +152,16 @@
             // btnNotifications
             // 
             this.btnNotifications.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnNotifications.BackColor = System.Drawing.Color.Transparent;
+            this.btnNotifications.BackColor = System.Drawing.Color.Silver;
+            this.btnNotifications.Enabled = false;
             this.btnNotifications.FlatAppearance.BorderSize = 0;
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnNotifications.Image = ((System.Drawing.Image)(resources.GetObject("btnNotifications.Image")));
             this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(854, 0);
+            this.btnNotifications.Location = new System.Drawing.Point(760, 0);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(0);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(140, 43);
             this.btnNotifications.TabIndex = 55;
@@ -153,25 +178,6 @@
             this.selectionBar.Size = new System.Drawing.Size(82, 5);
             this.selectionBar.TabIndex = 54;
             // 
-            // btnGroups
-            // 
-            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGroups.BackColor = System.Drawing.Color.Transparent;
-            this.btnGroups.FlatAppearance.BorderSize = 0;
-            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnGroups.Image = ((System.Drawing.Image)(resources.GetObject("btnGroups.Image")));
-            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGroups.Location = new System.Drawing.Point(661, 0);
-            this.btnGroups.Name = "btnGroups";
-            this.btnGroups.Size = new System.Drawing.Size(102, 43);
-            this.btnGroups.TabIndex = 5;
-            this.btnGroups.Text = " Groups";
-            this.btnGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGroups.UseVisualStyleBackColor = false;
-            this.btnGroups.Click += new System.EventHandler(this.btnGroups_Click);
-            // 
             // btnFriends
             // 
             this.btnFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -182,7 +188,8 @@
             this.btnFriends.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnFriends.Image = ((System.Drawing.Image)(resources.GetObject("btnFriends.Image")));
             this.btnFriends.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFriends.Location = new System.Drawing.Point(559, 0);
+            this.btnFriends.Location = new System.Drawing.Point(585, 0);
+            this.btnFriends.Margin = new System.Windows.Forms.Padding(0);
             this.btnFriends.Name = "btnFriends";
             this.btnFriends.Size = new System.Drawing.Size(96, 43);
             this.btnFriends.TabIndex = 4;
@@ -201,7 +208,8 @@
             this.btnEvents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnEvents.Image = ((System.Drawing.Image)(resources.GetObject("btnEvents.Image")));
             this.btnEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEvents.Location = new System.Drawing.Point(457, 0);
+            this.btnEvents.Location = new System.Drawing.Point(489, 0);
+            this.btnEvents.Margin = new System.Windows.Forms.Padding(0);
             this.btnEvents.Name = "btnEvents";
             this.btnEvents.Size = new System.Drawing.Size(96, 43);
             this.btnEvents.TabIndex = 3;
@@ -220,7 +228,8 @@
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(355, 0);
+            this.btnHome.Location = new System.Drawing.Point(393, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(96, 43);
             this.btnHome.TabIndex = 2;
@@ -239,7 +248,8 @@
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(253, 0);
+            this.btnLogout.Location = new System.Drawing.Point(297, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(96, 43);
             this.btnLogout.TabIndex = 1;
@@ -258,7 +268,8 @@
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(165, 0);
+            this.btnLogin.Location = new System.Drawing.Point(215, 0);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(82, 43);
             this.btnLogin.TabIndex = 0;
@@ -267,32 +278,30 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pictureBoxProfile
+            // pictureBox1
             // 
-            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
-            this.pictureBoxProfile.Location = new System.Drawing.Point(10, 9);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(26, 25);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 54;
-            this.pictureBoxProfile.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pictureBox1.Location = new System.Drawing.Point(31, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(462, 401);
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
             // 
-            // labelUserName
+            // panel1
             // 
-            this.labelUserName.AutoSize = true;
-            this.labelUserName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.labelUserName.Location = new System.Drawing.Point(39, 14);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(0, 16);
-            this.labelUserName.TabIndex = 59;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(74, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(920, 532);
+            this.panel1.TabIndex = 55;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1161, 654);
+            this.ClientSize = new System.Drawing.Size(1142, 654);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
@@ -300,6 +309,8 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -310,7 +321,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnEvents;
-        private System.Windows.Forms.Button btnGroups;
         private System.Windows.Forms.Button btnFriends;
         private System.Windows.Forms.Panel selectionBar;
         private System.Windows.Forms.Button btnNotifications;
@@ -319,6 +329,8 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
