@@ -35,7 +35,6 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPosts = new System.Windows.Forms.Button();
-            this.btnNotifications = new System.Windows.Forms.Button();
             this.selectionBar = new System.Windows.Forms.Panel();
             this.btnFriends = new System.Windows.Forms.Button();
             this.btnEvents = new System.Windows.Forms.Button();
@@ -54,7 +53,6 @@
             this.panelMenu.Controls.Add(this.btnMinimize);
             this.panelMenu.Controls.Add(this.btnExit);
             this.panelMenu.Controls.Add(this.btnPosts);
-            this.panelMenu.Controls.Add(this.btnNotifications);
             this.panelMenu.Controls.Add(this.selectionBar);
             this.panelMenu.Controls.Add(this.btnFriends);
             this.panelMenu.Controls.Add(this.btnEvents);
@@ -145,27 +143,6 @@
             this.btnPosts.UseVisualStyleBackColor = false;
             this.btnPosts.Click += new System.EventHandler(this.btnPosts_Click);
             // 
-            // btnNotifications
-            // 
-            this.btnNotifications.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnNotifications.BackColor = System.Drawing.Color.Transparent;
-            this.btnNotifications.FlatAppearance.BorderSize = 0;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotifications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnNotifications.Image = ((System.Drawing.Image)(resources.GetObject("btnNotifications.Image")));
-            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(777, 0);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(0);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(140, 43);
-            this.btnNotifications.TabIndex = 55;
-            this.btnNotifications.Text = " Notifications";
-            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotifications.UseVisualStyleBackColor = false;
-            this.btnNotifications.Visible = false;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
-            // 
             // selectionBar
             // 
             this.selectionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(242)))));
@@ -233,7 +210,6 @@
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Visible = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnLogout
             // 
@@ -300,7 +276,6 @@
         private System.Windows.Forms.Button btnEvents;
         private System.Windows.Forms.Button btnFriends;
         private System.Windows.Forms.Panel selectionBar;
-        private System.Windows.Forms.Button btnNotifications;
         private System.Windows.Forms.Button btnPosts;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMinimize;
