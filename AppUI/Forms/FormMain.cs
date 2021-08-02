@@ -42,7 +42,7 @@ namespace AppUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            Clipboard.SetText("design.patterns20cc");
+            Clipboard.SetText("design.patterns21c");
 
             LoginResult loginResult = facebookUserFetcher.Login();
 
