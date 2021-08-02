@@ -55,10 +55,10 @@
             this.labelProfileLocation = new System.Windows.Forms.Label();
             this.labelProfileGender = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelProfileStatus = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
@@ -498,25 +498,6 @@
             this.label7.Text = "Gender";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBoxProfilePicture);
-            this.panel1.Controls.Add(this.tableLayoutFriends);
-            this.panel1.Location = new System.Drawing.Point(51, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1045, 438);
-            this.panel1.TabIndex = 62;
-            // 
-            // pictureBoxProfilePicture
-            // 
-            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(20, 14);
-            this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
-            this.pictureBoxProfilePicture.Size = new System.Drawing.Size(400, 400);
-            this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfilePicture.TabIndex = 54;
-            this.pictureBoxProfilePicture.TabStop = false;
-            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -542,6 +523,26 @@
             this.labelProfileStatus.Size = new System.Drawing.Size(329, 58);
             this.labelProfileStatus.TabIndex = 0;
             this.labelProfileStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBoxProfilePicture);
+            this.panel1.Controls.Add(this.tableLayoutFriends);
+            this.panel1.Location = new System.Drawing.Point(51, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1045, 438);
+            this.panel1.TabIndex = 62;
+            // 
+            // pictureBoxProfilePicture
+            // 
+            this.pictureBoxProfilePicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxProfilePicture.Location = new System.Drawing.Point(20, 14);
+            this.pictureBoxProfilePicture.Name = "pictureBoxProfilePicture";
+            this.pictureBoxProfilePicture.Size = new System.Drawing.Size(400, 400);
+            this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfilePicture.TabIndex = 54;
+            this.pictureBoxProfilePicture.TabStop = false;
             // 
             // FormMain
             // 

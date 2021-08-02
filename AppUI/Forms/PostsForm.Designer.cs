@@ -50,6 +50,7 @@ namespace AppUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnFetchPosts);
             this.groupBox1.Location = new System.Drawing.Point(583, 46);
@@ -60,7 +61,7 @@ namespace AppUI
             // 
             // btnFetchPosts
             // 
-            this.btnFetchPosts.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFetchPosts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFetchPosts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchPosts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnFetchPosts.Location = new System.Drawing.Point(59, 11);
@@ -73,7 +74,7 @@ namespace AppUI
             // 
             // labelPostsCounted
             // 
-            this.labelPostsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPostsCounted.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPostsCounted.AutoSize = true;
             this.labelPostsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.labelPostsCounted.Location = new System.Drawing.Point(115, 363);
@@ -84,7 +85,7 @@ namespace AppUI
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(12, 363);
@@ -145,7 +146,7 @@ namespace AppUI
             // 
             // listBoxPosts
             // 
-            this.listBoxPosts.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listBoxPosts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxPosts.BackColor = System.Drawing.Color.White;
             this.listBoxPosts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxPosts.FormattingEnabled = true;
@@ -158,7 +159,7 @@ namespace AppUI
             // 
             // tableLayoutFriends
             // 
-            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutFriends.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutFriends.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutFriends.ColumnCount = 2;
@@ -223,7 +224,7 @@ namespace AppUI
             // 
             // textBoxDescption
             // 
-            this.textBoxDescption.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxDescption.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDescption.BackColor = System.Drawing.Color.White;
             this.textBoxDescption.Enabled = false;
             this.textBoxDescption.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,7 +237,7 @@ namespace AppUI
             // 
             // listBoxComments
             // 
-            this.listBoxComments.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listBoxComments.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxComments.BackColor = System.Drawing.Color.White;
             this.listBoxComments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxComments.FormattingEnabled = true;
