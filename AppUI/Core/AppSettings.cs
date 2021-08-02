@@ -21,8 +21,11 @@
                 // Posts form
                 "user_posts",
                 "user_likes",
-                //"user_photos", - TODO: Albums
+                // Albums form
+                "user_photos",
+                // Friends form
                 "user_friends",
+                // Groups form
                 "groups_access_member_info",
                 "publish_to_groups"
             };

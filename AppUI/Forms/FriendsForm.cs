@@ -29,16 +29,6 @@ namespace AppUI
             {
                 listBoxFriends.Items.Add(friend.Name);
             }
-
-
-
-            //listBoxEvents.Items.Clear();
-            //for (int i = 0; i < m_Events.Count; i++)
-            //{
-            //    listBoxEvents.Items.Add(m_Events[i].Name);
-            //}
-            //
-            //labelEventsCounted.Text = m_Events.Count.ToString();*/
         }
 
         private void listBoxFriends_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,31 +39,13 @@ namespace AppUI
             }
 
             User user = m_Friends[listBoxFriends.SelectedIndex];
+
+            labelFullName.Text = user.Name;
+            labelGender.Text = user.Gender?.ToString();
+            labelLocation.Text = user.Location?.Name;
+            labelBirthday.Text = user.Birthday;
+            labelStatus.Text = user.RelationshipStatus?.ToString();
+            pictureBoxProfile.Image = user.ImageNormal;
         }
-
-        /*private void listBoxPosts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBoxPosts.SelectedIndex == -1)
-            {
-                return;
-            }
-
-            Post chosen = m_Friends[listBoxPosts.SelectedIndex];
-
-            textBoxDescption.Text = chosen.Message;
-            labelName.Text = chosen.From.Name;
-            labelComments.Text = chosen.Comments.Count.ToString();
-            if (chosen.CreatedTime.HasValue)
-            {
-                labelPostedDate.Text = chosen.CreatedTime.Value.ToString("dd/MM/yy HH:mm");
-            } else
-            {
-                labelPostedDate.Text = "-";
-            }
-
-            writeComments(chosen);
-        }*/
-
-
     }
 }

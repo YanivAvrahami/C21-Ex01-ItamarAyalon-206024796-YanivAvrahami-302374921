@@ -57,6 +57,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelProfileStatus = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
@@ -324,18 +326,20 @@
             this.tableLayoutFriends.Controls.Add(this.labelProfileLocation, 1, 3);
             this.tableLayoutFriends.Controls.Add(this.labelProfileGender, 1, 2);
             this.tableLayoutFriends.Controls.Add(this.label7, 0, 2);
+            this.tableLayoutFriends.Controls.Add(this.label5, 0, 6);
+            this.tableLayoutFriends.Controls.Add(this.labelProfileStatus, 1, 6);
             this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutFriends.Location = new System.Drawing.Point(534, 14);
             this.tableLayoutFriends.Name = "tableLayoutFriends";
-            this.tableLayoutFriends.RowCount = 6;
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutFriends.Size = new System.Drawing.Size(480, 400);
+            this.tableLayoutFriends.RowCount = 7;
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutFriends.Size = new System.Drawing.Size(480, 402);
             this.tableLayoutFriends.TabIndex = 61;
             // 
             // labelProfileFirstName
@@ -347,7 +351,7 @@
             this.labelProfileFirstName.Location = new System.Drawing.Point(147, 1);
             this.labelProfileFirstName.MinimumSize = new System.Drawing.Size(10, 10);
             this.labelProfileFirstName.Name = "labelProfileFirstName";
-            this.labelProfileFirstName.Size = new System.Drawing.Size(329, 65);
+            this.labelProfileFirstName.Size = new System.Drawing.Size(329, 56);
             this.labelProfileFirstName.TabIndex = 0;
             this.labelProfileFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -357,10 +361,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProfileLastName.AutoSize = true;
-            this.labelProfileLastName.Location = new System.Drawing.Point(147, 67);
+            this.labelProfileLastName.Location = new System.Drawing.Point(147, 58);
             this.labelProfileLastName.MinimumSize = new System.Drawing.Size(10, 10);
             this.labelProfileLastName.Name = "labelProfileLastName";
-            this.labelProfileLastName.Size = new System.Drawing.Size(329, 65);
+            this.labelProfileLastName.Size = new System.Drawing.Size(329, 56);
             this.labelProfileLastName.TabIndex = 0;
             this.labelProfileLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -372,7 +376,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(4, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 65);
+            this.label4.Size = new System.Drawing.Size(136, 56);
             this.label4.TabIndex = 0;
             this.label4.Text = "First Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -383,9 +387,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 67);
+            this.label1.Location = new System.Drawing.Point(4, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 65);
+            this.label1.Size = new System.Drawing.Size(136, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "Last Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,10 +400,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProfileBirthday.AutoSize = true;
-            this.labelProfileBirthday.Location = new System.Drawing.Point(147, 331);
+            this.labelProfileBirthday.Location = new System.Drawing.Point(147, 286);
             this.labelProfileBirthday.MinimumSize = new System.Drawing.Size(10, 10);
             this.labelProfileBirthday.Name = "labelProfileBirthday";
-            this.labelProfileBirthday.Size = new System.Drawing.Size(329, 68);
+            this.labelProfileBirthday.Size = new System.Drawing.Size(329, 56);
             this.labelProfileBirthday.TabIndex = 0;
             this.labelProfileBirthday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -409,9 +413,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 331);
+            this.label3.Location = new System.Drawing.Point(4, 286);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 68);
+            this.label3.Size = new System.Drawing.Size(136, 56);
             this.label3.TabIndex = 0;
             this.label3.Text = "Birthday";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,10 +426,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProfileEmail.AutoSize = true;
-            this.labelProfileEmail.Location = new System.Drawing.Point(147, 265);
+            this.labelProfileEmail.Location = new System.Drawing.Point(147, 229);
             this.labelProfileEmail.MinimumSize = new System.Drawing.Size(10, 10);
             this.labelProfileEmail.Name = "labelProfileEmail";
-            this.labelProfileEmail.Size = new System.Drawing.Size(329, 65);
+            this.labelProfileEmail.Size = new System.Drawing.Size(329, 56);
             this.labelProfileEmail.TabIndex = 0;
             this.labelProfileEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -435,9 +439,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 265);
+            this.label6.Location = new System.Drawing.Point(4, 229);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 65);
+            this.label6.Size = new System.Drawing.Size(136, 56);
             this.label6.TabIndex = 0;
             this.label6.Text = "Email";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,9 +452,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 199);
+            this.label2.Location = new System.Drawing.Point(4, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 65);
+            this.label2.Size = new System.Drawing.Size(136, 56);
             this.label2.TabIndex = 0;
             this.label2.Text = "Location";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -461,10 +465,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProfileLocation.AutoSize = true;
-            this.labelProfileLocation.Location = new System.Drawing.Point(147, 199);
+            this.labelProfileLocation.Location = new System.Drawing.Point(147, 172);
             this.labelProfileLocation.MinimumSize = new System.Drawing.Size(10, 10);
             this.labelProfileLocation.Name = "labelProfileLocation";
-            this.labelProfileLocation.Size = new System.Drawing.Size(329, 65);
+            this.labelProfileLocation.Size = new System.Drawing.Size(329, 56);
             this.labelProfileLocation.TabIndex = 0;
             this.labelProfileLocation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -474,10 +478,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProfileGender.AutoSize = true;
-            this.labelProfileGender.Location = new System.Drawing.Point(147, 133);
+            this.labelProfileGender.Location = new System.Drawing.Point(147, 115);
             this.labelProfileGender.MinimumSize = new System.Drawing.Size(10, 10);
             this.labelProfileGender.Name = "labelProfileGender";
-            this.labelProfileGender.Size = new System.Drawing.Size(329, 65);
+            this.labelProfileGender.Size = new System.Drawing.Size(329, 56);
             this.labelProfileGender.TabIndex = 0;
             this.labelProfileGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -487,9 +491,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 133);
+            this.label7.Location = new System.Drawing.Point(4, 115);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 65);
+            this.label7.Size = new System.Drawing.Size(136, 56);
             this.label7.TabIndex = 0;
             this.label7.Text = "Gender";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,6 +516,32 @@
             this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 343);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 58);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Status";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelProfileStatus
+            // 
+            this.labelProfileStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelProfileStatus.AutoSize = true;
+            this.labelProfileStatus.Location = new System.Drawing.Point(147, 343);
+            this.labelProfileStatus.MinimumSize = new System.Drawing.Size(10, 10);
+            this.labelProfileStatus.Name = "labelProfileStatus";
+            this.labelProfileStatus.Size = new System.Drawing.Size(329, 58);
+            this.labelProfileStatus.TabIndex = 0;
+            this.labelProfileStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMain
             // 
@@ -565,6 +595,8 @@
         private System.Windows.Forms.Button btnAlbums;
         private System.Windows.Forms.Button btnGroups;
         private System.Windows.Forms.CheckBox checkBoxRememberMe;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelProfileStatus;
     }
 }
 
