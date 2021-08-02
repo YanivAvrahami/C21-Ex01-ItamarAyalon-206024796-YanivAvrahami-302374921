@@ -22,28 +22,36 @@ namespace AppUI
 
         public LoginResult Login()
         {
-            LoginResult loginResult;
+            LoginResult loginResult = null;
 
-            if (Properties.Settings.Default.RememberMe)
+            loginResult = Connect();
+
+            if (loginResult == null)
             {
-                //loginResult = Connect();
+                loginResult = FacebookService.Login(AppSettings.Instance.AppID, AppSettings.Instance.PermissionsToRequest);
             }
-
-            loginResult = FacebookService.Login(AppSettings.Instance.AppID, AppSettings.Instance.PermissionsToRequest);
-
 
             if (!string.IsNullOrEmpty(loginResult.AccessToken))
             {
                 User = loginResult.LoggedInUser;
             }
 
+            Properties.Settings.Default.Token = loginResult.AccessToken;
+            Properties.Settings.Default.Save();
+
             return loginResult;
         }
 
-        //private LoginResult Connect()
-        //{
-        //
-        //}
+        private LoginResult Connect()
+        {
+            if (Properties.Settings.Default.RememberMe &&
+                !string.IsNullOrEmpty(Properties.Settings.Default.Token))
+            {
+                return FacebookService.Connect(Properties.Settings.Default.Token);
+            }
+
+            return null;
+        }
 
         public void Logout()
         {

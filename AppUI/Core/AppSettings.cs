@@ -24,7 +24,6 @@
                 //"user_photos", - TODO: Albums
                 "user_friends",
                 "groups_access_member_info",
-                "Groups API",
                 "publish_to_groups"
             };
         }
