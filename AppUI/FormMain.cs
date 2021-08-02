@@ -13,6 +13,7 @@ namespace AppUI
         private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
         private Dictionary<eFormType, Form> applicationForms = new Dictionary<eFormType, Form>();
 
+
         public enum eFormType
         {
             Events,
