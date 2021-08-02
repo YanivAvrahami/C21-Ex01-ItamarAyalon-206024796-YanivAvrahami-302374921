@@ -30,6 +30,8 @@ namespace AppUI
                 listBoxFriends.Items.Add(friend.Name);
             }
 
+
+
             //listBoxEvents.Items.Clear();
             //for (int i = 0; i < m_Events.Count; i++)
             //{
@@ -37,6 +39,16 @@ namespace AppUI
             //}
             //
             //labelEventsCounted.Text = m_Events.Count.ToString();*/
+        }
+
+        private void listBoxFriends_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxFriends.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            User user = m_Friends[listBoxFriends.SelectedIndex];
         }
 
         /*private void listBoxPosts_SelectedIndexChanged(object sender, EventArgs e)

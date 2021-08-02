@@ -45,19 +45,24 @@ namespace AppUI
             Event chosen = m_Events[listBoxEvents.SelectedIndex];
 
             labelEventName.Text = chosen.Name;
-            labelEventLocation.Text = chosen.Place.Name;
+
+            labelEventLocation.Text = chosen.Place?.Name;
             labelEventInterested.Text = chosen.InterestedCount.ToString();
             labelEventPrivacy.Text = chosen.Privacy.ToString();
             textBoxEventDesc.Text = chosen.Description;
-            pictureBoxCover.LoadAsync(chosen.Cover.SourceURL);
             labelEventStartDate.Text = chosen.StartTime.Value.ToString("dd/MM/yy HH:mm");
+
+            if (chosen.Cover != null)
+            {
+                pictureBoxCover.LoadAsync(chosen.Cover.SourceURL);
+            }
 
             if (chosen.EndTime.HasValue)
             {
                 labelEventEndDate.Text = chosen.EndTime.Value.ToString("dd/MM/yy HH:mm");
             } else
             {
-                labelEventStartDate.Text = "-";
+                labelEventEndDate.Text = "-";
             }
         }
     }

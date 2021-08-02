@@ -30,7 +30,7 @@ namespace AppUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.btnFetchFriends = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.listBoxFriends = new System.Windows.Forms.ListBox();
@@ -42,14 +42,14 @@ namespace AppUI
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBoxProfile);
             this.panel1.Controls.Add(this.btnFetchFriends);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.listBoxFriends);
@@ -60,14 +60,14 @@ namespace AppUI
             this.panel1.Size = new System.Drawing.Size(755, 539);
             this.panel1.TabIndex = 57;
             // 
-            // pictureBox1
+            // pictureBoxProfile
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(138, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 241);
-            this.pictureBox1.TabIndex = 66;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxProfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(138, 78);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(253, 241);
+            this.pictureBoxProfile.TabIndex = 66;
+            this.pictureBoxProfile.TabStop = false;
             // 
             // btnFetchFriends
             // 
@@ -106,6 +106,7 @@ namespace AppUI
             this.listBoxFriends.ScrollAlwaysVisible = true;
             this.listBoxFriends.Size = new System.Drawing.Size(189, 365);
             this.listBoxFriends.TabIndex = 57;
+            this.listBoxFriends.SelectedIndexChanged += new System.EventHandler(this.listBoxFriends_SelectedIndexChanged);
             // 
             // tableLayoutFriends
             // 
@@ -212,7 +213,7 @@ namespace AppUI
             this.Text = "FriendsForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             this.ResumeLayout(false);
@@ -232,6 +233,6 @@ namespace AppUI
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnFetchFriends;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxProfile;
     }
 }
