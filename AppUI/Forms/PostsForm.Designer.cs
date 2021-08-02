@@ -262,7 +262,7 @@ namespace AppUI
             this.Controls.Add(this.textBoxDescption);
             this.Name = "PostsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PostsForm";
+            this.Text = "Posts";
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();

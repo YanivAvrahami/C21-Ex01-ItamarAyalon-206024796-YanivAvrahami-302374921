@@ -146,7 +146,7 @@ namespace AppUI.Forms
             this.MaximizeBox = false;
             this.Name = "GroupsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GroupsForm";
+            this.Text = "Groups";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGroups)).EndInit();

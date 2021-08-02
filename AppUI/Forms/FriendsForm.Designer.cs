@@ -271,7 +271,7 @@ namespace AppUI
             this.Controls.Add(this.listBoxFriends);
             this.Name = "FriendsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FriendsForm";
+            this.Text = "Friends";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();

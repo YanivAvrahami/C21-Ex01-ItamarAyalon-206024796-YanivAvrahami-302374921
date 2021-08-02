@@ -364,7 +364,7 @@ namespace AppUI
             this.Controls.Add(this.tableLayoutFriends);
             this.Name = "EventsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EventsForm";
+            this.Text = "Events";
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();

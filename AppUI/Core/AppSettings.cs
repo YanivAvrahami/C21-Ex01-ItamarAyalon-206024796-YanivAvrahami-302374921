@@ -27,7 +27,11 @@
                 "user_friends",
                 // Groups form
                 "groups_access_member_info",
-                "publish_to_groups"
+                "publish_to_groups",
+                // Feature 1
+                "pages_read_engagement",
+                "pages_read_user_content",
+
             };
         }
     }
