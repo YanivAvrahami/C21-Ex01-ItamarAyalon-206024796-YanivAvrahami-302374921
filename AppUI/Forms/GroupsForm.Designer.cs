@@ -102,6 +102,7 @@ namespace AppUI.Forms
             this.pictureBoxGroups.Location = new System.Drawing.Point(165, 88);
             this.pictureBoxGroups.Name = "pictureBoxGroups";
             this.pictureBoxGroups.Size = new System.Drawing.Size(262, 224);
+            this.pictureBoxGroups.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxGroups.TabIndex = 72;
             this.pictureBoxGroups.TabStop = false;
             // 
