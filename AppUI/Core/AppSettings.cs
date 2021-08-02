@@ -1,23 +1,14 @@
-﻿using System.Drawing;
-
-namespace AppUI
+﻿namespace AppUI
 {
-    static class AppSettings
+    public class AppSettings
     {
-        public static Point LastWindowLocation = new Point(20, 50);
-        public static Size LastWindowSize = new Size(500, 800);
-        public static bool RememberUser = false;
-        public static string LastAccessToken = null;
+        public static AppSettings Instance = new AppSettings();
 
-        public static string AppID { get; }
-        public static string[] PermissionsToRequest;
+        public string AppID => "644877859803597";
+        public string[] PermissionsToRequest { get; set; }
 
-        static AppSettings()
+        private AppSettings()
         {
-            LastWindowLocation = new Point(20, 50);
-            LastWindowSize = new Size(500, 800);
-            RememberUser = false;
-            LastAccessToken = null;
             PermissionsToRequest = new string[] {
                 // Home Profile
                 "public_profile",
@@ -32,10 +23,10 @@ namespace AppUI
                 "user_likes",
                 //"user_photos", - TODO: Albums
                 "user_friends",
-                "groups_access_member_info"
+                "groups_access_member_info",
+                "Groups API",
+                "publish_to_groups"
             };
-
-            AppID = "644877859803597";
         }
     }
 }

@@ -28,6 +28,8 @@ namespace AppUI
             initForms();
             setButtons(false);
             FacebookService.s_CollectionLimit = 100;
+
+            checkBoxRememberMe.Checked = Properties.Settings.Default.RememberMe;
         }
 
         private void initForms()
@@ -174,9 +176,7 @@ namespace AppUI
         {
             if (mouseDown)
             {
-                this.Location = new Point(
-                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
-
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
                 this.Update();
             }
         }
@@ -186,6 +186,12 @@ namespace AppUI
             mouseDown = false;
         }
 
-        
+        private void checkBoxRememberMe_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+
+            Properties.Settings.Default.RememberMe = checkBox.Checked;
+            Properties.Settings.Default.Save();
+        }
     }
 }

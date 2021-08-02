@@ -22,7 +22,15 @@ namespace AppUI
 
         public LoginResult Login()
         {
-            LoginResult loginResult = FacebookService.Login(AppSettings.AppID, AppSettings.PermissionsToRequest);
+            LoginResult loginResult;
+
+            if (Properties.Settings.Default.RememberMe)
+            {
+                //loginResult = Connect();
+            }
+
+            loginResult = FacebookService.Login(AppSettings.Instance.AppID, AppSettings.Instance.PermissionsToRequest);
+
 
             if (!string.IsNullOrEmpty(loginResult.AccessToken))
             {
@@ -31,6 +39,11 @@ namespace AppUI
 
             return loginResult;
         }
+
+        //private LoginResult Connect()
+        //{
+        //
+        //}
 
         public void Logout()
         {

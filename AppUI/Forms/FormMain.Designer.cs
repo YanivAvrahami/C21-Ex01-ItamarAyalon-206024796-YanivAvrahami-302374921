@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.checkBoxRememberMe = new System.Windows.Forms.CheckBox();
             this.labelUserName = new System.Windows.Forms.Label();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.checkBoxRememberMe);
             this.panelMenu.Controls.Add(this.labelUserName);
             this.panelMenu.Controls.Add(this.pictureBoxProfile);
             this.panelMenu.Controls.Add(this.btnMinimize);
@@ -86,6 +88,20 @@
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             this.panelMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseMove);
             this.panelMenu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseUp);
+            // 
+            // checkBoxRememberMe
+            // 
+            this.checkBoxRememberMe.AutoSize = true;
+            this.checkBoxRememberMe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxRememberMe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxRememberMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(182, 14);
+            this.checkBoxRememberMe.Name = "checkBoxRememberMe";
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(111, 20);
+            this.checkBoxRememberMe.TabIndex = 60;
+            this.checkBoxRememberMe.Text = "Remember Me";
+            this.checkBoxRememberMe.UseVisualStyleBackColor = true;
+            this.checkBoxRememberMe.CheckedChanged += new System.EventHandler(this.checkBoxRememberMe_CheckedChanged);
             // 
             // labelUserName
             // 
@@ -152,7 +168,7 @@
             this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_cat_profile_25;
             this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlbums.Location = new System.Drawing.Point(705, 0);
+            this.btnAlbums.Location = new System.Drawing.Point(745, 0);
             this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
             this.btnAlbums.Name = "btnAlbums";
             this.btnAlbums.Size = new System.Drawing.Size(106, 43);
@@ -172,7 +188,7 @@
             this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnGroups.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
             this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGroups.Location = new System.Drawing.Point(811, 0);
+            this.btnGroups.Location = new System.Drawing.Point(851, 0);
             this.btnGroups.Margin = new System.Windows.Forms.Padding(0);
             this.btnGroups.Name = "btnGroups";
             this.btnGroups.Size = new System.Drawing.Size(105, 43);
@@ -192,7 +208,7 @@
             this.btnPosts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnPosts.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
             this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPosts.Location = new System.Drawing.Point(626, 0);
+            this.btnPosts.Location = new System.Drawing.Point(666, 0);
             this.btnPosts.Margin = new System.Windows.Forms.Padding(0);
             this.btnPosts.Name = "btnPosts";
             this.btnPosts.Size = new System.Drawing.Size(79, 43);
@@ -220,7 +236,7 @@
             this.btnFriends.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnFriends.Image = global::AppUI.Properties.Resources.icons8_group_25_2;
             this.btnFriends.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFriends.Location = new System.Drawing.Point(530, 0);
+            this.btnFriends.Location = new System.Drawing.Point(570, 0);
             this.btnFriends.Margin = new System.Windows.Forms.Padding(0);
             this.btnFriends.Name = "btnFriends";
             this.btnFriends.Size = new System.Drawing.Size(96, 43);
@@ -240,7 +256,7 @@
             this.btnEvents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnEvents.Image = global::AppUI.Properties.Resources.icons8_event_25;
             this.btnEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEvents.Location = new System.Drawing.Point(434, 0);
+            this.btnEvents.Location = new System.Drawing.Point(474, 0);
             this.btnEvents.Margin = new System.Windows.Forms.Padding(0);
             this.btnEvents.Name = "btnEvents";
             this.btnEvents.Size = new System.Drawing.Size(96, 43);
@@ -260,7 +276,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnLogout.Image = global::AppUI.Properties.Resources.icons8_logout_rounded_left_25_3;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(338, 0);
+            this.btnLogout.Location = new System.Drawing.Point(378, 0);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(96, 43);
@@ -280,7 +296,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.btnLogin.Image = global::AppUI.Properties.Resources.icons8_login_25_5;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(256, 0);
+            this.btnLogin.Location = new System.Drawing.Point(296, 0);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(82, 43);
@@ -548,6 +564,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAlbums;
         private System.Windows.Forms.Button btnGroups;
+        private System.Windows.Forms.CheckBox checkBoxRememberMe;
     }
 }
 
