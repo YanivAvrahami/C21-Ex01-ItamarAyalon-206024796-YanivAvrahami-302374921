@@ -58,7 +58,7 @@ namespace AppUI
             // 
             // textBoxEventDesc
             // 
-            this.textBoxEventDesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxEventDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxEventDesc.BackColor = System.Drawing.Color.White;
             this.textBoxEventDesc.Enabled = false;
             this.textBoxEventDesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,7 +84,7 @@ namespace AppUI
             // 
             // listBoxEvents
             // 
-            this.listBoxEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listBoxEvents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxEvents.BackColor = System.Drawing.Color.White;
             this.listBoxEvents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxEvents.FormattingEnabled = true;
@@ -97,7 +97,7 @@ namespace AppUI
             // 
             // tableLayoutFriends
             // 
-            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutFriends.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutFriends.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutFriends.ColumnCount = 2;
@@ -280,7 +280,7 @@ namespace AppUI
             // 
             // btnFetchEvents
             // 
-            this.btnFetchEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFetchEvents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFetchEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchEvents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnFetchEvents.Location = new System.Drawing.Point(59, 11);
@@ -293,7 +293,7 @@ namespace AppUI
             // 
             // comboBoxEventType
             // 
-            this.comboBoxEventType.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxEventType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxEventType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEventType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxEventType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
@@ -305,7 +305,7 @@ namespace AppUI
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(12, 363);
@@ -316,7 +316,7 @@ namespace AppUI
             // 
             // labelEventsCounted
             // 
-            this.labelEventsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelEventsCounted.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelEventsCounted.AutoSize = true;
             this.labelEventsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.labelEventsCounted.Location = new System.Drawing.Point(127, 363);
@@ -327,7 +327,8 @@ namespace AppUI
             // 
             // pictureBoxCover
             // 
-            this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxCover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxCover.Location = new System.Drawing.Point(241, 52);
             this.pictureBoxCover.Name = "pictureBoxCover";
             this.pictureBoxCover.Size = new System.Drawing.Size(326, 203);
@@ -337,6 +338,7 @@ namespace AppUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnFetchEvents);
             this.groupBox1.Controls.Add(this.comboBoxEventType);
@@ -360,10 +362,9 @@ namespace AppUI
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxEvents);
             this.Controls.Add(this.tableLayoutFriends);
-            this.MaximizeBox = false;
             this.Name = "EventsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EventsForm";
+            this.Text = "Events";
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();

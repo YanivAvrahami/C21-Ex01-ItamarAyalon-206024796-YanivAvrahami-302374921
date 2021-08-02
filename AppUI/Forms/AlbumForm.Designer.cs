@@ -163,9 +163,11 @@ namespace AppUI
             this.Controls.Add(this.groupBoxPhotos);
             this.Controls.Add(this.btnPrevPage);
             this.Controls.Add(this.btnNextPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "AlbumForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AlbumForm";
+            this.Text = "Album";
             this.groupBoxPhotos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

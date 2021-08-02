@@ -69,6 +69,7 @@ namespace AppUI
             labelProfileLocation.Text = facebookUserFetcher.User.Location?.Name;
             labelProfileEmail.Text = facebookUserFetcher.User.Email;
             labelProfileBirthday.Text = facebookUserFetcher.User.Birthday;
+            labelProfileStatus.Text = facebookUserFetcher.User.RelationshipStatus?.ToString();
         }
 
         private void clear()

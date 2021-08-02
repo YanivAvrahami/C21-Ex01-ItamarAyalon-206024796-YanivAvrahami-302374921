@@ -59,16 +59,16 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 40);
+            this.label3.Location = new System.Drawing.Point(4, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 38);
+            this.label3.Size = new System.Drawing.Size(103, 58);
             this.label3.TabIndex = 0;
             this.label3.Text = "Create Date";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBoxCover
             // 
-            this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxCover.Location = new System.Drawing.Point(242, 50);
             this.pictureBoxCover.Name = "pictureBoxCover";
             this.pictureBoxCover.Size = new System.Drawing.Size(326, 255);
@@ -82,9 +82,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCreateDate.AutoSize = true;
-            this.labelCreateDate.Location = new System.Drawing.Point(114, 40);
+            this.labelCreateDate.Location = new System.Drawing.Point(114, 60);
             this.labelCreateDate.Name = "labelCreateDate";
-            this.labelCreateDate.Size = new System.Drawing.Size(153, 38);
+            this.labelCreateDate.Size = new System.Drawing.Size(153, 58);
             this.labelCreateDate.TabIndex = 0;
             this.labelCreateDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -96,14 +96,14 @@ namespace AppUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 38);
+            this.label1.Size = new System.Drawing.Size(103, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelAlbumsCounted
             // 
-            this.labelAlbumsCounted.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelAlbumsCounted.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAlbumsCounted.AutoSize = true;
             this.labelAlbumsCounted.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.labelAlbumsCounted.Location = new System.Drawing.Point(127, 363);
@@ -114,7 +114,7 @@ namespace AppUI
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(12, 363);
@@ -125,7 +125,7 @@ namespace AppUI
             // 
             // btnFetchAlbums
             // 
-            this.btnFetchAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFetchAlbums.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFetchAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchAlbums.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnFetchAlbums.Location = new System.Drawing.Point(57, 30);
@@ -144,7 +144,7 @@ namespace AppUI
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(114, 1);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(153, 38);
+            this.labelName.Size = new System.Drawing.Size(153, 58);
             this.labelName.TabIndex = 0;
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -163,7 +163,7 @@ namespace AppUI
             // 
             // tableLayoutFriends
             // 
-            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutFriends.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutFriends.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutFriends.ColumnCount = 2;
@@ -180,7 +180,7 @@ namespace AppUI
             this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutFriends.Location = new System.Drawing.Point(582, 140);
             this.tableLayoutFriends.Name = "tableLayoutFriends";
-            this.tableLayoutFriends.RowCount = 6;
+            this.tableLayoutFriends.RowCount = 4;
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -196,9 +196,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 79);
+            this.label4.Location = new System.Drawing.Point(4, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 38);
+            this.label4.Size = new System.Drawing.Size(103, 58);
             this.label4.TabIndex = 0;
             this.label4.Text = "Photos";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,9 +209,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 118);
+            this.label5.Location = new System.Drawing.Point(4, 178);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 38);
+            this.label5.Size = new System.Drawing.Size(103, 59);
             this.label5.TabIndex = 0;
             this.label5.Text = "Privacy";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,9 +222,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPhotos.AutoSize = true;
-            this.labelPhotos.Location = new System.Drawing.Point(114, 79);
+            this.labelPhotos.Location = new System.Drawing.Point(114, 119);
             this.labelPhotos.Name = "labelPhotos";
-            this.labelPhotos.Size = new System.Drawing.Size(153, 38);
+            this.labelPhotos.Size = new System.Drawing.Size(153, 58);
             this.labelPhotos.TabIndex = 0;
             this.labelPhotos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -234,15 +234,15 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivacy.AutoSize = true;
-            this.labelPrivacy.Location = new System.Drawing.Point(114, 118);
+            this.labelPrivacy.Location = new System.Drawing.Point(114, 178);
             this.labelPrivacy.Name = "labelPrivacy";
-            this.labelPrivacy.Size = new System.Drawing.Size(153, 38);
+            this.labelPrivacy.Size = new System.Drawing.Size(153, 59);
             this.labelPrivacy.TabIndex = 0;
             this.labelPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnFetchAlbums);
             this.groupBox1.Location = new System.Drawing.Point(583, 44);
@@ -253,7 +253,7 @@ namespace AppUI
             // 
             // listBoxAlbums
             // 
-            this.listBoxAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listBoxAlbums.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxAlbums.BackColor = System.Drawing.Color.White;
             this.listBoxAlbums.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxAlbums.FormattingEnabled = true;
@@ -266,7 +266,7 @@ namespace AppUI
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btnOpenAlbum);
             this.groupBox2.Location = new System.Drawing.Point(242, 305);
@@ -277,7 +277,7 @@ namespace AppUI
             // 
             // btnOpenAlbum
             // 
-            this.btnOpenAlbum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnOpenAlbum.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOpenAlbum.Enabled = false;
             this.btnOpenAlbum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenAlbum.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
