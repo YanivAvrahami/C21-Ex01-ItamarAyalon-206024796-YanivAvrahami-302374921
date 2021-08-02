@@ -32,14 +32,15 @@ namespace AppUI.Forms
                 return;
             }
 
-            Group chosenGroup = m_Groups[listBoxGroups.SelectedIndex];
+            Group currentGroup = m_Groups[listBoxGroups.SelectedIndex];
 
-            User owner = chosenGroup.Owner;
-            if (owner != null)
-            {
-                labelGroupOwner.Text = chosenGroup.Owner.Name;
-            }
-            labelGroupDescription.Text = chosenGroup.Description;
+            pictureBoxGroups.Image = currentGroup.ImageLarge;
+            labelGroupDescription.Text = currentGroup.Description;
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void listBoxPosts_SelectedIndexChanged(object sender, EventArgs e)
