@@ -31,9 +31,19 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.checkBoxRememberMe = new System.Windows.Forms.CheckBox();
             this.labelUserName = new System.Windows.Forms.Label();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnAlbums = new System.Windows.Forms.Button();
+            this.btnPostsCounter = new System.Windows.Forms.Button();
+            this.btnLikeRated = new System.Windows.Forms.Button();
+            this.btnGroups = new System.Windows.Forms.Button();
+            this.btnPosts = new System.Windows.Forms.Button();
             this.selectionBar = new System.Windows.Forms.Panel();
+            this.btnFriends = new System.Windows.Forms.Button();
+            this.btnEvents = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
             this.labelProfileFirstName = new System.Windows.Forms.Label();
             this.labelProfileLastName = new System.Windows.Forms.Label();
@@ -51,21 +61,11 @@
             this.labelProfileStatus = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.btnAlbums = new System.Windows.Forms.Button();
-            this.btnLikeRated = new System.Windows.Forms.Button();
-            this.btnGroups = new System.Windows.Forms.Button();
-            this.btnPosts = new System.Windows.Forms.Button();
-            this.btnFriends = new System.Windows.Forms.Button();
-            this.btnEvents = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnPostsCounter = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -89,7 +89,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1298, 43);
+            this.panelMenu.Size = new System.Drawing.Size(1292, 43);
             this.panelMenu.TabIndex = 53;
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             this.panelMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseMove);
@@ -119,6 +119,16 @@
             this.labelUserName.Size = new System.Drawing.Size(0, 16);
             this.labelUserName.TabIndex = 59;
             // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.Image = global::AppUI.Properties.Resources.icons8_name_25;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(10, 9);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(26, 25);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 54;
+            this.pictureBoxProfile.TabStop = false;
+            // 
             // btnMinimize
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -127,7 +137,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnMinimize.Location = new System.Drawing.Point(1228, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1222, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 30);
             this.btnMinimize.TabIndex = 58;
@@ -145,7 +155,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnExit.Location = new System.Drawing.Point(1266, 0);
+            this.btnExit.Location = new System.Drawing.Point(1260, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(32, 30);
             this.btnExit.TabIndex = 57;
@@ -154,6 +164,106 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnAlbums
+            // 
+            this.btnAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlbums.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlbums.FlatAppearance.BorderSize = 0;
+            this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlbums.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_cat_profile_25;
+            this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlbums.Location = new System.Drawing.Point(709, 0);
+            this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAlbums.Name = "btnAlbums";
+            this.btnAlbums.Size = new System.Drawing.Size(106, 43);
+            this.btnAlbums.TabIndex = 56;
+            this.btnAlbums.Text = "Albums";
+            this.btnAlbums.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlbums.UseVisualStyleBackColor = false;
+            this.btnAlbums.Click += new System.EventHandler(this.btnAlbums_Click);
+            // 
+            // btnPostsCounter
+            // 
+            this.btnPostsCounter.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPostsCounter.BackColor = System.Drawing.Color.Transparent;
+            this.btnPostsCounter.FlatAppearance.BorderSize = 0;
+            this.btnPostsCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPostsCounter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPostsCounter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnPostsCounter.Image = global::AppUI.Properties.Resources.icons8_star_26;
+            this.btnPostsCounter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPostsCounter.Location = new System.Drawing.Point(1046, 0);
+            this.btnPostsCounter.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPostsCounter.Name = "btnPostsCounter";
+            this.btnPostsCounter.Size = new System.Drawing.Size(143, 43);
+            this.btnPostsCounter.TabIndex = 56;
+            this.btnPostsCounter.Text = "Posts Counter";
+            this.btnPostsCounter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPostsCounter.UseVisualStyleBackColor = false;
+            this.btnPostsCounter.Click += new System.EventHandler(this.btnPostsCounter_Click);
+            // 
+            // btnLikeRated
+            // 
+            this.btnLikeRated.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLikeRated.BackColor = System.Drawing.Color.Transparent;
+            this.btnLikeRated.FlatAppearance.BorderSize = 0;
+            this.btnLikeRated.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLikeRated.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLikeRated.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnLikeRated.Image = global::AppUI.Properties.Resources.icons8_star_26;
+            this.btnLikeRated.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLikeRated.Location = new System.Drawing.Point(920, 0);
+            this.btnLikeRated.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLikeRated.Name = "btnLikeRated";
+            this.btnLikeRated.Size = new System.Drawing.Size(126, 43);
+            this.btnLikeRated.TabIndex = 56;
+            this.btnLikeRated.Text = "Like Rated";
+            this.btnLikeRated.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLikeRated.UseVisualStyleBackColor = false;
+            this.btnLikeRated.Click += new System.EventHandler(this.btnLikeRated_Click);
+            // 
+            // btnGroups
+            // 
+            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGroups.BackColor = System.Drawing.Color.Transparent;
+            this.btnGroups.FlatAppearance.BorderSize = 0;
+            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnGroups.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGroups.Location = new System.Drawing.Point(815, 0);
+            this.btnGroups.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGroups.Name = "btnGroups";
+            this.btnGroups.Size = new System.Drawing.Size(105, 43);
+            this.btnGroups.TabIndex = 56;
+            this.btnGroups.Text = "Groups";
+            this.btnGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGroups.UseVisualStyleBackColor = false;
+            this.btnGroups.Click += new System.EventHandler(this.btnGroups_Click);
+            // 
+            // btnPosts
+            // 
+            this.btnPosts.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPosts.BackColor = System.Drawing.Color.Transparent;
+            this.btnPosts.FlatAppearance.BorderSize = 0;
+            this.btnPosts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPosts.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPosts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnPosts.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
+            this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPosts.Location = new System.Drawing.Point(630, 0);
+            this.btnPosts.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPosts.Name = "btnPosts";
+            this.btnPosts.Size = new System.Drawing.Size(79, 43);
+            this.btnPosts.TabIndex = 56;
+            this.btnPosts.Text = " Posts";
+            this.btnPosts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPosts.UseVisualStyleBackColor = false;
+            this.btnPosts.Click += new System.EventHandler(this.btnPosts_Click);
+            // 
             // selectionBar
             // 
             this.selectionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(242)))));
@@ -161,6 +271,86 @@
             this.selectionBar.Name = "selectionBar";
             this.selectionBar.Size = new System.Drawing.Size(82, 5);
             this.selectionBar.TabIndex = 54;
+            // 
+            // btnFriends
+            // 
+            this.btnFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFriends.BackColor = System.Drawing.Color.Transparent;
+            this.btnFriends.FlatAppearance.BorderSize = 0;
+            this.btnFriends.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFriends.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFriends.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnFriends.Image = global::AppUI.Properties.Resources.icons8_group_25_2;
+            this.btnFriends.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFriends.Location = new System.Drawing.Point(534, 0);
+            this.btnFriends.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFriends.Name = "btnFriends";
+            this.btnFriends.Size = new System.Drawing.Size(96, 43);
+            this.btnFriends.TabIndex = 4;
+            this.btnFriends.Text = " Friends";
+            this.btnFriends.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFriends.UseVisualStyleBackColor = false;
+            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
+            // 
+            // btnEvents
+            // 
+            this.btnEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEvents.BackColor = System.Drawing.Color.Transparent;
+            this.btnEvents.FlatAppearance.BorderSize = 0;
+            this.btnEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvents.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnEvents.Image = global::AppUI.Properties.Resources.icons8_event_25;
+            this.btnEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEvents.Location = new System.Drawing.Point(438, 0);
+            this.btnEvents.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEvents.Name = "btnEvents";
+            this.btnEvents.Size = new System.Drawing.Size(96, 43);
+            this.btnEvents.TabIndex = 3;
+            this.btnEvents.Text = " Events";
+            this.btnEvents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEvents.UseVisualStyleBackColor = false;
+            this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnLogout.Image = global::AppUI.Properties.Resources.icons8_logout_rounded_left_25_3;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(342, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(96, 43);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+            this.btnLogin.Image = global::AppUI.Properties.Resources.icons8_login_25_5;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(260, 0);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(82, 43);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tableLayoutFriends
             // 
@@ -380,10 +570,11 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBoxProfilePicture);
             this.panel1.Controls.Add(this.tableLayoutFriends);
-            this.panel1.Location = new System.Drawing.Point(51, 75);
+            this.panel1.Location = new System.Drawing.Point(124, 75);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1045, 438);
             this.panel1.TabIndex = 62;
@@ -398,202 +589,12 @@
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
             // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.Image = global::AppUI.Properties.Resources.icons8_name_25;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(10, 9);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(26, 25);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 54;
-            this.pictureBoxProfile.TabStop = false;
-            // 
-            // btnAlbums
-            // 
-            this.btnAlbums.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAlbums.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlbums.FlatAppearance.BorderSize = 0;
-            this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlbums.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnAlbums.Image = global::AppUI.Properties.Resources.icons8_cat_profile_25;
-            this.btnAlbums.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlbums.Location = new System.Drawing.Point(712, 0);
-            this.btnAlbums.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAlbums.Name = "btnAlbums";
-            this.btnAlbums.Size = new System.Drawing.Size(106, 43);
-            this.btnAlbums.TabIndex = 56;
-            this.btnAlbums.Text = "Albums";
-            this.btnAlbums.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlbums.UseVisualStyleBackColor = false;
-            this.btnAlbums.Click += new System.EventHandler(this.btnAlbums_Click);
-            // 
-            // btnLikeRated
-            // 
-            this.btnLikeRated.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLikeRated.BackColor = System.Drawing.Color.Transparent;
-            this.btnLikeRated.FlatAppearance.BorderSize = 0;
-            this.btnLikeRated.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLikeRated.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLikeRated.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnLikeRated.Image = global::AppUI.Properties.Resources.icons8_star_26;
-            this.btnLikeRated.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLikeRated.Location = new System.Drawing.Point(923, 0);
-            this.btnLikeRated.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLikeRated.Name = "btnLikeRated";
-            this.btnLikeRated.Size = new System.Drawing.Size(126, 43);
-            this.btnLikeRated.TabIndex = 56;
-            this.btnLikeRated.Text = "Like Rated";
-            this.btnLikeRated.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLikeRated.UseVisualStyleBackColor = false;
-            this.btnLikeRated.Click += new System.EventHandler(this.btnLikeRated_Click);
-            // 
-            // btnGroups
-            // 
-            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGroups.BackColor = System.Drawing.Color.Transparent;
-            this.btnGroups.FlatAppearance.BorderSize = 0;
-            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGroups.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnGroups.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
-            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGroups.Location = new System.Drawing.Point(818, 0);
-            this.btnGroups.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGroups.Name = "btnGroups";
-            this.btnGroups.Size = new System.Drawing.Size(105, 43);
-            this.btnGroups.TabIndex = 56;
-            this.btnGroups.Text = "Groups";
-            this.btnGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGroups.UseVisualStyleBackColor = false;
-            this.btnGroups.Click += new System.EventHandler(this.btnGroups_Click);
-            // 
-            // btnPosts
-            // 
-            this.btnPosts.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPosts.BackColor = System.Drawing.Color.Transparent;
-            this.btnPosts.FlatAppearance.BorderSize = 0;
-            this.btnPosts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPosts.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPosts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnPosts.Image = global::AppUI.Properties.Resources.icons8_sent_25_3;
-            this.btnPosts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPosts.Location = new System.Drawing.Point(633, 0);
-            this.btnPosts.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPosts.Name = "btnPosts";
-            this.btnPosts.Size = new System.Drawing.Size(79, 43);
-            this.btnPosts.TabIndex = 56;
-            this.btnPosts.Text = " Posts";
-            this.btnPosts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPosts.UseVisualStyleBackColor = false;
-            this.btnPosts.Click += new System.EventHandler(this.btnPosts_Click);
-            // 
-            // btnFriends
-            // 
-            this.btnFriends.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFriends.BackColor = System.Drawing.Color.Transparent;
-            this.btnFriends.FlatAppearance.BorderSize = 0;
-            this.btnFriends.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFriends.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFriends.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnFriends.Image = global::AppUI.Properties.Resources.icons8_group_25_2;
-            this.btnFriends.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFriends.Location = new System.Drawing.Point(537, 0);
-            this.btnFriends.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFriends.Name = "btnFriends";
-            this.btnFriends.Size = new System.Drawing.Size(96, 43);
-            this.btnFriends.TabIndex = 4;
-            this.btnFriends.Text = " Friends";
-            this.btnFriends.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFriends.UseVisualStyleBackColor = false;
-            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
-            // 
-            // btnEvents
-            // 
-            this.btnEvents.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEvents.BackColor = System.Drawing.Color.Transparent;
-            this.btnEvents.FlatAppearance.BorderSize = 0;
-            this.btnEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEvents.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEvents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnEvents.Image = global::AppUI.Properties.Resources.icons8_event_25;
-            this.btnEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEvents.Location = new System.Drawing.Point(441, 0);
-            this.btnEvents.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEvents.Name = "btnEvents";
-            this.btnEvents.Size = new System.Drawing.Size(96, 43);
-            this.btnEvents.TabIndex = 3;
-            this.btnEvents.Text = " Events";
-            this.btnEvents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEvents.UseVisualStyleBackColor = false;
-            this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnLogout.Image = global::AppUI.Properties.Resources.icons8_logout_rounded_left_25_3;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(345, 0);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(96, 43);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnLogin.Image = global::AppUI.Properties.Resources.icons8_login_25_5;
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(263, 0);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(82, 43);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnPostsCounter
-            // 
-            this.btnPostsCounter.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPostsCounter.BackColor = System.Drawing.Color.Transparent;
-            this.btnPostsCounter.FlatAppearance.BorderSize = 0;
-            this.btnPostsCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPostsCounter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPostsCounter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-            this.btnPostsCounter.Image = global::AppUI.Properties.Resources.icons8_star_26;
-            this.btnPostsCounter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPostsCounter.Location = new System.Drawing.Point(1049, 0);
-            this.btnPostsCounter.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPostsCounter.Name = "btnPostsCounter";
-            this.btnPostsCounter.Size = new System.Drawing.Size(143, 43);
-            this.btnPostsCounter.TabIndex = 56;
-            this.btnPostsCounter.Text = "Posts Counter";
-            this.btnPostsCounter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPostsCounter.UseVisualStyleBackColor = false;
-            this.btnPostsCounter.Click += new System.EventHandler(this.btnPostsCounter_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1298, 552);
+            this.ClientSize = new System.Drawing.Size(1292, 552);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -602,11 +603,11 @@
             this.Text = "Application";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
