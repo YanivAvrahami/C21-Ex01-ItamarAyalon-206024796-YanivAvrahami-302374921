@@ -251,33 +251,6 @@
     <None Include="Resources\icons8-logout-rounded-left-25-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Features\PostCounter.resx">
-      <DependentUpon>PostCounter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Basic\AlbumForm.resx">
-      <DependentUpon>AlbumForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Basic\AlbumsForm.resx">
-      <DependentUpon>AlbumsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Basic\EventsForm.resx">
-      <DependentUpon>EventsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Basic\FriendsForm.resx">
-      <DependentUpon>FriendsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Basic\GroupsForm.resx">
-      <DependentUpon>GroupsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Basic\PostsForm.resx">
-      <DependentUpon>PostsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Features\LikeRated.resx">
-      <DependentUpon>LikeRated.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
