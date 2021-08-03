@@ -58,8 +58,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelProfileStatus = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
             this.btnLikeRated = new System.Windows.Forms.Button();
+            this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
+            this.btnPostsCounter = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
@@ -528,6 +529,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnPostsCounter);
             this.panel1.Controls.Add(this.btnLikeRated);
             this.panel1.Controls.Add(this.pictureBoxProfilePicture);
             this.panel1.Controls.Add(this.tableLayoutFriends);
@@ -535,6 +537,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1045, 438);
             this.panel1.TabIndex = 62;
+            // 
+            // btnLikeRated
+            // 
+            this.btnLikeRated.Location = new System.Drawing.Point(441, 129);
+            this.btnLikeRated.Name = "btnLikeRated";
+            this.btnLikeRated.Size = new System.Drawing.Size(75, 23);
+            this.btnLikeRated.TabIndex = 62;
+            this.btnLikeRated.Text = "TEST";
+            this.btnLikeRated.UseVisualStyleBackColor = true;
+            this.btnLikeRated.Click += new System.EventHandler(this.btnLikeRated_Click);
             // 
             // pictureBoxProfilePicture
             // 
@@ -546,15 +558,15 @@
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
             // 
-            // btnLikeRated
+            // btnPostsCounter
             // 
-            this.btnLikeRated.Location = new System.Drawing.Point(441, 129);
-            this.btnLikeRated.Name = "btnLikeRated";
-            this.btnLikeRated.Size = new System.Drawing.Size(75, 23);
-            this.btnLikeRated.TabIndex = 62;
-            this.btnLikeRated.Text = "TEST";
-            this.btnLikeRated.UseVisualStyleBackColor = true;
-            this.btnLikeRated.Click += new System.EventHandler(this.btnLikeRated_Click);
+            this.btnPostsCounter.Location = new System.Drawing.Point(441, 173);
+            this.btnPostsCounter.Name = "btnPostsCounter";
+            this.btnPostsCounter.Size = new System.Drawing.Size(75, 23);
+            this.btnPostsCounter.TabIndex = 62;
+            this.btnPostsCounter.Text = "Posts Counter";
+            this.btnPostsCounter.UseVisualStyleBackColor = true;
+            this.btnPostsCounter.Click += new System.EventHandler(this.btnPostsCounter_Click);
             // 
             // FormMain
             // 
@@ -612,6 +624,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelProfileStatus;
         private System.Windows.Forms.Button btnLikeRated;
+        private System.Windows.Forms.Button btnPostsCounter;
     }
 }
 

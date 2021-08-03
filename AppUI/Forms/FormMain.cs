@@ -22,6 +22,7 @@ namespace AppUI
             Albums,
             Groups,
             LikeRated,
+            PostsCounter
         }
 
         public FormMain()
@@ -42,6 +43,7 @@ namespace AppUI
             applicationForms.Add(eFormType.Albums, new AlbumsForm());
             applicationForms.Add(eFormType.Groups, new GroupsForm());
             applicationForms.Add(eFormType.LikeRated, new LikeRated());
+            applicationForms.Add(eFormType.PostsCounter, new PostsCounter());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -202,6 +204,12 @@ namespace AppUI
         {
             SetSelectionBarOnButton((Button)sender);
             applicationForms[eFormType.LikeRated].ShowDialog();
+        }
+
+        private void btnPostsCounter_Click(object sender, EventArgs e)
+        {
+            SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.PostsCounter].ShowDialog();
         }
     }
 }
