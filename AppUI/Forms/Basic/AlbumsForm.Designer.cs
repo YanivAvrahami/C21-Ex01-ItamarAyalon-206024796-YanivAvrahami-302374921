@@ -69,6 +69,7 @@ namespace AppUI
             // pictureBoxCover
             // 
             this.pictureBoxCover.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxCover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxCover.Location = new System.Drawing.Point(242, 50);
             this.pictureBoxCover.Name = "pictureBoxCover";
             this.pictureBoxCover.Size = new System.Drawing.Size(326, 255);

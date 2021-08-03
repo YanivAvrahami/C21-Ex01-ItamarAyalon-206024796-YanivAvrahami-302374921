@@ -13,13 +13,15 @@ namespace AppUI
         private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
         private Dictionary<eFormType, Form> applicationForms = new Dictionary<eFormType, Form>();
 
+
         public enum eFormType
         {
             Events,
             Friends,
             Posts,
             Albums,
-            Groups
+            Groups,
+            LikeRated,
         }
 
         public FormMain()
@@ -39,6 +41,7 @@ namespace AppUI
             applicationForms.Add(eFormType.Posts, new PostsForm());
             applicationForms.Add(eFormType.Albums, new AlbumsForm());
             applicationForms.Add(eFormType.Groups, new GroupsForm());
+            applicationForms.Add(eFormType.LikeRated, new LikeRated());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -193,6 +196,12 @@ namespace AppUI
 
             Properties.Settings.Default.RememberMe = checkBox.Checked;
             Properties.Settings.Default.Save();
+        }
+
+        private void btnLikeRated_Click(object sender, EventArgs e)
+        {
+            SetSelectionBarOnButton((Button)sender);
+            applicationForms[eFormType.LikeRated].ShowDialog();
         }
     }
 }
