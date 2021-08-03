@@ -92,9 +92,9 @@ namespace AppUI
             applicationForms[eFormType.Friends] = new FriendsForm();
             applicationForms[eFormType.Posts] = new PostsForm();
             applicationForms[eFormType.Albums] = new AlbumsForm();
-            applicationForms[eFormType.Albums] = new GroupsForm();
-            applicationForms[eFormType.Albums] = new LikeRated();
-            applicationForms[eFormType.Albums] = new PostCounter();
+            applicationForms[eFormType.Groups] = new GroupsForm();
+            applicationForms[eFormType.LikeRated] = new LikeRated();
+            applicationForms[eFormType.PostCounter] = new PostCounter();
         }
 
         private void setButtons(bool i_IsActive)
@@ -105,6 +105,8 @@ namespace AppUI
             btnAlbums.Enabled = i_IsActive;
             btnGroups.Enabled = i_IsActive;
             btnLogout.Enabled = i_IsActive;
+            btnLikeRated.Enabled = i_IsActive;
+            btnPostsCounter.Enabled = i_IsActive;
             btnLogin.Enabled = !i_IsActive;
         }
 
