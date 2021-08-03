@@ -128,6 +128,12 @@
       <DependentUpon>EventsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\FacebookUserFetcher.cs" />
+    <Compile Include="Forms\Features\PostsAnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Features\PostsAnalyticsForm.designer.cs">
+      <DependentUpon>PostsAnalyticsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     <None Include="Resources\icons8-logout-rounded-left-25-2.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Features\PostsAnalyticsForm.resx">
+      <DependentUpon>PostsAnalyticsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
