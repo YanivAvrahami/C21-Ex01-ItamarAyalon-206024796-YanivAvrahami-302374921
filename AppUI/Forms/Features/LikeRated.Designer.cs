@@ -55,6 +55,11 @@ namespace AppUI
             this.pictureBoxLeastComments = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostLiked)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutFriends.SuspendLayout();
@@ -65,13 +70,14 @@ namespace AppUI
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeastComments)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFetchInfo
             // 
             this.btnFetchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFetchInfo.Location = new System.Drawing.Point(17, 66);
+            this.btnFetchInfo.Location = new System.Drawing.Point(33, 86);
             this.btnFetchInfo.Name = "btnFetchInfo";
             this.btnFetchInfo.Size = new System.Drawing.Size(162, 43);
             this.btnFetchInfo.TabIndex = 65;
@@ -137,7 +143,7 @@ namespace AppUI
             this.tableLayoutFriends.Controls.Add(this.label1, 0, 1);
             this.tableLayoutFriends.Controls.Add(this.label5, 0, 0);
             this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutFriends.Location = new System.Drawing.Point(520, 234);
+            this.tableLayoutFriends.Location = new System.Drawing.Point(520, 324);
             this.tableLayoutFriends.Name = "tableLayoutFriends";
             this.tableLayoutFriends.RowCount = 3;
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -146,7 +152,7 @@ namespace AppUI
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.Size = new System.Drawing.Size(250, 238);
+            this.tableLayoutFriends.Size = new System.Drawing.Size(250, 192);
             this.tableLayoutFriends.TabIndex = 79;
             // 
             // labelTotalPhotos
@@ -157,7 +163,7 @@ namespace AppUI
             this.labelTotalPhotos.AutoSize = true;
             this.labelTotalPhotos.Location = new System.Drawing.Point(117, 1);
             this.labelTotalPhotos.Name = "labelTotalPhotos";
-            this.labelTotalPhotos.Size = new System.Drawing.Size(129, 78);
+            this.labelTotalPhotos.Size = new System.Drawing.Size(129, 62);
             this.labelTotalPhotos.TabIndex = 0;
             this.labelTotalPhotos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -167,9 +173,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAvgLikes.AutoSize = true;
-            this.labelAvgLikes.Location = new System.Drawing.Point(117, 80);
+            this.labelAvgLikes.Location = new System.Drawing.Point(117, 64);
             this.labelAvgLikes.Name = "labelAvgLikes";
-            this.labelAvgLikes.Size = new System.Drawing.Size(129, 78);
+            this.labelAvgLikes.Size = new System.Drawing.Size(129, 62);
             this.labelAvgLikes.TabIndex = 0;
             this.labelAvgLikes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -179,9 +185,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAvgComments.AutoSize = true;
-            this.labelAvgComments.Location = new System.Drawing.Point(117, 159);
+            this.labelAvgComments.Location = new System.Drawing.Point(117, 127);
             this.labelAvgComments.Name = "labelAvgComments";
-            this.labelAvgComments.Size = new System.Drawing.Size(129, 78);
+            this.labelAvgComments.Size = new System.Drawing.Size(129, 64);
             this.labelAvgComments.TabIndex = 0;
             this.labelAvgComments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -191,9 +197,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 159);
+            this.label3.Location = new System.Drawing.Point(4, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 78);
+            this.label3.Size = new System.Drawing.Size(106, 64);
             this.label3.TabIndex = 0;
             this.label3.Text = "Avg Comments";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -204,9 +210,9 @@ namespace AppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 80);
+            this.label1.Location = new System.Drawing.Point(4, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 78);
+            this.label1.Size = new System.Drawing.Size(106, 62);
             this.label1.TabIndex = 0;
             this.label1.Text = "Avg Likes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,7 +225,7 @@ namespace AppUI
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(4, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 78);
+            this.label5.Size = new System.Drawing.Size(106, 62);
             this.label5.TabIndex = 0;
             this.label5.Text = "Total Photos Loaded";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -358,11 +364,11 @@ namespace AppUI
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(9, 16);
+            this.label8.Location = new System.Drawing.Point(4, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(175, 38);
+            this.label8.Size = new System.Drawing.Size(214, 57);
             this.label8.TabIndex = 80;
-            this.label8.Text = "It may take a while\r\nto process the images";
+            this.label8.Text = "It may take a while\r\nto process the images,\r\nand spend a lot of requests";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox5
@@ -370,17 +376,69 @@ namespace AppUI
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.btnFetchInfo);
-            this.groupBox5.Location = new System.Drawing.Point(543, 94);
+            this.groupBox5.Location = new System.Drawing.Point(530, 35);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(197, 116);
+            this.groupBox5.Size = new System.Drawing.Size(223, 138);
             this.groupBox5.TabIndex = 81;
             this.groupBox5.TabStop = false;
+            // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerStart.Location = new System.Drawing.Point(58, 31);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.ShowCheckBox = true;
+            this.dateTimePickerStart.Size = new System.Drawing.Size(162, 27);
+            this.dateTimePickerStart.TabIndex = 82;
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(58, 102);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.ShowCheckBox = true;
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(162, 27);
+            this.dateTimePickerEnd.TabIndex = 82;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(21, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 19);
+            this.label9.TabIndex = 83;
+            this.label9.Text = "From Date:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(21, 80);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 19);
+            this.label10.TabIndex = 83;
+            this.label10.Text = "Until Date:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.dateTimePickerEnd);
+            this.panel1.Controls.Add(this.dateTimePickerStart);
+            this.panel1.Location = new System.Drawing.Point(520, 179);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 139);
+            this.panel1.TabIndex = 85;
             // 
             // LikeRated
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 523);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.tableLayoutFriends);
             this.Controls.Add(this.groupBox4);
@@ -405,6 +463,8 @@ namespace AppUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeastComments)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -437,5 +497,10 @@ namespace AppUI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel1;
     }
 }

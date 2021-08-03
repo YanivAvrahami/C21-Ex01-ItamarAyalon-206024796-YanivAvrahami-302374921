@@ -1,23 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class PostsCounter : Form
+    public partial class PostCounter : Form
     {
         private string[] months =
             {"Jan", "Feb", "Mar", "Apr",
             "May", "Jun", "Jul", "Aug",
             "Sep", "Oct", "Nov", "Dec"};
 
-        private void chart1_Click(object sender, EventArgs e)
+        public PostCounter()
         {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            InitializeComponent();
         }
 
         private void btnLoadMostLikedPosts_Click(object sender, EventArgs e)
