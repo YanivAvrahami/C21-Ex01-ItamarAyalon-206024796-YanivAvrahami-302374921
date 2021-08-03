@@ -197,7 +197,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\icons8-star-26.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-logout-rounded-left-25.png" />
     <None Include="Resources\icons8-login-25-5.png" />
@@ -251,6 +253,12 @@
     <None Include="Resources\icons8-logout-rounded-left-25-2.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Features\PostCounter.resx">
+      <DependentUpon>PostCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

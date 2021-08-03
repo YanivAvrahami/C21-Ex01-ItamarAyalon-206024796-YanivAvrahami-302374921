@@ -29,12 +29,13 @@ namespace AppUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label9 = new System.Windows.Forms.Label();
             this.btnLoadMostLikedPosts = new System.Windows.Forms.Button();
             this.chartPostsCounter = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartPostsCounter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace AppUI
             this.btnLoadMostLikedPosts.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLoadMostLikedPosts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadMostLikedPosts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLoadMostLikedPosts.Location = new System.Drawing.Point(293, 320);
+            this.btnLoadMostLikedPosts.Location = new System.Drawing.Point(293, 296);
             this.btnLoadMostLikedPosts.Name = "btnLoadMostLikedPosts";
             this.btnLoadMostLikedPosts.Size = new System.Drawing.Size(189, 43);
             this.btnLoadMostLikedPosts.TabIndex = 74;
@@ -68,27 +69,44 @@ namespace AppUI
             this.chartPostsCounter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chartPostsCounter.BackColor = System.Drawing.Color.LightGray;
             this.chartPostsCounter.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea1.Name = "ChartArea1";
-            this.chartPostsCounter.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartPostsCounter.Legends.Add(legend1);
-            this.chartPostsCounter.Location = new System.Drawing.Point(48, 100);
+            chartArea4.AxisX.Interval = 1D;
+            chartArea4.AxisX.LabelAutoFitMinFontSize = 8;
+            chartArea4.AxisX.LabelStyle.Interval = 1D;
+            chartArea4.AxisX.MaximumAutoSize = 100F;
+            chartArea4.Name = "ChartArea1";
+            this.chartPostsCounter.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartPostsCounter.Legends.Add(legend4);
+            this.chartPostsCounter.Location = new System.Drawing.Point(48, 75);
             this.chartPostsCounter.Name = "chartPostsCounter";
-            series1.ChartArea = "ChartArea1";
-            series1.IsXValueIndexed = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Posts";
-            series1.YValuesPerPoint = 2;
-            this.chartPostsCounter.Series.Add(series1);
-            this.chartPostsCounter.Size = new System.Drawing.Size(699, 211);
+            series4.ChartArea = "ChartArea1";
+            series4.CustomProperties = "PointWidth=0.4";
+            series4.IsXValueIndexed = true;
+            series4.Legend = "Legend1";
+            series4.Name = "Posts";
+            series4.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series4.YValuesPerPoint = 3;
+            this.chartPostsCounter.Series.Add(series4);
+            this.chartPostsCounter.Size = new System.Drawing.Size(698, 211);
             this.chartPostsCounter.TabIndex = 73;
             this.chartPostsCounter.Text = "chart1";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(344, 13);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "*This graph shows the total number of posts that was made each month";
             // 
             // PostCounter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 381);
+            this.ClientSize = new System.Drawing.Size(795, 347);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnLoadMostLikedPosts);
             this.Controls.Add(this.chartPostsCounter);
@@ -105,5 +123,6 @@ namespace AppUI
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnLoadMostLikedPosts;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPostsCounter;
+        private System.Windows.Forms.Label label1;
     }
 }

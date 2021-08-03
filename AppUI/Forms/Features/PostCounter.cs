@@ -1,41 +1,53 @@
-﻿using System;
+﻿using FacebookWrapper.ObjectModel;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppUI
 {
     public partial class PostCounter : Form
     {
-        private string[] months =
-            {"Jan", "Feb", "Mar", "Apr",
-            "May", "Jun", "Jul", "Aug",
-            "Sep", "Oct", "Nov", "Dec"};
+        private List<string> months = new List<string>(12);
+        private int[] postCountByMonth = new int[12];
 
         public PostCounter()
         {
             InitializeComponent();
+
+            months.Add("Jan");
+            months.Add("Feb");
+            months.Add("Mar");
+            months.Add("Apr");
+            months.Add("May");
+            months.Add("Jun");
+            months.Add("Jul");
+            months.Add("Aug");
+            months.Add("Sep");
+            months.Add("Oct");
+            months.Add("Nov");
+            months.Add("Dec");
         }
 
         private void btnLoadMostLikedPosts_Click(object sender, EventArgs e)
         {
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[0], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[1], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[2], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[3], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[4], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[5], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[6], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[7], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[8], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[9], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[10], 33);
-            chartPostsCounter.Series["Posts"].Points.AddXY(months[11], 33);
+            postCountByMonth = getPostsNumInEachMonth();
+
+            for (int i = 0; i < 12; i++)
+            {
+                chartPostsCounter.Series["Posts"].Points.AddXY(months[i], postCountByMonth[i]);
+            }
+        }
+
+        private int[] getPostsNumInEachMonth() 
+        {
+            int[] counter = new int[12];
+
+            foreach (Post post in FacebookUserFetcher.sr_Instance.FetchPosts())
+            {
+                counter[post.CreatedTime.Value.Month - 1]++;
+            }
+
+            return counter;
         }
     }
 }
