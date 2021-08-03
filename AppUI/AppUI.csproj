@@ -253,6 +253,9 @@
     <None Include="Resources\icons8-logout-rounded-left-25-2.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Features\LikeRated.resx">
+      <DependentUpon>LikeRated.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Features\PostCounter.resx">
       <DependentUpon>PostCounter.cs</DependentUpon>
     </EmbeddedResource>

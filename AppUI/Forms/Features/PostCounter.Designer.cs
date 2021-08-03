@@ -29,9 +29,9 @@ namespace AppUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label9 = new System.Windows.Forms.Label();
             this.btnLoadMostLikedPosts = new System.Windows.Forms.Button();
             this.chartPostsCounter = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -69,24 +69,27 @@ namespace AppUI
             this.chartPostsCounter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chartPostsCounter.BackColor = System.Drawing.Color.LightGray;
             this.chartPostsCounter.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea4.AxisX.Interval = 1D;
-            chartArea4.AxisX.LabelAutoFitMinFontSize = 8;
-            chartArea4.AxisX.LabelStyle.Interval = 1D;
-            chartArea4.AxisX.MaximumAutoSize = 100F;
-            chartArea4.Name = "ChartArea1";
-            this.chartPostsCounter.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartPostsCounter.Legends.Add(legend4);
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.LabelAutoFitMinFontSize = 8;
+            chartArea1.AxisX.LabelStyle.Interval = 1D;
+            chartArea1.AxisX.MaximumAutoSize = 100F;
+            chartArea1.AxisX2.LabelAutoFitMinFontSize = 8;
+            chartArea1.AxisY.LabelAutoFitMinFontSize = 8;
+            chartArea1.AxisY2.LabelAutoFitMinFontSize = 8;
+            chartArea1.Name = "ChartArea1";
+            this.chartPostsCounter.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartPostsCounter.Legends.Add(legend1);
             this.chartPostsCounter.Location = new System.Drawing.Point(48, 75);
             this.chartPostsCounter.Name = "chartPostsCounter";
-            series4.ChartArea = "ChartArea1";
-            series4.CustomProperties = "PointWidth=0.4";
-            series4.IsXValueIndexed = true;
-            series4.Legend = "Legend1";
-            series4.Name = "Posts";
-            series4.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series4.YValuesPerPoint = 3;
-            this.chartPostsCounter.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.CustomProperties = "PointWidth=0.4";
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Posts";
+            series1.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series1.YValuesPerPoint = 3;
+            this.chartPostsCounter.Series.Add(series1);
             this.chartPostsCounter.Size = new System.Drawing.Size(698, 211);
             this.chartPostsCounter.TabIndex = 73;
             this.chartPostsCounter.Text = "chart1";
@@ -111,6 +114,7 @@ namespace AppUI
             this.Controls.Add(this.btnLoadMostLikedPosts);
             this.Controls.Add(this.chartPostsCounter);
             this.Name = "PostCounter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PostCounter";
             ((System.ComponentModel.ISupportInitialize)(this.chartPostsCounter)).EndInit();
             this.ResumeLayout(false);
