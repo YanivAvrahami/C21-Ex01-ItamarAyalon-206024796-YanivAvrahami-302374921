@@ -49,11 +49,18 @@ namespace AppUI
             Photo leastComments = m_Photos[0];
             int totalLikes = 0;
             int totalComments = 0;
+            int total = 0;
 
             foreach (Photo currentPhoto in m_Photos)
             {
+                if (!isDateInRange(currentPhoto.CreatedTime))
+                {
+                    continue;
+                }
+
                 totalLikes += currentPhoto.LikedBy.Count;
                 totalComments += currentPhoto.Comments.Count;
+                total++;
 
                 if (mostLiked.LikedBy.Count < currentPhoto.LikedBy.Count)
                 {
@@ -78,9 +85,31 @@ namespace AppUI
 
             displayPictures(mostLiked, leastLiked, mostComments, leastComments);
 
-            labelTotalPhotos.Text = m_Photos.Count.ToString();
-            labelAvgLikes.Text = (totalLikes / (float)m_Photos.Count).ToString();
-            labelAvgComments.Text = (totalComments / (float)m_Photos.Count).ToString();
+            labelTotalPhotos.Text = total.ToString();
+            labelAvgLikes.Text = (totalLikes / (float)total).ToString();
+            labelAvgComments.Text = (totalComments / (float)total).ToString();
+        }
+
+        private bool isDateInRange(DateTime? i_PhotoCreatedTime)
+        {
+            if (!i_PhotoCreatedTime.HasValue)
+            {
+                return false;
+            }
+
+            if (dateTimePickerStart.Checked &&
+                i_PhotoCreatedTime < dateTimePickerStart.Value)
+            {
+                return false;
+            }
+
+            if (dateTimePickerEnd.Checked &&
+                i_PhotoCreatedTime > dateTimePickerEnd.Value)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private void displayPictures(Photo i_MostLiked, Photo i_LeastLiked, Photo i_MostComments, Photo i_LeastComments)
