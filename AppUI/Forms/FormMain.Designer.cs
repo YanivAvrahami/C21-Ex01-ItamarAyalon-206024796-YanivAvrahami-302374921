@@ -59,6 +59,7 @@
             this.labelProfileStatus = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxProfilePicture = new System.Windows.Forms.PictureBox();
+            this.btnLikeRated = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
@@ -527,6 +528,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnLikeRated);
             this.panel1.Controls.Add(this.pictureBoxProfilePicture);
             this.panel1.Controls.Add(this.tableLayoutFriends);
             this.panel1.Location = new System.Drawing.Point(51, 75);
@@ -543,6 +545,16 @@
             this.pictureBoxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
+            // 
+            // btnLikeRated
+            // 
+            this.btnLikeRated.Location = new System.Drawing.Point(441, 129);
+            this.btnLikeRated.Name = "btnLikeRated";
+            this.btnLikeRated.Size = new System.Drawing.Size(75, 23);
+            this.btnLikeRated.TabIndex = 62;
+            this.btnLikeRated.Text = "TEST";
+            this.btnLikeRated.UseVisualStyleBackColor = true;
+            this.btnLikeRated.Click += new System.EventHandler(this.btnLikeRated_Click);
             // 
             // FormMain
             // 
@@ -599,6 +611,7 @@
         private System.Windows.Forms.CheckBox checkBoxRememberMe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelProfileStatus;
+        private System.Windows.Forms.Button btnLikeRated;
     }
 }
 
