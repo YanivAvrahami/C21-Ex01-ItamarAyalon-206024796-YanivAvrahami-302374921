@@ -60,7 +60,6 @@ namespace UI
             // 
             this.textBoxEventDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxEventDesc.BackColor = System.Drawing.Color.White;
-            this.textBoxEventDesc.Enabled = false;
             this.textBoxEventDesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEventDesc.Location = new System.Drawing.Point(241, 261);
             this.textBoxEventDesc.Multiline = true;
