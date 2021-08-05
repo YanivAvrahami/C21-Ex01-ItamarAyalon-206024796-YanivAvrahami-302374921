@@ -16,6 +16,7 @@ namespace AppUI
         private int[] NumPostsByMonthCount { get; set; }
         private int SelectedYear { get; set; }
         private int SelectedMonth { get; set; }
+        private bool IsYearOnly { get; set; }
         private readonly int k_NumOfMonthInYear = 12;
 
         public postsCounterForm()
@@ -60,17 +61,22 @@ namespace AppUI
 
         private void monthComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedMonth = (int)monthComboBox.SelectedItem;
-
             List<Post> CurrentPostsByYear = UserPosts.Where(post => post.CreatedTime.Value.Year == SelectedYear).ToList();
 
             NumPostsByMonthCount = new int[k_NumOfMonthInYear];
-            //for (int i = 0; i < k_NumOfMonthInYear; i++)
-            //{
-            //    NumPostsByMonthCount[i] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == i).ToList().Count;
-            //}
 
-            NumPostsByMonthCount[SelectedMonth] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
+            if (IsYearOnly)
+            {
+                for (int i = 0; i < k_NumOfMonthInYear; i++)
+                {
+                    NumPostsByMonthCount[i] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == i).ToList().Count;
+                }
+            }
+            else 
+            {
+                SelectedMonth = (int)monthComboBox.SelectedItem;
+                NumPostsByMonthCount[SelectedMonth] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
+            }
         }
 
         private void initializeMonthStrings()
@@ -87,6 +93,12 @@ namespace AppUI
             MonthStrings.Add("Oct");
             MonthStrings.Add("Nov");
             MonthStrings.Add("Dec");
+        }
+
+        private void yearOnlyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            IsYearOnly = yearOnlyCheckBox.Checked;
+            monthComboBox.Enabled = !IsYearOnly;
         }
     }
 }
