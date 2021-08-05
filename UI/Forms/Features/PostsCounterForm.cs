@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
 using System.Collections.ObjectModel;
+using Logic;
 
 namespace UI
 {

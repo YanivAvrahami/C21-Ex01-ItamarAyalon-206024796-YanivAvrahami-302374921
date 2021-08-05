@@ -5,6 +5,7 @@ using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using System.Collections.Generic;
 using UI.Forms;
+using Logic;
 
 namespace UI
 {

@@ -2,9 +2,9 @@
 using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 
-namespace UI
+namespace Logic
 {
-    internal class FacebookUserFetcher
+    public class FacebookUserFetcher
     {
         public static readonly FacebookUserFetcher sr_Instance = new FacebookUserFetcher();
 
@@ -34,6 +34,7 @@ namespace UI
 
             Properties.Settings.Default.Token = loginResult.AccessToken;
             Properties.Settings.Default.Save();
+            
 
             return loginResult;
         }
@@ -115,7 +116,7 @@ namespace UI
             return groups;
         }
 
-        internal List<Album> FetchAlbums()
+        public List<Album> FetchAlbums()
         {
             List<Album> albums = new List<Album>(User.Albums.Count);
 
@@ -127,7 +128,7 @@ namespace UI
             return albums;
         }
 
-        internal List<Photo> FetchPhotos(Album i_Album)
+        public List<Photo> FetchPhotos(Album i_Album)
         {
             int albumIdx = User.Albums.IndexOf(i_Album);
             if (albumIdx == -1)

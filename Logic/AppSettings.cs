@@ -1,4 +1,4 @@
-﻿namespace UI
+﻿namespace Logic
 {
     public class AppSettings
     {
