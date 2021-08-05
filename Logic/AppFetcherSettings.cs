@@ -1,13 +1,11 @@
 ﻿namespace Logic
 {
-    public class AppSettings
+    internal class AppFetcherSettings
     {
-        public static AppSettings Instance = new AppSettings();
-
         public string AppID => "644877859803597";
         public string[] PermissionsToRequest { get; set; }
 
-        private AppSettings()
+        public AppFetcherSettings()
         {
             PermissionsToRequest = new string[] {
                 // Home Profile

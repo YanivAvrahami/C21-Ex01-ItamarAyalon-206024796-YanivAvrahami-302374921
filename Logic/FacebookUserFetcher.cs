@@ -12,8 +12,11 @@ namespace Logic
 
         public bool IsLoggedIn => User != null;
 
+        private AppFetcherSettings m_AppSettings;
+
         private FacebookUserFetcher()
         {
+            m_AppSettings = new AppFetcherSettings();
         }
 
         public LoginResult Login()
@@ -24,7 +27,7 @@ namespace Logic
 
             if (loginResult == null)
             {
-                loginResult = FacebookService.Login(AppSettings.Instance.AppID, AppSettings.Instance.PermissionsToRequest);
+                loginResult = FacebookService.Login(m_AppSettings.AppID, m_AppSettings.PermissionsToRequest);
             }
 
             if (!string.IsNullOrEmpty(loginResult.AccessToken))
