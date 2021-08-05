@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI
 {
-    partial class EventsForm
+    partial class eventsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -348,7 +348,7 @@ namespace AppUI
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
             // 
-            // EventsForm
+            // eventsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -362,7 +362,7 @@ namespace AppUI
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxEvents);
             this.Controls.Add(this.tableLayoutFriends);
-            this.Name = "EventsForm";
+            this.Name = "eventsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Events";
             this.tableLayoutFriends.ResumeLayout(false);

@@ -8,7 +8,7 @@ using AppUI.Forms;
 
 namespace AppUI
 {
-    public partial class FormMain : Form
+    public partial class mainForm : Form
     {
         private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
         private Dictionary<eFormType, Form> applicationForms = new Dictionary<eFormType, Form>();
@@ -25,7 +25,7 @@ namespace AppUI
             PostCounter
         }
 
-        public FormMain()
+        public mainForm()
         {
             InitializeComponent();
             initForms();
@@ -37,13 +37,13 @@ namespace AppUI
 
         private void initForms()
         {
-            applicationForms.Add(eFormType.Events, new EventsForm());
-            applicationForms.Add(eFormType.Friends, new FriendsForm());
-            applicationForms.Add(eFormType.Posts, new PostsForm());
-            applicationForms.Add(eFormType.Albums, new AlbumsForm());
-            applicationForms.Add(eFormType.Groups, new GroupsForm());
-            applicationForms.Add(eFormType.LikeRated, new LikeRated());
-            applicationForms.Add(eFormType.PostCounter, new PostCounter());
+            applicationForms.Add(eFormType.Events, new eventsForm());
+            applicationForms.Add(eFormType.Friends, new friendsForm());
+            applicationForms.Add(eFormType.Posts, new postsForm());
+            applicationForms.Add(eFormType.Albums, new albumsForm());
+            applicationForms.Add(eFormType.Groups, new groupsForm());
+            applicationForms.Add(eFormType.LikeRated, new likeRatedForm());
+            applicationForms.Add(eFormType.PostCounter, new postsCounterForm());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -88,13 +88,13 @@ namespace AppUI
             labelProfileEmail.Text = String.Empty;
             labelProfileBirthday.Text = String.Empty;
 
-            applicationForms[eFormType.Events] = new EventsForm();
-            applicationForms[eFormType.Friends] = new FriendsForm();
-            applicationForms[eFormType.Posts] = new PostsForm();
-            applicationForms[eFormType.Albums] = new AlbumsForm();
-            applicationForms[eFormType.Groups] = new GroupsForm();
-            applicationForms[eFormType.LikeRated] = new LikeRated();
-            applicationForms[eFormType.PostCounter] = new PostCounter();
+            applicationForms[eFormType.Events] = new eventsForm();
+            applicationForms[eFormType.Friends] = new friendsForm();
+            applicationForms[eFormType.Posts] = new postsForm();
+            applicationForms[eFormType.Albums] = new albumsForm();
+            applicationForms[eFormType.Groups] = new groupsForm();
+            applicationForms[eFormType.LikeRated] = new likeRatedForm();
+            applicationForms[eFormType.PostCounter] = new postsCounterForm();
         }
 
         private void setButtons(bool i_IsActive)

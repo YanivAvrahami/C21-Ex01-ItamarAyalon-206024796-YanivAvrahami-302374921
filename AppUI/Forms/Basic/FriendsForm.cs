@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class FriendsForm : Form
+    public partial class friendsForm : Form
     {
         private List<User> m_Friends;
 
-        public FriendsForm()
+        public friendsForm()
         {
             InitializeComponent();
             m_Friends = new List<User>();

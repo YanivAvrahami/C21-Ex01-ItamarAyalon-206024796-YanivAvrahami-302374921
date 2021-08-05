@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class PostsForm : Form
+    public partial class postsForm : Form
     {
         private List<Post> m_Posts;
 
-        public PostsForm()
+        public postsForm()
         {
             InitializeComponent();
 

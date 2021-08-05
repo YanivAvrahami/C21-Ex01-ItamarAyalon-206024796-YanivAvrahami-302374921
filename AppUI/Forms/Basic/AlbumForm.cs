@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class AlbumForm : Form
+    public partial class albumForm : Form
     {
         private int m_CurrentPhotoIdx;
         private List<Photo> m_Photos;
@@ -22,7 +22,7 @@ namespace AppUI
             }
         }
 
-        public AlbumForm()
+        public albumForm()
         {
             InitializeComponent();
 

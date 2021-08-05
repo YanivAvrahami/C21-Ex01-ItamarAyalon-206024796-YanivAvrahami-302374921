@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI
 {
-    partial class AlbumsForm
+    partial class albumsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -290,7 +290,7 @@ namespace AppUI
             this.btnOpenAlbum.UseVisualStyleBackColor = true;
             this.btnOpenAlbum.Click += new System.EventHandler(this.btnOpenAlbum_Click);
             // 
-            // AlbumsForm
+            // albumsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +303,7 @@ namespace AppUI
             this.Controls.Add(this.tableLayoutFriends);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AlbumsForm";
+            this.Name = "albumsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Albums";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();

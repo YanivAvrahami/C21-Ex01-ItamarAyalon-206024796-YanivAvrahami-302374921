@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace AppUI.Forms
 {
-    public partial class GroupsForm : Form
+    public partial class groupsForm : Form
     {
         private List<Group> m_Groups;
 
-        public GroupsForm()
+        public groupsForm()
         {
             InitializeComponent();
             m_Groups = new List<Group>();

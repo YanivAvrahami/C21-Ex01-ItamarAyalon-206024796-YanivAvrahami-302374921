@@ -1,6 +1,6 @@
 ﻿namespace AppUI
 {
-    partial class FormMain
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -589,7 +589,7 @@
             this.pictureBoxProfilePicture.TabIndex = 54;
             this.pictureBoxProfilePicture.TabStop = false;
             // 
-            // FormMain
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -598,7 +598,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMain";
+            this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application";
             this.panelMenu.ResumeLayout(false);

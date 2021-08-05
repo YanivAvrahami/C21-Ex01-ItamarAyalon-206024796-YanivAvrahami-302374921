@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI
 {
-    partial class FriendsForm
+    partial class friendsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -259,7 +259,7 @@ namespace AppUI
             this.listBoxFriends.TabIndex = 68;
             this.listBoxFriends.SelectedIndexChanged += new System.EventHandler(this.listBoxFriends_SelectedIndexChanged);
             // 
-            // FriendsForm
+            // friendsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,7 +269,7 @@ namespace AppUI
             this.Controls.Add(this.btnFetchFriends);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxFriends);
-            this.Name = "FriendsForm";
+            this.Name = "friendsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Friends";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI
 {
-    partial class PostsForm
+    partial class postsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -247,7 +247,7 @@ namespace AppUI
             this.listBoxComments.Size = new System.Drawing.Size(612, 156);
             this.listBoxComments.TabIndex = 71;
             // 
-            // PostsForm
+            // postsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +260,7 @@ namespace AppUI
             this.Controls.Add(this.listBoxPosts);
             this.Controls.Add(this.tableLayoutFriends);
             this.Controls.Add(this.textBoxDescption);
-            this.Name = "PostsForm";
+            this.Name = "postsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Posts";
             this.groupBox1.ResumeLayout(false);

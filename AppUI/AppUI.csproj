@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\AppSettings.cs" />
+    <Compile Include="Core\FacebookUserFetcher.cs" />
     <Compile Include="Forms\Basic\AlbumForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,18 +128,17 @@
     <Compile Include="Forms\Basic\EventsForm.Designer.cs">
       <DependentUpon>EventsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core\FacebookUserFetcher.cs" />
-    <Compile Include="Forms\Features\PostCounter.cs">
+    <Compile Include="Forms\Features\PostsCounterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Features\PostCounter.Designer.cs">
-      <DependentUpon>PostCounter.cs</DependentUpon>
+    <Compile Include="Forms\Features\PostsCounterForm.Designer.cs">
+      <DependentUpon>PostsCounterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormMain.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Basic\FriendsForm.cs">
       <SubType>Form</SubType>
@@ -158,11 +158,11 @@
     <Compile Include="Forms\Basic\PostsForm.Designer.cs">
       <DependentUpon>PostsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Features\LikeRated.cs">
+    <Compile Include="Forms\Features\LikeRatedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Features\LikeRated.Designer.cs">
-      <DependentUpon>LikeRated.cs</DependentUpon>
+    <Compile Include="Forms\Features\LikeRatedForm.Designer.cs">
+      <DependentUpon>LikeRatedForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -253,14 +253,32 @@
     <None Include="Resources\icons8-logout-rounded-left-25-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Features\LikeRated.resx">
-      <DependentUpon>LikeRated.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Basic\AlbumsForm.resx">
+      <DependentUpon>AlbumsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Features\PostCounter.resx">
-      <DependentUpon>PostCounter.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Basic\AlbumForm.resx">
+      <DependentUpon>AlbumForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Basic\EventsForm.resx">
+      <DependentUpon>EventsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basic\FriendsForm.resx">
+      <DependentUpon>FriendsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basic\GroupsForm.resx">
+      <DependentUpon>GroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basic\PostsForm.resx">
+      <DependentUpon>PostsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Features\LikeRatedForm.resx">
+      <DependentUpon>LikeRatedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Features\PostsCounterForm.resx">
+      <DependentUpon>PostsCounterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class AlbumsForm : Form
+    public partial class albumsForm : Form
     {
         private List<Album> m_Albums;
 
-        public AlbumsForm()
+        public albumsForm()
         {
             InitializeComponent();
 
@@ -57,7 +57,7 @@ namespace AppUI
 
         private void btnOpenAlbum_Click(object sender, EventArgs e)
         {
-            AlbumForm album = new AlbumForm();
+            albumForm album = new albumForm();
             album.AlbumShown = m_Albums[listBoxAlbums.SelectedIndex];
             album.ShowDialog();
         }

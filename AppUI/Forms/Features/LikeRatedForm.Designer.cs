@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI
 {
-    partial class LikeRated
+    partial class likeRatedForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,10 @@ namespace AppUI
         private void InitializeComponent()
         {
             this.btnFetchInfo = new System.Windows.Forms.Button();
-            this.pictureBoxMostLiked = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelMostLiked = new System.Windows.Forms.Label();
+            this.pictureBoxMostLiked = new System.Windows.Forms.PictureBox();
             this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
             this.labelTotalPhotos = new System.Windows.Forms.Label();
             this.labelAvgLikes = new System.Windows.Forms.Label();
@@ -60,8 +60,8 @@ namespace AppUI
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostLiked)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostLiked)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeastLiked)).BeginInit();
@@ -84,16 +84,6 @@ namespace AppUI
             this.btnFetchInfo.Text = "Fetch";
             this.btnFetchInfo.UseVisualStyleBackColor = true;
             this.btnFetchInfo.Click += new System.EventHandler(this.btnFetchInfo_Click);
-            // 
-            // pictureBoxMostLiked
-            // 
-            this.pictureBoxMostLiked.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxMostLiked.Location = new System.Drawing.Point(6, 56);
-            this.pictureBoxMostLiked.Name = "pictureBoxMostLiked";
-            this.pictureBoxMostLiked.Size = new System.Drawing.Size(236, 187);
-            this.pictureBoxMostLiked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMostLiked.TabIndex = 77;
-            this.pictureBoxMostLiked.TabStop = false;
             // 
             // groupBox1
             // 
@@ -127,6 +117,16 @@ namespace AppUI
             this.labelMostLiked.Size = new System.Drawing.Size(95, 19);
             this.labelMostLiked.TabIndex = 79;
             this.labelMostLiked.Text = "00/00/0000";
+            // 
+            // pictureBoxMostLiked
+            // 
+            this.pictureBoxMostLiked.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxMostLiked.Location = new System.Drawing.Point(6, 56);
+            this.pictureBoxMostLiked.Name = "pictureBoxMostLiked";
+            this.pictureBoxMostLiked.Size = new System.Drawing.Size(236, 187);
+            this.pictureBoxMostLiked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMostLiked.TabIndex = 77;
+            this.pictureBoxMostLiked.TabStop = false;
             // 
             // tableLayoutFriends
             // 
@@ -434,7 +434,7 @@ namespace AppUI
             this.panel1.Size = new System.Drawing.Size(250, 139);
             this.panel1.TabIndex = 85;
             // 
-            // LikeRated
+            // likeRatedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -446,12 +446,12 @@ namespace AppUI
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "LikeRated";
+            this.Name = "likeRatedForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Like Rated";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostLiked)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMostLiked)).EndInit();
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             this.groupBox2.ResumeLayout(false);

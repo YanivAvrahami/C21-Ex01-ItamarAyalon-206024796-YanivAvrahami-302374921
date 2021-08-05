@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class EventsForm : Form
+    public partial class eventsForm : Form
     {
         private List<Event> m_Events;
 
-        public EventsForm()
+        public eventsForm()
         {
             InitializeComponent();
 

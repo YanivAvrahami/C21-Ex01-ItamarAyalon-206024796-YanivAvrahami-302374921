@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI
 {
-    partial class AlbumForm
+    partial class albumForm
     {
         /// <summary>
         /// Required designer variable.
@@ -155,7 +155,7 @@ namespace AppUI
             this.pictureBox6.TabIndex = 78;
             this.pictureBox6.TabStop = false;
             // 
-            // AlbumForm
+            // albumForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,7 +165,7 @@ namespace AppUI
             this.Controls.Add(this.btnNextPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "AlbumForm";
+            this.Name = "albumForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Album";
             this.groupBoxPhotos.ResumeLayout(false);

@@ -1,7 +1,7 @@
 ﻿
 namespace AppUI.Forms
 {
-    partial class GroupsForm
+    partial class groupsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -133,7 +133,7 @@ namespace AppUI.Forms
             this.pictureBoxGroups.TabIndex = 72;
             this.pictureBoxGroups.TabStop = false;
             // 
-            // GroupsForm
+            // groupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +144,7 @@ namespace AppUI.Forms
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxGroups);
             this.MaximizeBox = false;
-            this.Name = "GroupsForm";
+            this.Name = "groupsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Groups";
             this.tableLayoutPanel1.ResumeLayout(false);

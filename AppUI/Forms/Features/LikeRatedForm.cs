@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace AppUI
 {
-    public partial class LikeRated : Form
+    public partial class likeRatedForm : Form
     {
         private List<Photo> m_Photos;
 
-        public LikeRated()
+        public likeRatedForm()
         {
             InitializeComponent();
 
