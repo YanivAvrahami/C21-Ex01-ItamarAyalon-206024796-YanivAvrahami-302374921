@@ -1,5 +1,5 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
+using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Logic;
@@ -56,7 +56,8 @@ namespace UI
             if (chosen.CreatedTime.HasValue)
             {
                 labelPostedDate.Text = chosen.CreatedTime.Value.ToString("dd/MM/yy HH:mm");
-            } else
+            }
+            else
             {
                 labelPostedDate.Text = "-";
             }

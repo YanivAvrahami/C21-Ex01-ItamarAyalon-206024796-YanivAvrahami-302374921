@@ -1,5 +1,5 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
+using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Logic;
@@ -98,6 +98,7 @@ namespace UI
             {
                 m_CurrentPhotoIdx = 0;
             }
+
             displayPhotos();
         }
     }

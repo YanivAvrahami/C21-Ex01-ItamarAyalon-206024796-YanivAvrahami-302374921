@@ -1,5 +1,4 @@
-﻿
-namespace UI.Forms
+﻿namespace UI.Forms
 {
     partial class groupsForm
     {
@@ -18,6 +17,7 @@ namespace UI.Forms
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 

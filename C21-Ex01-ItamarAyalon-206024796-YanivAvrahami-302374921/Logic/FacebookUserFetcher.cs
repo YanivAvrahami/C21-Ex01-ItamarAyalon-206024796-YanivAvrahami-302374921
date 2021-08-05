@@ -1,6 +1,6 @@
-﻿using FacebookWrapper;
+﻿using System.Collections.Generic;
+using FacebookWrapper;
 using FacebookWrapper.ObjectModel;
-using System.Collections.Generic;
 
 namespace Logic
 {
@@ -8,11 +8,11 @@ namespace Logic
     {
         public static readonly FacebookUserFetcher sr_Instance = new FacebookUserFetcher();
 
+        private readonly AppFetcherSettings m_AppSettings;
+
         public User User { get; private set; }
 
         public bool IsLoggedIn => User != null;
-
-        private AppFetcherSettings m_AppSettings;
 
         private FacebookUserFetcher()
         {
@@ -21,9 +21,7 @@ namespace Logic
 
         public LoginResult Login()
         {
-            LoginResult loginResult = null;
-
-            loginResult = Connect();
+            LoginResult loginResult = Connect();
 
             if (loginResult == null)
             {
@@ -38,7 +36,6 @@ namespace Logic
             Properties.Settings.Default.Token = loginResult.AccessToken;
             Properties.Settings.Default.Save();
             
-
             return loginResult;
         }
 

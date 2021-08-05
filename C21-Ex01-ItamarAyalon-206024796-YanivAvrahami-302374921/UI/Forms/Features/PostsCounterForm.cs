@@ -1,5 +1,5 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
+using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
@@ -10,16 +10,22 @@ namespace UI
 {
     public partial class postsCounterForm : Form
     {
+        private readonly int k_NumOfMonthInYear = 12;
+
         private List<Post> UserPosts { get; set; }
+
         private List<string> MonthStrings { get; set; }
+
         private List<int> Years { get; set; }
+
         private List<int> Months { get; set; }
+
         private int[] MonthCounters { get; set; }
         
         private bool IsYearOnlyChecked { get; set; }
-        private readonly int k_NumOfMonthInYear = 12;
 
         private int SelectedYear { get; set; }
+
         private int SelectedMonth { get; set; }
 
         public postsCounterForm()

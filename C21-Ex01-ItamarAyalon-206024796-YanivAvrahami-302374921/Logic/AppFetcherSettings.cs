@@ -29,9 +29,7 @@
                 // Feature 1
                 "pages_read_engagement",
                 "pages_read_user_content",
-
             };
         }
     }
 }
-

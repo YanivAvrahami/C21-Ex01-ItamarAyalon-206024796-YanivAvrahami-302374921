@@ -1,6 +1,5 @@
-﻿using FacebookWrapper;
+﻿using System;
 using FacebookWrapper.ObjectModel;
-using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Logic;
@@ -61,7 +60,8 @@ namespace UI
             if (chosen.EndTime.HasValue)
             {
                 labelEventEndDate.Text = chosen.EndTime.Value.ToString("dd/MM/yy HH:mm");
-            } else
+            }
+            else
             {
                 labelEventEndDate.Text = "-";
             }

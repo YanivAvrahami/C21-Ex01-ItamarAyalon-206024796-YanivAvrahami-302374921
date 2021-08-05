@@ -1,5 +1,4 @@
-﻿
-namespace UI
+﻿namespace UI
 {
     partial class likeRatedForm
     {
@@ -18,6 +17,7 @@ namespace UI
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 

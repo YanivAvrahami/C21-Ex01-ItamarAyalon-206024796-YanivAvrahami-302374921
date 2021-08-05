@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
-using System.Collections.Generic;
 using UI.Forms;
 using Logic;
 
@@ -11,7 +9,7 @@ namespace UI
 {
     public partial class mainForm : Form
     {
-        private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
+        private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
 
         public mainForm()
         {
@@ -57,12 +55,12 @@ namespace UI
         {
             pictureBoxProfilePicture.Image = null;
 
-            labelProfileFirstName.Text = String.Empty;
-            labelProfileLastName.Text = String.Empty;
-            labelProfileGender.Text = String.Empty;
-            labelProfileLocation.Text = String.Empty;
-            labelProfileEmail.Text = String.Empty;
-            labelProfileBirthday.Text = String.Empty;
+            labelProfileFirstName.Text = string.Empty;
+            labelProfileLastName.Text = string.Empty;
+            labelProfileGender.Text = string.Empty;
+            labelProfileLocation.Text = string.Empty;
+            labelProfileEmail.Text = string.Empty;
+            labelProfileBirthday.Text = string.Empty;
         }
 
         private void setButtons(bool i_IsActive)
@@ -91,7 +89,7 @@ namespace UI
             FacebookService.LogoutWithUI();
             facebookUserFetcher.Logout();
             pictureBoxProfile.Image = UI.Properties.Resources.icons8_name_25;
-            labelUserName.Text = "";
+            labelUserName.Text = string.Empty;
             clear();
             setButtons(false);
         }
