@@ -65,10 +65,12 @@ namespace AppUI
             List<Post> CurrentPostsByYear = UserPosts.Where(post => post.CreatedTime.Value.Year == SelectedYear).ToList();
 
             NumPostsByMonthCount = new int[k_NumOfMonthInYear];
-            for (int i = 0; i < k_NumOfMonthInYear; i++)
-            {
-                NumPostsByMonthCount[i] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == i).ToList().Count;
-            }
+            //for (int i = 0; i < k_NumOfMonthInYear; i++)
+            //{
+            //    NumPostsByMonthCount[i] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == i).ToList().Count;
+            //}
+
+            NumPostsByMonthCount[SelectedMonth] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
         }
 
         private void initializeMonthStrings()
