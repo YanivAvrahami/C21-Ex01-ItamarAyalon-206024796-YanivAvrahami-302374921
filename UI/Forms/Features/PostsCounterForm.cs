@@ -14,11 +14,13 @@ namespace UI
         private List<string> MonthStrings { get; set; }
         private List<int> Years { get; set; }
         private List<int> Months { get; set; }
-        private int[] NumPostsByMonthCount { get; set; }
+        private int[] MonthCounters { get; set; }
+        
+        private bool IsYearOnlyChecked { get; set; }
+        private readonly int k_NumOfMonthInYear = 12;
+
         private int SelectedYear { get; set; }
         private int SelectedMonth { get; set; }
-        private bool IsYearOnly { get; set; }
-        private readonly int k_NumOfMonthInYear = 12;
 
         public postsCounterForm()
         {
@@ -27,7 +29,7 @@ namespace UI
             UserPosts = new List<Post>();
             MonthStrings = new List<string>();
             Years = new List<int>();
-            NumPostsByMonthCount = new int[12];
+            MonthCounters = new int[12];
             initializeMonthStrings();
 
             initializeBindings();
@@ -49,35 +51,43 @@ namespace UI
 
         private void updateChartButton_Click(object sender, EventArgs e)
         {
-            postsChart.Series["Posts"].Points.DataBindXY(MonthStrings, NumPostsByMonthCount);
+            MonthCounters = new int[k_NumOfMonthInYear];
+            List<Post> allPostsInSelectedYear = UserPosts.Where(post => post.CreatedTime.Value.Year == SelectedYear).ToList();
+
+            if (IsYearOnlyChecked)
+            {
+                for (int i = 0; i < k_NumOfMonthInYear; i++)
+                {
+                    MonthCounters[i] = allPostsInSelectedYear.Where(post => post.CreatedTime.Value.Month == i).ToList().Count;
+                }
+            }
+            else
+            {
+                MonthCounters[SelectedMonth] = allPostsInSelectedYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
+            }
+
+            postsChart.Series["Posts"].Points.DataBindXY(MonthStrings, MonthCounters);
         }
 
         private void yearComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedYear = (int)yearComboBox.SelectedItem;
             Months = UserPosts.Where(post => post.CreatedTime.Value.Year == SelectedYear)
-                .Select(post => post.CreatedTime.Value.Month).Distinct().ToList();
+                .Select(post => post.CreatedTime.Value.Month)
+                .Distinct()
+                .ToList();
             monthComboBox.DataSource = Months;
         }
 
         private void monthComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<Post> CurrentPostsByYear = UserPosts.Where(post => post.CreatedTime.Value.Year == SelectedYear).ToList();
+            SelectedMonth = (int)monthComboBox.SelectedItem;
+        }
 
-            NumPostsByMonthCount = new int[k_NumOfMonthInYear];
-
-            if (IsYearOnly)
-            {
-                for (int i = 0; i < k_NumOfMonthInYear; i++)
-                {
-                    NumPostsByMonthCount[i] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == i).ToList().Count;
-                }
-            }
-            else 
-            {
-                SelectedMonth = (int)monthComboBox.SelectedItem;
-                NumPostsByMonthCount[SelectedMonth] = CurrentPostsByYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
-            }
+        private void yearOnlyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            IsYearOnlyChecked = yearOnlyCheckBox.Checked;
+            monthComboBox.Enabled = !IsYearOnlyChecked;
         }
 
         private void initializeMonthStrings()
@@ -94,12 +104,6 @@ namespace UI
             MonthStrings.Add("Oct");
             MonthStrings.Add("Nov");
             MonthStrings.Add("Dec");
-        }
-
-        private void yearOnlyCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            IsYearOnly = yearOnlyCheckBox.Checked;
-            monthComboBox.Enabled = !IsYearOnly;
         }
     }
 }
