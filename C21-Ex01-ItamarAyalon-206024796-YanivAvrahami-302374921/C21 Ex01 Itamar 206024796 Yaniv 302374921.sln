@@ -5,9 +5,10 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{905D5BF1-A7E4-4440-85E8-84772F5312D5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application Info", "Application Info", "{EB0B2835-87A5-43C9-9A43-732D49151671}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB0B2835-87A5-43C9-9A43-732D49151671}"
 	ProjectSection(SolutionItems) = preProject
 		C21 Ex01 Itamar 206024796 Yaniv 302374921.docx = C21 Ex01 Itamar 206024796 Yaniv 302374921.docx
+		Report.txt = Report.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{961052F0-25FE-4F21-8D90-02ED9462E40B}"
