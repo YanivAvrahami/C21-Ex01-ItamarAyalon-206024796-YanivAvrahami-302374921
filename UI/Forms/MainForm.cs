@@ -12,39 +12,14 @@ namespace UI
     public partial class mainForm : Form
     {
         private FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
-        private Dictionary<eFormType, Form> applicationForms = new Dictionary<eFormType, Form>();
-
-
-        public enum eFormType
-        {
-            Events,
-            Friends,
-            Posts,
-            Albums,
-            Groups,
-            LikeRated,
-            PostCounter
-        }
 
         public mainForm()
         {
             InitializeComponent();
-            initForms();
             setButtons(false);
             FacebookService.s_CollectionLimit = 100;
 
             checkBoxRememberMe.Checked = Properties.Settings.Default.RememberMe;
-        }
-
-        private void initForms()
-        {
-            applicationForms.Add(eFormType.Events, new eventsForm());
-            applicationForms.Add(eFormType.Friends, new friendsForm());
-            applicationForms.Add(eFormType.Posts, new postsForm());
-            applicationForms.Add(eFormType.Albums, new albumsForm());
-            applicationForms.Add(eFormType.Groups, new groupsForm());
-            applicationForms.Add(eFormType.LikeRated, new likeRatedForm());
-            applicationForms.Add(eFormType.PostCounter, new postsCounterForm());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -88,14 +63,6 @@ namespace UI
             labelProfileLocation.Text = String.Empty;
             labelProfileEmail.Text = String.Empty;
             labelProfileBirthday.Text = String.Empty;
-
-            applicationForms[eFormType.Events] = new eventsForm();
-            applicationForms[eFormType.Friends] = new friendsForm();
-            applicationForms[eFormType.Posts] = new postsForm();
-            applicationForms[eFormType.Albums] = new albumsForm();
-            applicationForms[eFormType.Groups] = new groupsForm();
-            applicationForms[eFormType.LikeRated] = new likeRatedForm();
-            applicationForms[eFormType.PostCounter] = new postsCounterForm();
         }
 
         private void setButtons(bool i_IsActive)
@@ -131,31 +98,43 @@ namespace UI
         private void btnEvents_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.Events].ShowDialog();
+            new eventsForm().ShowDialog();
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.Friends].ShowDialog();
+            new friendsForm().ShowDialog();
         }
 
         private void btnPosts_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.Posts].ShowDialog();
+            new postsForm().ShowDialog();
         }
 
         private void btnAlbums_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.Albums].ShowDialog();
+            new albumsForm().ShowDialog();
         }
 
         private void btnGroups_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.Groups].ShowDialog();
+            new groupsForm().ShowDialog();
+        }
+
+        private void btnLikeRated_Click(object sender, EventArgs e)
+        {
+            SetSelectionBarOnButton((Button)sender);
+            new likeRatedForm().ShowDialog();
+        }
+
+        private void btnPostsCounter_Click(object sender, EventArgs e)
+        {
+            SetSelectionBarOnButton((Button)sender);
+            new postsCounterForm().ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -204,18 +183,6 @@ namespace UI
 
             Properties.Settings.Default.RememberMe = checkBox.Checked;
             Properties.Settings.Default.Save();
-        }
-
-        private void btnLikeRated_Click(object sender, EventArgs e)
-        {
-            SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.LikeRated].ShowDialog();
-        }
-
-        private void btnPostsCounter_Click(object sender, EventArgs e)
-        {
-            SetSelectionBarOnButton((Button)sender);
-            applicationForms[eFormType.PostCounter].ShowDialog();
         }
     }
 }
