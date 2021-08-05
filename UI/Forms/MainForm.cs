@@ -19,7 +19,7 @@ namespace UI
             setButtons(false);
             FacebookService.s_CollectionLimit = 100;
 
-            checkBoxRememberMe.Checked = Properties.Settings.Default.RememberMe;
+            checkBoxRememberMe.Checked = Logic.Properties.Settings.Default.RememberMe;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -181,8 +181,8 @@ namespace UI
         {
             CheckBox checkBox = sender as CheckBox;
 
-            Properties.Settings.Default.RememberMe = checkBox.Checked;
-            Properties.Settings.Default.Save();
+            Logic.Properties.Settings.Default.RememberMe = checkBox.Checked;
+            Logic.Properties.Settings.Default.Save();
         }
     }
 }
