@@ -89,6 +89,7 @@ namespace UI
             SetSelectionBarOnButton((Button)sender);
             
             FacebookService.LogoutWithUI();
+            facebookUserFetcher.Logout();
             pictureBoxProfile.Image = UI.Properties.Resources.icons8_name_25;
             labelUserName.Text = "";
             clear();
