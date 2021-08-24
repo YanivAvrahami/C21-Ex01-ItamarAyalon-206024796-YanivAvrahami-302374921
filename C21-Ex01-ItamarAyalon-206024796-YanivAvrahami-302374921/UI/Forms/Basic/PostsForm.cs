@@ -19,7 +19,7 @@ namespace UI
 
         private void btnFetchPosts_Click(object sender, EventArgs e)
         {
-            m_Posts = FacebookUserFetcher.sr_Instance.FetchPosts();
+            m_Posts = FacebookUserFetcher.Instance.FetchPosts();
 
             listBoxPosts.Items.Clear();
             foreach (Post post in m_Posts)

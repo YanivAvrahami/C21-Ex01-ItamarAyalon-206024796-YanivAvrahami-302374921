@@ -6,7 +6,26 @@ namespace Logic
 {
     public class FacebookUserFetcher
     {
-        public static readonly FacebookUserFetcher sr_Instance = new FacebookUserFetcher();
+        private static readonly object myLock = new object();
+
+        private static FacebookUserFetcher m_Instance = null;
+        public static FacebookUserFetcher Instance 
+        {
+            get
+            {
+                if (m_Instance == null)
+                {
+                    lock (myLock)
+                    {
+                        if (m_Instance == null)
+                        {
+                            m_Instance = new FacebookUserFetcher();
+                        }
+                    }
+                }
+                return m_Instance;
+            }
+        }
 
         private readonly AppFetcherSettings m_AppSettings;
 

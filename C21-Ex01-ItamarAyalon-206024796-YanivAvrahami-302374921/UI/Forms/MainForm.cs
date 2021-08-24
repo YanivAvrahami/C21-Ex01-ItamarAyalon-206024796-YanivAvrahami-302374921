@@ -9,7 +9,7 @@ namespace UI
 {
     public partial class mainForm : Form
     {
-        private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.sr_Instance;
+        private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
 
         public mainForm()
         {

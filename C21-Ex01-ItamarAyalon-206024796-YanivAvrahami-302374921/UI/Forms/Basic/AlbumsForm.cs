@@ -19,7 +19,7 @@ namespace UI
 
         private void btnFetchAlbums_Click(object sender, EventArgs e)
         {
-            m_Albums = FacebookUserFetcher.sr_Instance.FetchAlbums();
+            m_Albums = FacebookUserFetcher.Instance.FetchAlbums();
 
             listBoxAlbums.Items.Clear();
             for (int i = 0; i < m_Albums.Count; i++)

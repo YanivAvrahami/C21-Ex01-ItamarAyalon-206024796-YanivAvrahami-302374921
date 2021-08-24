@@ -18,7 +18,7 @@ namespace UI.Forms
 
         private void btnFetchGroups_Click(object sender, EventArgs e)
         {
-            m_Groups = FacebookUserFetcher.sr_Instance.FetchGroups();
+            m_Groups = FacebookUserFetcher.Instance.FetchGroups();
             listBoxGroups.Items.Clear();
             foreach (Group group in m_Groups)
             {

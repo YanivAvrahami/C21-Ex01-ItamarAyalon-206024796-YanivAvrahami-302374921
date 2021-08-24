@@ -49,7 +49,7 @@ namespace UI
 
         private void FormPostCounter_Load(object sender, EventArgs e)
         {
-            UserPosts = FacebookUserFetcher.sr_Instance.FetchPosts();
+            UserPosts = FacebookUserFetcher.Instance.FetchPosts();
             Years = UserPosts.Select(post => post.CreatedTime.Value.Year).Distinct().ToList();
             yearComboBox.DataSource = null;
             yearComboBox.DataSource = Years;

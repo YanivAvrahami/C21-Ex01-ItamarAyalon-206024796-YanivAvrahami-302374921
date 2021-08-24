@@ -19,12 +19,12 @@ namespace UI
 
         private void btnFetchInfo_Click(object sender, EventArgs e)
         {
-            List<Album> albums = FacebookUserFetcher.sr_Instance.FetchAlbums();
+            List<Album> albums = FacebookUserFetcher.Instance.FetchAlbums();
             m_Photos = new List<Photo>();
 
             foreach (Album album in albums)
             {
-                m_Photos.AddRange(FacebookUserFetcher.sr_Instance.FetchPhotos(album));
+                m_Photos.AddRange(FacebookUserFetcher.Instance.FetchPhotos(album));
             }
 
             extractInfo();

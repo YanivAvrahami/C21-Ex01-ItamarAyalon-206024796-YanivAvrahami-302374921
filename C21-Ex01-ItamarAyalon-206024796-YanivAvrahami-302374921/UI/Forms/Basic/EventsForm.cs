@@ -24,7 +24,7 @@ namespace UI
         {
             eEventType eventsType = (eEventType)Enum.Parse(typeof(eEventType), comboBoxEventType.SelectedItem.ToString());
 
-            m_Events = FacebookUserFetcher.sr_Instance.FetchEvents(eventsType);
+            m_Events = FacebookUserFetcher.Instance.FetchEvents(eventsType);
 
             listBoxEvents.Items.Clear();
             for (int i = 0; i < m_Events.Count; i++)

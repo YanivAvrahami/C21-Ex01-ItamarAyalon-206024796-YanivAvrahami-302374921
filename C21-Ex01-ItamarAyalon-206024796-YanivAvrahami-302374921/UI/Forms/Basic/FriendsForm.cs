@@ -18,7 +18,7 @@ namespace UI
 
         private void btnFetchFriends_Click(object sender, EventArgs e)
         {
-            m_Friends = FacebookUserFetcher.sr_Instance.FetchFriends();
+            m_Friends = FacebookUserFetcher.Instance.FetchFriends();
             listBoxFriends.Items.Clear();
             foreach (User friend in m_Friends)
             {

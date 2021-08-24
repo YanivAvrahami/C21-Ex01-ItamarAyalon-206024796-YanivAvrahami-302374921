@@ -35,7 +35,7 @@ namespace UI
 
         private void fetchPhotos()
         {
-            m_Photos = FacebookUserFetcher.sr_Instance.FetchPhotos(AlbumShown);
+            m_Photos = FacebookUserFetcher.Instance.FetchPhotos(AlbumShown);
 
             displayPhotos();
         }
