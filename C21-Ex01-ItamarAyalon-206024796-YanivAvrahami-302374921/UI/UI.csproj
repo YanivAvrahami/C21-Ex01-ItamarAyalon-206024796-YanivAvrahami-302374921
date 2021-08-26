@@ -190,6 +190,8 @@
     <Content Include="Resources\icons8-star-26.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Event.datasource" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Post.datasource" />
     <None Include="Resources\icons8-logout-rounded-left-25.png" />
     <None Include="Resources\icons8-login-25-5.png" />
     <None Include="Resources\icons8-login-25-4.png" />
@@ -242,6 +244,15 @@
     <None Include="Resources\icons8-logout-rounded-left-25-2.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Basic\AlbumForm.resx">
+      <DependentUpon>AlbumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basic\EventsForm.resx">
+      <DependentUpon>EventsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basic\PostsForm.resx">
+      <DependentUpon>PostsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

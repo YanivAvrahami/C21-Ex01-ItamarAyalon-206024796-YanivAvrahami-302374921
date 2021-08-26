@@ -12,7 +12,7 @@ namespace UI
     {
         private readonly int k_NumOfMonthInYear = 12;
 
-        private List<Post> UserPosts { get; set; }
+        private ObservableCollection<Post> UserPosts { get; set; }
 
         private List<string> MonthStrings { get; set; }
 
@@ -32,7 +32,7 @@ namespace UI
         {
             InitializeComponent();
 
-            UserPosts = new List<Post>();
+            UserPosts = new ObservableCollection<Post>();
             MonthStrings = new List<string>();
             Years = new List<int>();
             MonthCounters = new int[12];
@@ -69,7 +69,7 @@ namespace UI
             }
             else
             {
-                MonthCounters[SelectedMonth] = allPostsInSelectedYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
+                MonthCounters[SelectedMonth - 1] = allPostsInSelectedYear.Where(post => post.CreatedTime.Value.Month == SelectedMonth).ToList().Count;
             }
 
             postsChart.Series["Posts"].Points.DataBindXY(MonthStrings, MonthCounters);

@@ -29,22 +29,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFetchPosts = new System.Windows.Forms.Button();
             this.labelPostsCounted = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelPostedDate = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.listBoxPosts = new System.Windows.Forms.ListBox();
-            this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelComments = new System.Windows.Forms.Label();
+            this.postBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxDescption = new System.Windows.Forms.TextBox();
             this.listBoxComments = new System.Windows.Forms.ListBox();
+            this.commentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutFriends = new System.Windows.Forms.TableLayoutPanel();
+            this.labelComments = new System.Windows.Forms.Label();
+            this.createdTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentsBindingSource)).BeginInit();
             this.tableLayoutFriends.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,43 +99,6 @@
             this.label2.TabIndex = 74;
             this.label2.Text = "Posts found:";
             // 
-            // labelPostedDate
-            // 
-            this.labelPostedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPostedDate.AutoSize = true;
-            this.labelPostedDate.Location = new System.Drawing.Point(114, 36);
-            this.labelPostedDate.Name = "labelPostedDate";
-            this.labelPostedDate.Size = new System.Drawing.Size(153, 34);
-            this.labelPostedDate.TabIndex = 0;
-            this.labelPostedDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelName
-            // 
-            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(114, 1);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(153, 34);
-            this.labelName.TabIndex = 0;
-            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -148,6 +116,8 @@
             // 
             this.listBoxPosts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxPosts.BackColor = System.Drawing.Color.White;
+            this.listBoxPosts.DataSource = this.postBindingSource;
+            this.listBoxPosts.DisplayMember = "Name";
             this.listBoxPosts.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxPosts.FormattingEnabled = true;
             this.listBoxPosts.ItemHeight = 19;
@@ -155,72 +125,10 @@
             this.listBoxPosts.Name = "listBoxPosts";
             this.listBoxPosts.Size = new System.Drawing.Size(218, 308);
             this.listBoxPosts.TabIndex = 71;
-            this.listBoxPosts.SelectedIndexChanged += new System.EventHandler(this.listBoxPosts_SelectedIndexChanged);
             // 
-            // tableLayoutFriends
+            // postBindingSource
             // 
-            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutFriends.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutFriends.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutFriends.ColumnCount = 2;
-            this.tableLayoutFriends.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.74074F));
-            this.tableLayoutFriends.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.25926F));
-            this.tableLayoutFriends.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutFriends.Controls.Add(this.labelName, 1, 0);
-            this.tableLayoutFriends.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutFriends.Controls.Add(this.labelPostedDate, 1, 1);
-            this.tableLayoutFriends.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutFriends.Controls.Add(this.labelComments, 1, 2);
-            this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutFriends.Location = new System.Drawing.Point(582, 113);
-            this.tableLayoutFriends.Name = "tableLayoutFriends";
-            this.tableLayoutFriends.RowCount = 3;
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutFriends.Size = new System.Drawing.Size(271, 107);
-            this.tableLayoutFriends.TabIndex = 70;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 34);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Posted Date";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 35);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Comments";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelComments
-            // 
-            this.labelComments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelComments.AutoSize = true;
-            this.labelComments.Location = new System.Drawing.Point(114, 71);
-            this.labelComments.Name = "labelComments";
-            this.labelComments.Size = new System.Drawing.Size(153, 35);
-            this.labelComments.TabIndex = 0;
-            this.labelComments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.postBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Post);
             // 
             // textBoxDescption
             // 
@@ -239,6 +147,8 @@
             // 
             this.listBoxComments.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxComments.BackColor = System.Drawing.Color.White;
+            this.listBoxComments.DataSource = this.commentsBindingSource;
+            this.listBoxComments.DisplayMember = "Message";
             this.listBoxComments.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxComments.FormattingEnabled = true;
             this.listBoxComments.ItemHeight = 19;
@@ -246,6 +156,112 @@
             this.listBoxComments.Name = "listBoxComments";
             this.listBoxComments.Size = new System.Drawing.Size(612, 156);
             this.listBoxComments.TabIndex = 71;
+            // 
+            // commentsBindingSource
+            // 
+            this.commentsBindingSource.DataMember = "Comments";
+            this.commentsBindingSource.DataSource = this.postBindingSource;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 35);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Comments";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 34);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Posted Date";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelName
+            // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(114, 1);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(153, 34);
+            this.labelName.TabIndex = 0;
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutFriends
+            // 
+            this.tableLayoutFriends.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutFriends.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutFriends.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutFriends.ColumnCount = 2;
+            this.tableLayoutFriends.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.74074F));
+            this.tableLayoutFriends.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.25926F));
+            this.tableLayoutFriends.Controls.Add(this.createdTimeDateTimePicker, 1, 1);
+            this.tableLayoutFriends.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutFriends.Controls.Add(this.labelName, 1, 0);
+            this.tableLayoutFriends.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutFriends.Controls.Add(this.label4, 0, 2);
+            this.tableLayoutFriends.Controls.Add(this.labelComments, 1, 2);
+            this.tableLayoutFriends.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutFriends.Location = new System.Drawing.Point(582, 113);
+            this.tableLayoutFriends.Name = "tableLayoutFriends";
+            this.tableLayoutFriends.RowCount = 3;
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutFriends.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutFriends.Size = new System.Drawing.Size(271, 107);
+            this.tableLayoutFriends.TabIndex = 70;
+            // 
+            // labelComments
+            // 
+            this.labelComments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelComments.AutoSize = true;
+            this.labelComments.Location = new System.Drawing.Point(114, 71);
+            this.labelComments.Name = "labelComments";
+            this.labelComments.Size = new System.Drawing.Size(153, 35);
+            this.labelComments.TabIndex = 0;
+            this.labelComments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // createdTimeDateTimePicker
+            // 
+            this.createdTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.postBindingSource, "CreatedTime", true));
+            this.createdTimeDateTimePicker.Enabled = false;
+            this.createdTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.createdTimeDateTimePicker.Location = new System.Drawing.Point(114, 39);
+            this.createdTimeDateTimePicker.Name = "createdTimeDateTimePicker";
+            this.createdTimeDateTimePicker.Size = new System.Drawing.Size(153, 27);
+            this.createdTimeDateTimePicker.TabIndex = 79;
+            this.createdTimeDateTimePicker.TabStop = false;
             // 
             // postsForm
             // 
@@ -264,6 +280,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Posts";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentsBindingSource)).EndInit();
             this.tableLayoutFriends.ResumeLayout(false);
             this.tableLayoutFriends.PerformLayout();
             this.ResumeLayout(false);
@@ -277,16 +295,18 @@
         private System.Windows.Forms.Button btnFetchPosts;
         private System.Windows.Forms.Label labelPostsCounted;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelPostedDate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListBox listBoxPosts;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutFriends;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxDescption;
         private System.Windows.Forms.ListBox listBoxComments;
+        private System.Windows.Forms.BindingSource postBindingSource;
+        private System.Windows.Forms.BindingSource commentsBindingSource;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutFriends;
+        private System.Windows.Forms.DateTimePicker createdTimeDateTimePicker;
         private System.Windows.Forms.Label labelComments;
     }
 }
