@@ -7,7 +7,7 @@ namespace UI
 {
     public partial class PostsForm : Form
     {
-        public postsForm()
+        public PostsForm()
         {
             InitializeComponent();
 

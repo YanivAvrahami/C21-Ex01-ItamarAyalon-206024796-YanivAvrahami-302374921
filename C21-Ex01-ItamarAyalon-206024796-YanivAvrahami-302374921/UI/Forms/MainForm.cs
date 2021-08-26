@@ -6,13 +6,13 @@ using Logic;
 
 namespace UI
 {
-    public partial class mainForm : Form
+    public partial class MainForm : Form
     {
         private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
 
         private IFormFactory m_FormFactory = new LightFormFactory();
 
-        public mainForm()
+        public MainForm()
         {
             InitializeComponent();
             setButtons(false);

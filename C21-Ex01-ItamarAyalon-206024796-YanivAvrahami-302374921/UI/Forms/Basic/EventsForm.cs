@@ -7,7 +7,7 @@ namespace UI
 {
     public partial class EventsForm : Form
     {
-        public eventsForm()
+        public EventsForm()
         {
             InitializeComponent();
 

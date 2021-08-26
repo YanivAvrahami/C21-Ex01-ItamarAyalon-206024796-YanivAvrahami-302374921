@@ -339,7 +339,7 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(326, 119);
             this.descriptionTextBox.TabIndex = 70;
             // 
-            // eventsForm
+            // EventsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -353,7 +353,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBoxEvents);
             this.Controls.Add(this.tableLayoutFriends);
-            this.Name = "eventsForm";
+            this.Name = "EventsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Events";
             ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).EndInit();
