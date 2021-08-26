@@ -8,10 +8,8 @@ namespace UI
 {
     public partial class AlbumForm : Form
     {
-        private int m_CurrentPhotoIdx;
-        private List<Photo> m_Photos;
+        private AlbumsFacade m_AlbumsFacade;
         private Album m_AlbumShown;
-        private int m_Displayed;
 
         public Album AlbumShown
         {
@@ -26,37 +24,27 @@ namespace UI
         public AlbumForm()
         {
             InitializeComponent();
-
-            m_AlbumShown = null;
-            m_Photos = new List<Photo>();
-            m_CurrentPhotoIdx = 0;
-            m_Displayed = 0;
         }
 
         private void fetchPhotos()
         {
-            m_Photos = FacebookUserFetcher.Instance.FetchPhotos(AlbumShown);
-
-            displayPhotos();
+            m_AlbumsFacade = new AlbumsFacade(FacebookUserFetcher.Instance.FetchPhotos(AlbumShown), 6);
+            btnNextPage_Click(this, new EventArgs());
         }
 
         private void displayPhotos()
         {
-            m_Displayed = 0;
+            IEnumerator<Photo> enumerator = m_AlbumsFacade.CurrentChunk.GetEnumerator();
+
             foreach (Control control in groupBoxPhotos.Controls)
             {
                 if (control is PictureBox pictureBox)
                 {
-                    if (pictureBox.Image != null)
-                    {
-                        pictureBox.Image = null;
-                    }
+                    pictureBox.Image = null;
 
-                    if (m_CurrentPhotoIdx < m_Photos.Count)
+                    if (enumerator.MoveNext())
                     {
-                        pictureBox.LoadAsync(m_Photos[m_CurrentPhotoIdx].PictureThumbURL);
-                        m_CurrentPhotoIdx++;
-                        m_Displayed++;
+                        pictureBox.LoadAsync(enumerator.Current.PictureThumbURL);
                     }
                 }
             }
@@ -66,39 +54,19 @@ namespace UI
 
         private void setButtons()
         {
-            if (m_CurrentPhotoIdx < m_Photos.Count)
-            {
-                btnNextPage.Enabled = true;
-            }
-            else
-            {
-                btnNextPage.Enabled = false;
-            }
-
-            if (m_CurrentPhotoIdx > groupBoxPhotos.Controls.Count)
-            {
-                btnPrevPage.Enabled = true;
-            }
-            else
-            {
-                btnPrevPage.Enabled = false;
-            }
+            btnNextPage.Enabled = m_AlbumsFacade.HasNextPage();
+            btnPrevPage.Enabled = m_AlbumsFacade.HasPrevPage();
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
         {
+            m_AlbumsFacade.NextPage();
             displayPhotos();
         }
 
         private void btnPrevPage_Click(object sender, EventArgs e)
         {
-            m_CurrentPhotoIdx -= groupBoxPhotos.Controls.Count + m_Displayed;
-
-            if (m_CurrentPhotoIdx < 0)
-            {
-                m_CurrentPhotoIdx = 0;
-            }
-
+            m_AlbumsFacade.PrevPage();
             displayPhotos();
         }
     }
