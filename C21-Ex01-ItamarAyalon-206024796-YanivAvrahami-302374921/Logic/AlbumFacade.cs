@@ -1,5 +1,4 @@
 ﻿using FacebookWrapper.ObjectModel;
-using System.Collections.ObjectModel;
 
 namespace Logic
 {
@@ -11,9 +10,9 @@ namespace Logic
         public int ChunkSize { get; private set; }
         public int MaxChunkSize { get; }
 
-        public AlbumsFacade(Collection<Photo> i_Photos, int i_MaxChunkSize)
+        public AlbumsFacade(Album i_AlbumShown, int i_MaxChunkSize)
         {
-            m_Photos = new Photos(i_Photos);
+            m_Photos = new Photos(FacebookUserFetcher.Instance.FetchPhotos(i_AlbumShown));
             MaxChunkSize = i_MaxChunkSize;
             CurrentChunk = null;
         }

@@ -28,7 +28,7 @@ namespace UI
 
         private void fetchPhotos()
         {
-            m_AlbumsFacade = new AlbumsFacade(FacebookUserFetcher.Instance.FetchPhotos(AlbumShown), 6);
+            m_AlbumsFacade = new AlbumsFacade(AlbumShown, 6);
             btnNextPage_Click(this, new EventArgs());
         }
 
