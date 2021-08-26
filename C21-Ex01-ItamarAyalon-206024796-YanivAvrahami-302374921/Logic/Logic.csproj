@@ -108,8 +108,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumFacade.cs" />
     <Compile Include="AppFetcherSettings.cs" />
     <Compile Include="FacebookUserFetcher.cs" />
+    <Compile Include="Photos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

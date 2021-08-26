@@ -9,12 +9,14 @@ namespace UI
     public partial class AlbumsForm : Form
     {
         private List<Album> m_Albums;
+        private FormFactory m_FormFactory;
 
-        public AlbumsForm()
+        public AlbumsForm(FormFactory i_FormFactory)
         {
             InitializeComponent();
 
             m_Albums = new List<Album>();
+            m_FormFactory = i_FormFactory;
         }
 
         private void btnFetchAlbums_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace UI
 
         private void btnOpenAlbum_Click(object sender, EventArgs e)
         {
-            AlbumForm album = new AlbumForm();
+            AlbumForm album = (AlbumForm)m_FormFactory.Create(typeof(AlbumForm));
             album.AlbumShown = m_Albums[listBoxAlbums.SelectedIndex];
             album.ShowDialog();
         }
