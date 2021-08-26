@@ -19,7 +19,7 @@ namespace UI
 
             if (i_FormType.Equals(typeof(AlbumsForm)))
             {
-                newForm = new AlbumsForm();
+                newForm = new AlbumsForm(this);
             }
             else if (i_FormType.Equals(typeof(AlbumForm)))
             {

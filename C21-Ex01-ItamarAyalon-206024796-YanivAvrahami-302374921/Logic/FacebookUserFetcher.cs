@@ -141,7 +141,7 @@ namespace Logic
             return albums;
         }
 
-        public List<Photo> FetchPhotos(Album i_Album)
+        public FacebookObjectCollection<Photo> FetchPhotos(Album i_Album)
         {
             int albumIdx = User.Albums.IndexOf(i_Album);
             if (albumIdx == -1)
@@ -149,14 +149,7 @@ namespace Logic
                 return null;
             }
 
-            List<Photo> photos = new List<Photo>();
-
-            foreach (Photo photo in User.Albums[albumIdx].Photos)
-            {
-                photos.Add(photo);
-            }
-
-            return photos;
+            return User.Albums[albumIdx].Photos;
         }
 
         private FacebookObjectCollection<Event> getRequiredEvents(eEventType i_Type)
