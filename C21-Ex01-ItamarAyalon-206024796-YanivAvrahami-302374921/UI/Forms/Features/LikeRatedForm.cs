@@ -6,11 +6,11 @@ using Logic;
 
 namespace UI
 {
-    public partial class likeRatedForm : Form
+    public partial class LikeRatedForm : Form
     {
         private List<Photo> m_Photos;
 
-        public likeRatedForm()
+        public LikeRatedForm()
         {
             InitializeComponent();
 

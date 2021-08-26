@@ -6,11 +6,11 @@ using Logic;
 
 namespace UI
 {
-    public partial class albumsForm : Form
+    public partial class AlbumsForm : Form
     {
         private List<Album> m_Albums;
 
-        public albumsForm()
+        public AlbumsForm()
         {
             InitializeComponent();
 
@@ -52,7 +52,7 @@ namespace UI
 
         private void btnOpenAlbum_Click(object sender, EventArgs e)
         {
-            albumForm album = new albumForm();
+            AlbumForm album = new AlbumForm();
             album.AlbumShown = m_Albums[listBoxAlbums.SelectedIndex];
             album.ShowDialog();
         }

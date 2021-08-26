@@ -1,6 +1,6 @@
-﻿namespace UI.Forms
+﻿namespace UI
 {
-    partial class groupsForm
+    partial class GroupsForm
     {
         /// <summary>
         /// Required designer variable.

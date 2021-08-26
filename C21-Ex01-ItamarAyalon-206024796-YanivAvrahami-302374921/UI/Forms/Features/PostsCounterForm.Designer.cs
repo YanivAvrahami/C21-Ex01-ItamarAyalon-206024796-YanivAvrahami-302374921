@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class postsCounterForm
+    partial class PostsCounterForm
     {
         /// <summary>
         /// Required designer variable.

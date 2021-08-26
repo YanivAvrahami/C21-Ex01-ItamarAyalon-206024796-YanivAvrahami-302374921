@@ -8,7 +8,7 @@ using Logic;
 
 namespace UI
 {
-    public partial class postsCounterForm : Form
+    public partial class PostsCounterForm : Form
     {
         private readonly int k_NumOfMonthInYear = 12;
 
@@ -28,7 +28,7 @@ namespace UI
 
         private int SelectedMonth { get; set; }
 
-        public postsCounterForm()
+        public PostsCounterForm()
         {
             InitializeComponent();
 

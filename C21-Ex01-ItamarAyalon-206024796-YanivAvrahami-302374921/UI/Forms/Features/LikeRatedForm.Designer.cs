@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class likeRatedForm
+    partial class LikeRatedForm
     {
         /// <summary>
         /// Required designer variable.

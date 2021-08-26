@@ -6,11 +6,11 @@ using Logic;
 
 namespace UI
 {
-    public partial class friendsForm : Form
+    public partial class FriendsForm : Form
     {
         private List<User> m_Friends;
 
-        public friendsForm()
+        public FriendsForm()
         {
             InitializeComponent();
             m_Friends = new List<User>();

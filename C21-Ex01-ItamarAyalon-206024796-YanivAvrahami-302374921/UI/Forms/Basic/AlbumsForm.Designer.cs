@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class albumsForm
+    partial class AlbumsForm
     {
         /// <summary>
         /// Required designer variable.

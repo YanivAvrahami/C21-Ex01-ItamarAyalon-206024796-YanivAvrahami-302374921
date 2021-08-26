@@ -6,7 +6,7 @@ using Logic;
 
 namespace UI
 {
-    public partial class albumForm : Form
+    public partial class AlbumForm : Form
     {
         private int m_CurrentPhotoIdx;
         private List<Photo> m_Photos;
@@ -23,7 +23,7 @@ namespace UI
             }
         }
 
-        public albumForm()
+        public AlbumForm()
         {
             InitializeComponent();
 

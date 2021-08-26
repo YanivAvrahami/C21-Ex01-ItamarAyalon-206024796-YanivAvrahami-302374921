@@ -108,6 +108,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract Factory\DarkFormFactory.cs" />
+    <Compile Include="Abstract Factory\IFormFactory.cs" />
+    <Compile Include="Abstract Factory\LightFormFactory.cs" />
     <Compile Include="Forms\Basic\AlbumForm.cs">
       <SubType>Form</SubType>
     </Compile>

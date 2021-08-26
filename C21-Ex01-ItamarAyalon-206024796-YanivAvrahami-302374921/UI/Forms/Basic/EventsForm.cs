@@ -6,11 +6,11 @@ using Logic;
 
 namespace UI
 {
-    public partial class eventsForm : Form
+    public partial class EventsForm : Form
     {
         private List<Event> m_Events;
 
-        public eventsForm()
+        public EventsForm()
         {
             InitializeComponent();
 

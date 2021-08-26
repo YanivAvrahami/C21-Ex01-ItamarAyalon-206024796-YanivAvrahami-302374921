@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class eventsForm
+    partial class EventsForm
     {
         /// <summary>
         /// Required designer variable.

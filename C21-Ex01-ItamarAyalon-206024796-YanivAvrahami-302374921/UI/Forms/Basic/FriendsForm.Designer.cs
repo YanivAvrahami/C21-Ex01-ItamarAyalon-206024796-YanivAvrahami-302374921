@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class friendsForm
+    partial class FriendsForm
     {
         /// <summary>
         /// Required designer variable.

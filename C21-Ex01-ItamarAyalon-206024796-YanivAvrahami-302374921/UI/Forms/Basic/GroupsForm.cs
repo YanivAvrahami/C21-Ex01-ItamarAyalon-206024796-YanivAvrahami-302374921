@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Logic;
 
-namespace UI.Forms
+namespace UI
 {
-    public partial class groupsForm : Form
+    public partial class GroupsForm : Form
     {
         private List<Group> m_Groups;
 
-        public groupsForm()
+        public GroupsForm()
         {
             InitializeComponent();
             m_Groups = new List<Group>();

@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using FacebookWrapper;
-using UI.Forms;
 using Logic;
 
 namespace UI
@@ -10,6 +9,8 @@ namespace UI
     public partial class mainForm : Form
     {
         private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
+
+        private IFormFactory m_FormFactory = new LightFormFactory();
 
         public mainForm()
         {
@@ -97,43 +98,43 @@ namespace UI
         private void btnEvents_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new eventsForm().ShowDialog();
+            m_FormFactory.CreateEventsForm();
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new friendsForm().ShowDialog();
+            m_FormFactory.CreateFriendsForm();
         }
 
         private void btnPosts_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new postsForm().ShowDialog();
+            m_FormFactory.CreatePostsForm();
         }
 
         private void btnAlbums_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new albumsForm().ShowDialog();
+            m_FormFactory.CreateAlbumsForm();
         }
 
         private void btnGroups_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new groupsForm().ShowDialog();
+            m_FormFactory.CreateGroupsForm();
         }
 
         private void btnLikeRated_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new likeRatedForm().ShowDialog();
+            m_FormFactory.CreateLikeRatedForm();
         }
 
         private void btnPostsCounter_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            new postsCounterForm().ShowDialog();
+            m_FormFactory.CreatePostsCounterForm();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
