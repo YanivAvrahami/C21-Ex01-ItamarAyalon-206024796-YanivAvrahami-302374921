@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FacebookWrapper;
 using FacebookWrapper.ObjectModel;
 
@@ -63,7 +64,14 @@ namespace Logic
             if (Properties.Settings.Default.RememberMe &&
                 !string.IsNullOrEmpty(Properties.Settings.Default.Token))
             {
-                return FacebookService.Connect(Properties.Settings.Default.Token);
+                try
+                {
+                    return FacebookService.Connect(Properties.Settings.Default.Token);
+                }
+                catch (Exception e)
+                {
+                    return null;
+                }
             }
 
             return null;
