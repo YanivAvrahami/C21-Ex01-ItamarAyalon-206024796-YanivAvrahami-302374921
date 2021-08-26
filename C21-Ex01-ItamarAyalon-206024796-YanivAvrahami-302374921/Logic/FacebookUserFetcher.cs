@@ -80,31 +80,17 @@ namespace Logic
         public void Logout()
         {
             User = null;
+            Properties.Settings.Default.Token = "";
         }
 
-        public List<Event> FetchEvents(eEventType i_Type)
+        public FacebookObjectCollection<Event> FetchEvents(eEventType i_Type)
         {
-            FacebookObjectCollection<Event> requiredEvents = getRequiredEvents(i_Type);
-            List<Event> events = new List<Event>(requiredEvents.Count);
-
-            foreach (Event currentEvent in requiredEvents)
-            {
-                events.Add(currentEvent);
-            }
-
-            return events;
+            return getRequiredEvents(i_Type);
         }
 
-        public List<Post> FetchPosts()
+        public FacebookObjectCollection<Post> FetchPosts()
         {
-            List<Post> posts = new List<Post>(User.Posts.Count);
-
-            foreach (Post post in User.Posts)
-            {
-                posts.Add(post);
-            }
-
-            return posts;
+            return User.Posts;
         }
 
         public List<User> FetchFriends()

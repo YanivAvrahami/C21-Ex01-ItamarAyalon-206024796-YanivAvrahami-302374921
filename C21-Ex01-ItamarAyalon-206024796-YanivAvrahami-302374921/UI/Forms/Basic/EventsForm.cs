@@ -1,6 +1,5 @@
 ﻿using System;
 using FacebookWrapper.ObjectModel;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using Logic;
 
@@ -8,63 +7,53 @@ namespace UI
 {
     public partial class EventsForm : Form
     {
-        private List<Event> m_Events;
-
-        public EventsForm()
+        public eventsForm()
         {
             InitializeComponent();
 
-            m_Events = new List<Event>();
+            bindComponents();
 
             comboBoxEventType.Items.AddRange(Enum.GetNames(typeof(eEventType)));
             comboBoxEventType.SelectedIndex = 0;
+        }
+
+        private void bindComponents()
+        {
+            Binding countEventsBinding = new Binding("Text", eventBindingSource, "");
+            countEventsBinding.Format += countEventsBinding_Format;
+            Binding imageBinding = new Binding("Image", eventBindingSource, "Cover");
+            imageBinding.Format += imageBinding_Format;
+
+            pictureBoxCover.DataBindings.Add(imageBinding);
+            labelEventsCounted.DataBindings.Add(countEventsBinding);
+        }
+
+        private void countEventsBinding_Format(object sender, ConvertEventArgs e)
+        {
+            Binding theSender = sender as Binding;
+            if (theSender.DataSource is BindingSource bSource)
+            {
+                e.Value = bSource.Count.ToString();
+            }
+        }
+
+        private void imageBinding_Format(object sender, ConvertEventArgs e)
+        {
+            Binding theSender = sender as Binding;
+            if (theSender.DataSource is BindingSource bSource)
+            {
+                if (bSource.Current is Event theEvent)
+                {
+                    pictureBoxCover.LoadAsync(theEvent.Cover.SourceURL);
+                }
+            }
         }
 
         private void btnFetchEvents_Click(object sender, EventArgs e)
         {
             eEventType eventsType = (eEventType)Enum.Parse(typeof(eEventType), comboBoxEventType.SelectedItem.ToString());
 
-            m_Events = FacebookUserFetcher.Instance.FetchEvents(eventsType);
-
-            listBoxEvents.Items.Clear();
-            for (int i = 0; i < m_Events.Count; i++)
-            {
-                listBoxEvents.Items.Add(m_Events[i].Name);
-            }
-
-            labelEventsCounted.Text = m_Events.Count.ToString();
-        }
-
-        private void listBoxEvents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBoxEvents.SelectedIndex == -1)
-            {
-                return;
-            }
-
-            Event chosen = m_Events[listBoxEvents.SelectedIndex];
-
-            labelEventName.Text = chosen.Name;
-
-            labelEventLocation.Text = chosen.Place?.Name;
-            labelEventInterested.Text = chosen.InterestedCount.ToString();
-            labelEventPrivacy.Text = chosen.Privacy.ToString();
-            textBoxEventDesc.Text = chosen.Description;
-            labelEventStartDate.Text = chosen.StartTime.Value.ToString("dd/MM/yy HH:mm");
-
-            if (chosen.Cover != null)
-            {
-                pictureBoxCover.LoadAsync(chosen.Cover.SourceURL);
-            }
-
-            if (chosen.EndTime.HasValue)
-            {
-                labelEventEndDate.Text = chosen.EndTime.Value.ToString("dd/MM/yy HH:mm");
-            }
-            else
-            {
-                labelEventEndDate.Text = "-";
-            }
+            eventBindingSource.DataSource = FacebookUserFetcher.Instance.FetchEvents(eventsType);
         }
     }
 }
