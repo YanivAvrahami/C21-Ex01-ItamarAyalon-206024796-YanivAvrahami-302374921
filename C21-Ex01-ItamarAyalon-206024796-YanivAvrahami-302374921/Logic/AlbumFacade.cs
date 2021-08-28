@@ -13,8 +13,9 @@ namespace Logic
         public AlbumsFacade(Album i_AlbumShown, int i_MaxChunkSize)
         {
             m_Photos = new Photos(FacebookUserFetcher.Instance.FetchPhotos(i_AlbumShown));
+            CurrentChunk = new Photos(null);
             MaxChunkSize = i_MaxChunkSize;
-            CurrentChunk = null;
+            NextPage();
         }
 
         public void PrevPage()

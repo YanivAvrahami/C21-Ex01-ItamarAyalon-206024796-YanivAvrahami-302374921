@@ -2,6 +2,7 @@
 using FacebookWrapper.ObjectModel;
 using System.Windows.Forms;
 using Logic;
+using System.Threading;
 
 namespace UI
 {
@@ -15,6 +16,23 @@ namespace UI
 
             comboBoxEventType.Items.AddRange(Enum.GetNames(typeof(eEventType)));
             comboBoxEventType.SelectedIndex = 0;
+            comboBoxEventType.SelectedIndexChanged += comboBoxEventType_SelectedIndexChanged;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            new Thread(fetchEventsOnLoad).Start();
+        }
+
+        private void fetchEventsOnLoad()
+        {
+            comboBoxEventType.Invoke(new Action(() =>
+            {
+                eEventType eventsType = (eEventType)Enum.Parse(typeof(eEventType), comboBoxEventType.SelectedItem.ToString());
+                eventBindingSource.DataSource = FacebookUserFetcher.Instance.FetchEvents(eventsType);
+            }));
         }
 
         private void bindComponents()
@@ -51,9 +69,12 @@ namespace UI
 
         private void btnFetchEvents_Click(object sender, EventArgs e)
         {
-            eEventType eventsType = (eEventType)Enum.Parse(typeof(eEventType), comboBoxEventType.SelectedItem.ToString());
+            new Thread(fetchEventsOnLoad).Start();
+        }
 
-            eventBindingSource.DataSource = FacebookUserFetcher.Instance.FetchEvents(eventsType);
+        private void comboBoxEventType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           new Thread(fetchEventsOnLoad).Start();
         }
     }
 }

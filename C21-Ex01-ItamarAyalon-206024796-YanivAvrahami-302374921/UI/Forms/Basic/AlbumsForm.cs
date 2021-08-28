@@ -3,6 +3,7 @@ using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Logic;
+using System.Threading;
 
 namespace UI
 {
@@ -19,17 +20,29 @@ namespace UI
             m_FormFactory = i_FormFactory;
         }
 
-        private void btnFetchAlbums_Click(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            new Thread(fetchAlbumsOnLoad).Start();
+        }
+
+        private void fetchAlbumsOnLoad()
         {
             m_Albums = FacebookUserFetcher.Instance.FetchAlbums();
 
-            listBoxAlbums.Items.Clear();
+            listBoxAlbums.Invoke(new Action(() => listBoxAlbums.Items.Clear()));
             for (int i = 0; i < m_Albums.Count; i++)
             {
-                listBoxAlbums.Items.Add(m_Albums[i].Name);
+                listBoxAlbums.Invoke(new Action(() => listBoxAlbums.Items.Add(m_Albums[i].Name)));
+                //listBoxAlbums.Items.Add(m_Albums[i].Name);
             }
 
-            labelAlbumsCounted.Text = m_Albums.Count.ToString();
+            labelAlbumsCounted.Invoke(new Action(() => labelAlbumsCounted.Text = m_Albums.Count.ToString()));
+        }
+
+        private void btnFetchAlbums_Click(object sender, EventArgs e)
+        {
+            new Thread(fetchAlbumsOnLoad).Start();
         }
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace UI
         private void fetchPhotos()
         {
             m_AlbumsFacade = new AlbumsFacade(AlbumShown, 6);
-            btnNextPage_Click(this, new EventArgs());
+            displayPhotos();
         }
 
         private void displayPhotos()
