@@ -127,6 +127,7 @@
             // btnFetchAlbums
             // 
             this.btnFetchAlbums.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFetchAlbums.Enabled = false;
             this.btnFetchAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchAlbums.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnFetchAlbums.Location = new System.Drawing.Point(57, 30);
@@ -290,7 +291,7 @@
             this.btnOpenAlbum.UseVisualStyleBackColor = true;
             this.btnOpenAlbum.Click += new System.EventHandler(this.btnOpenAlbum_Click);
             // 
-            // albumsForm
+            // AlbumsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +304,7 @@
             this.Controls.Add(this.tableLayoutFriends);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "albumsForm";
+            this.Name = "AlbumsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Albums";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();

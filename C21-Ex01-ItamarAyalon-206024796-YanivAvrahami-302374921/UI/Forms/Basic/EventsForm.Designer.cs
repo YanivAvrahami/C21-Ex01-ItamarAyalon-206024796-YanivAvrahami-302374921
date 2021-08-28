@@ -262,6 +262,7 @@
             // btnFetchEvents
             // 
             this.btnFetchEvents.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFetchEvents.Enabled = false;
             this.btnFetchEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchEvents.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnFetchEvents.Location = new System.Drawing.Point(59, 11);
