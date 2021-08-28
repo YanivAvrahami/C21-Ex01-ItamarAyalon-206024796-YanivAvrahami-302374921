@@ -34,7 +34,6 @@ namespace UI
             for (int i = 0; i < m_Albums.Count; i++)
             {
                 listBoxAlbums.Invoke(new Action(() => listBoxAlbums.Items.Add(m_Albums[i].Name)));
-                //listBoxAlbums.Items.Add(m_Albums[i].Name);
             }
 
             labelAlbumsCounted.Invoke(new Action(() => labelAlbumsCounted.Text = m_Albums.Count.ToString()));
