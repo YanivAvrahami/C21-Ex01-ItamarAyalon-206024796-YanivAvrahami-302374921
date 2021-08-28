@@ -4,15 +4,21 @@ namespace Logic
 {
     public class AlbumsFacade
     {
-        private Photos m_Photos;
+        private readonly Photos r_Photos;
 
         public Photos CurrentChunk { get; }
+
         public int ChunkSize { get; private set; }
+
         public int MaxChunkSize { get; }
+
+        public bool HasNextPage => r_Photos.Index < r_Photos.Count;
+
+        public bool HasPrevPage => r_Photos.Index >= MaxChunkSize;
 
         public AlbumsFacade(Album i_AlbumShown, int i_MaxChunkSize)
         {
-            m_Photos = new Photos(FacebookUserFetcher.Instance.FetchPhotos(i_AlbumShown));
+            r_Photos = new Photos(FacebookUserFetcher.Instance.FetchPhotos(i_AlbumShown));
             CurrentChunk = new Photos(null);
             MaxChunkSize = i_MaxChunkSize;
             NextPage();
@@ -24,9 +30,9 @@ namespace Logic
 
             for (int i = 0; i < MaxChunkSize; i++)
             {
-                CurrentChunk.Add(m_Photos.Current);
+                CurrentChunk.Add(r_Photos.Current);
 
-                if (!m_Photos.MovePrev())
+                if (!r_Photos.MovePrev())
                 {
                     break;
                 }
@@ -39,23 +45,13 @@ namespace Logic
 
             for (int i = 0; i < MaxChunkSize; i++)
             {
-                if (!m_Photos.MoveNext())
+                if (!r_Photos.MoveNext())
                 {
                     break;
                 }
 
-                CurrentChunk.Add(m_Photos.Current);
+                CurrentChunk.Add(r_Photos.Current);
             }
-        }
-
-        public bool HasNextPage()
-        {
-            return (m_Photos.Index < m_Photos.Count);
-        }
-
-        public bool HasPrevPage()
-        {
-            return (m_Photos.Index >= MaxChunkSize);
         }
     }
 }

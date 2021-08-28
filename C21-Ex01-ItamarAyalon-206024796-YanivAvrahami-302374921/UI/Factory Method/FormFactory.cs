@@ -6,11 +6,11 @@ namespace UI
 {
     public class FormFactory
     {
-        private Color m_BackgroundColor;
+        public Color BackgroundColor { get; set; }
 
         public FormFactory(Color i_BackgroundColor)
         {
-            m_BackgroundColor = i_BackgroundColor;
+            BackgroundColor = i_BackgroundColor;
         }
 
         public Form Create(Type i_FormType)
@@ -52,7 +52,7 @@ namespace UI
             
             if (newForm != null)
             {
-                newForm.BackColor = m_BackgroundColor;
+                newForm.BackColor = BackgroundColor;
                 return newForm;
             }
 

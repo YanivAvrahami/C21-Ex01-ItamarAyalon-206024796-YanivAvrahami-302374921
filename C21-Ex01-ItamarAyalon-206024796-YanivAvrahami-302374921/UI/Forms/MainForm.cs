@@ -10,7 +10,7 @@ namespace UI
     {
         private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
 
-        private FormFactory m_FormFactory = new FormFactory(Color.FromArgb(240, 242, 245));
+        private readonly FormFactory m_FormFactory = new FormFactory(Color.FromArgb(240, 242, 245));
 
         public MainForm()
         {

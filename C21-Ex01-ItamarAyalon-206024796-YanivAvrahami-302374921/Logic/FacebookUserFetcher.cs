@@ -11,6 +11,7 @@ namespace Logic
         private static readonly object fetchLock = new object();
 
         private static FacebookUserFetcher m_Instance = null;
+
         public static FacebookUserFetcher Instance
         {
             get
@@ -25,6 +26,7 @@ namespace Logic
                         }
                     }
                 }
+
                 return m_Instance;
             }
         }
@@ -44,7 +46,7 @@ namespace Logic
         {
             lock (fetchLock)
             {
-                LoginResult loginResult = Connect();
+                LoginResult loginResult = connect();
 
                 if (loginResult == null)
                 {
@@ -63,7 +65,7 @@ namespace Logic
             }
         }
 
-        private LoginResult Connect()
+        private LoginResult connect()
         {
             lock (fetchLock)
             {
@@ -74,7 +76,7 @@ namespace Logic
                     {
                         return FacebookService.Connect(Properties.Settings.Default.Token);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         return null;
                     }
@@ -89,7 +91,7 @@ namespace Logic
             lock (fetchLock)
             {
                 User = null;
-                Properties.Settings.Default.Token = ""; 
+                Properties.Settings.Default.Token = string.Empty; 
             }
         }
 

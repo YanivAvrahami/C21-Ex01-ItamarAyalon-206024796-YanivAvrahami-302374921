@@ -1,15 +1,17 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using FacebookWrapper.ObjectModel;
 
 namespace Logic
 {
     public class Photos : IEnumerator<Photo>, IEnumerable<Photo>
     {
-        private Collection<Photo> m_Photos;
+        private readonly Collection<Photo> m_Photos;
+
         public int Index { get; private set; } = -1;
+
         public int Count => m_Photos.Count;
 
         public Photos(Collection<Photo> i_Photos)
@@ -45,8 +47,6 @@ namespace Logic
             Reset();
         }
 
-        public void Dispose() { }
-
         public IEnumerator<Photo> GetEnumerator() => this;
 
         public bool MoveNext()
@@ -64,5 +64,10 @@ namespace Logic
         public void Reset() => Index = -1;
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        void IDisposable.Dispose()
+        {
+            // Dispose
+        }
     }
 }

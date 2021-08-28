@@ -7,7 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{905D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB0B2835-87A5-43C9-9A43-732D49151671}"
 	ProjectSection(SolutionItems) = preProject
-		C21 Ex01 Itamar 206024796 Yaniv 302374921.docx = C21 Ex01 Itamar 206024796 Yaniv 302374921.docx
 		C21 Ex02 Itamar 206024796 Yaniv 302374921.docx = C21 Ex02 Itamar 206024796 Yaniv 302374921.docx
 		Report.txt = Report.txt
 	EndProjectSection

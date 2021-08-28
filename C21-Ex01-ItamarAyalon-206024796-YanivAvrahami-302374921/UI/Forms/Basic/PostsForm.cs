@@ -1,6 +1,6 @@
 ﻿using System;
-using FacebookWrapper.ObjectModel;
 using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
 using Logic;
 
 namespace UI
@@ -18,7 +18,7 @@ namespace UI
         {
             Binding countCommentsBinding = new Binding("Text", postBindingSource, "Comments");
             countCommentsBinding.Format += countCommentsBinding_Format;
-            Binding countPostsBinding = new Binding("Text", postBindingSource, "");
+            Binding countPostsBinding = new Binding("Text", postBindingSource, string.Empty);
             countPostsBinding.Format += countPostsBinding_Format;
 
             labelName.DataBindings.Add(new Binding("Text", postBindingSource, "From.Name"));

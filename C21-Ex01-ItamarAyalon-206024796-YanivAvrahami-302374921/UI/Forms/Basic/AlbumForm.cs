@@ -1,7 +1,7 @@
 ﻿using System;
-using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
 using Logic;
 
 namespace UI
@@ -54,8 +54,8 @@ namespace UI
 
         private void setButtons()
         {
-            btnNextPage.Enabled = m_AlbumsFacade.HasNextPage();
-            btnPrevPage.Enabled = m_AlbumsFacade.HasPrevPage();
+            btnNextPage.Enabled = m_AlbumsFacade.HasNextPage;
+            btnPrevPage.Enabled = m_AlbumsFacade.HasPrevPage;
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)

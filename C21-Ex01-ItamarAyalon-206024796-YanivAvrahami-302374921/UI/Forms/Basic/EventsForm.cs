@@ -1,8 +1,8 @@
 ﻿using System;
-using FacebookWrapper.ObjectModel;
-using System.Windows.Forms;
-using Logic;
 using System.Threading;
+using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
+using Logic;
 
 namespace UI
 {
@@ -37,7 +37,7 @@ namespace UI
 
         private void bindComponents()
         {
-            Binding countEventsBinding = new Binding("Text", eventBindingSource, "");
+            Binding countEventsBinding = new Binding("Text", eventBindingSource, string.Empty);
             countEventsBinding.Format += countEventsBinding_Format;
             Binding imageBinding = new Binding("Image", eventBindingSource, "Cover");
             imageBinding.Format += imageBinding_Format;

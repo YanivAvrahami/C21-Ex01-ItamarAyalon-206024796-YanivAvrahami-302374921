@@ -3,6 +3,7 @@
     internal class AppFetcherSettings
     {
         public string AppID => "644877859803597";
+
         public string[] PermissionsToRequest { get; set; }
 
         public AppFetcherSettings()

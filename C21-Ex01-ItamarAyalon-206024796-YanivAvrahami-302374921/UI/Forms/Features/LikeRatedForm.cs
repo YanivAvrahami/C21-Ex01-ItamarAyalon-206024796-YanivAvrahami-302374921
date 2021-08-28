@@ -1,7 +1,7 @@
 ﻿using System;
-using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
 using Logic;
 
 namespace UI

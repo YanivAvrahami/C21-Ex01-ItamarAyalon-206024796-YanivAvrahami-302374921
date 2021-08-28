@@ -1,16 +1,16 @@
 ﻿using System;
-using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using Logic;
 using System.Threading;
+using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
+using Logic;
 
 namespace UI
 {
     public partial class AlbumsForm : Form
     {
+        private readonly FormFactory m_FormFactory;
         private List<Album> m_Albums;
-        private FormFactory m_FormFactory;
 
         public AlbumsForm(FormFactory i_FormFactory)
         {
