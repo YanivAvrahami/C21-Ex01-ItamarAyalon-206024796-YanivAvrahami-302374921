@@ -24,7 +24,7 @@ namespace UI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             SetSelectionBarOnButton((Button)sender);
-            Clipboard.SetText("design.patterns.c21");
+            Clipboard.SetText("design.patterns.c21ב");
 
             LoginResult loginResult = facebookUserFetcher.Login();
 
