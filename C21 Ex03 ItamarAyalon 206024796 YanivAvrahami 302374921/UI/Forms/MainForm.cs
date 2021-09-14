@@ -10,35 +10,14 @@ namespace UI
     {
         private readonly FacebookUserFetcher r_FacebookUserFetcher = FacebookUserFetcher.Instance;
 
-        private ICommand m_EventsFormCommand;
-        private ICommand m_FriendsCommand;
-        private ICommand m_PostsCommand;
-        private ICommand m_AlbumsCommand;
-        private ICommand m_GroupsCommand;
-        private ICommand m_LikeRatedCommand;
-        private ICommand m_PostsCounterCommand;
-
         public MainForm()
         {
             InitializeComponent();
-            initCommands();
 
             setButtons(false);
             FacebookService.s_CollectionLimit = 100;
 
             checkBoxRememberMe.Checked = Logic.Properties.Settings.Default.RememberMe;
-        }
-
-        private void initCommands()
-        {
-            FormFactory formFactory = new FormFactory(Color.FromArgb(240, 242, 245));
-            m_EventsFormCommand = new RelayCommand(() => formFactory.Create(typeof(EventsForm)).ShowDialog());
-            m_FriendsCommand = new RelayCommand(() => formFactory.Create(typeof(FriendsForm)).ShowDialog());
-            m_PostsCommand = new RelayCommand(() => formFactory.Create(typeof(PostsForm)).ShowDialog());
-            m_AlbumsCommand = new RelayCommand(() => formFactory.Create(typeof(AlbumsForm)).ShowDialog());
-            m_GroupsCommand = new RelayCommand(() => formFactory.Create(typeof(GroupsForm)).ShowDialog());
-            m_LikeRatedCommand = new RelayCommand(() => formFactory.Create(typeof(LikeRatedForm)).ShowDialog());
-            m_PostsCounterCommand = new RelayCommand(() => formFactory.Create(typeof(PostsCounterForm)).ShowDialog());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -123,37 +102,37 @@ namespace UI
 
         private void btnEvents_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_EventsFormCommand);
+            displayDialog((Button)sender, CommandManager.DisplayEventsCommand);
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_FriendsCommand);
+            displayDialog((Button)sender, CommandManager.DisplayFriendsCommand);
         }
 
         private void btnPosts_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_PostsCommand);
+            displayDialog((Button)sender, CommandManager.DisplayPostsCommand);
         }
 
         private void btnAlbums_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_AlbumsCommand);
+            displayDialog((Button)sender, CommandManager.DisplayAlbumsCommand);
         }
 
         private void btnGroups_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_GroupsCommand);
+            displayDialog((Button)sender, CommandManager.DisplayGroupsCommand);
         }
 
         private void btnLikeRated_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_LikeRatedCommand);
+            displayDialog((Button)sender, CommandManager.DisplayLikeRatedCommand);
         }
 
         private void btnPostsCounter_Click(object sender, EventArgs e)
         {
-            displayDialog((Button)sender, m_PostsCounterCommand);
+            displayDialog((Button)sender, CommandManager.DisplayPostsCounterCommand);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

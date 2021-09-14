@@ -17,7 +17,7 @@ namespace UI
 
         public void Execute()
         {
-            m_Action.Invoke();
+            m_Action?.Invoke();
         }
     }
 }
