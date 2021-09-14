@@ -108,6 +108,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Factory Method\FormFactory.cs" />
     <Compile Include="Forms\Basic\AlbumForm.cs">
       <SubType>Form</SubType>

@@ -8,17 +8,37 @@ namespace UI
 {
     public partial class MainForm : Form
     {
-        private readonly FacebookUserFetcher facebookUserFetcher = FacebookUserFetcher.Instance;
+        private readonly FacebookUserFetcher r_FacebookUserFetcher = FacebookUserFetcher.Instance;
 
-        private readonly FormFactory m_FormFactory = new FormFactory(Color.FromArgb(240, 242, 245));
+        private ICommand m_EventsFormCommand;
+        private ICommand m_FriendsCommand;
+        private ICommand m_PostsCommand;
+        private ICommand m_AlbumsCommand;
+        private ICommand m_GroupsCommand;
+        private ICommand m_LikeRatedCommand;
+        private ICommand m_PostsCounterCommand;
 
         public MainForm()
         {
             InitializeComponent();
+            initCommands();
+
             setButtons(false);
             FacebookService.s_CollectionLimit = 100;
 
             checkBoxRememberMe.Checked = Logic.Properties.Settings.Default.RememberMe;
+        }
+
+        private void initCommands()
+        {
+            FormFactory formFactory = new FormFactory(Color.FromArgb(240, 242, 245));
+            m_EventsFormCommand = new RelayCommand(() => formFactory.Create(typeof(EventsForm)).ShowDialog());
+            m_FriendsCommand = new RelayCommand(() => formFactory.Create(typeof(FriendsForm)).ShowDialog());
+            m_PostsCommand = new RelayCommand(() => formFactory.Create(typeof(PostsForm)).ShowDialog());
+            m_AlbumsCommand = new RelayCommand(() => formFactory.Create(typeof(AlbumsForm)).ShowDialog());
+            m_GroupsCommand = new RelayCommand(() => formFactory.Create(typeof(GroupsForm)).ShowDialog());
+            m_LikeRatedCommand = new RelayCommand(() => formFactory.Create(typeof(LikeRatedForm)).ShowDialog());
+            m_PostsCounterCommand = new RelayCommand(() => formFactory.Create(typeof(PostsCounterForm)).ShowDialog());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -26,7 +46,7 @@ namespace UI
             SetSelectionBarOnButton((Button)sender);
             Clipboard.SetText("design.patterns.c21ב");
 
-            LoginResult loginResult = facebookUserFetcher.Login();
+            LoginResult loginResult = r_FacebookUserFetcher.Login();
 
             if (!string.IsNullOrEmpty(loginResult.AccessToken))
             {
@@ -42,14 +62,14 @@ namespace UI
 
         private void profileFetch()
         {
-            pictureBoxProfilePicture.Image = facebookUserFetcher.User.ImageLarge;
-            labelProfileFirstName.Text = facebookUserFetcher.User.FirstName;
-            labelProfileLastName.Text = facebookUserFetcher.User.LastName;
-            labelProfileGender.Text = facebookUserFetcher.User.Gender.ToString();
-            labelProfileLocation.Text = facebookUserFetcher.User.Location?.Name;
-            labelProfileEmail.Text = facebookUserFetcher.User.Email;
-            labelProfileBirthday.Text = facebookUserFetcher.User.Birthday;
-            labelProfileStatus.Text = facebookUserFetcher.User.RelationshipStatus?.ToString();
+            pictureBoxProfilePicture.Image = r_FacebookUserFetcher.User.ImageLarge;
+            labelProfileFirstName.Text = r_FacebookUserFetcher.User.FirstName;
+            labelProfileLastName.Text = r_FacebookUserFetcher.User.LastName;
+            labelProfileGender.Text = r_FacebookUserFetcher.User.Gender.ToString();
+            labelProfileLocation.Text = r_FacebookUserFetcher.User.Location?.Name;
+            labelProfileEmail.Text = r_FacebookUserFetcher.User.Email;
+            labelProfileBirthday.Text = r_FacebookUserFetcher.User.Birthday;
+            labelProfileStatus.Text = r_FacebookUserFetcher.User.RelationshipStatus?.ToString();
         }
 
         private void clear()
@@ -79,8 +99,8 @@ namespace UI
 
         private void toolbarFetch()
         {
-            pictureBoxProfile.LoadAsync(facebookUserFetcher.User.PictureSmallURL);
-            labelUserName.Text = facebookUserFetcher.User.Name;
+            pictureBoxProfile.LoadAsync(r_FacebookUserFetcher.User.PictureSmallURL);
+            labelUserName.Text = r_FacebookUserFetcher.User.Name;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -88,53 +108,52 @@ namespace UI
             SetSelectionBarOnButton((Button)sender);
             
             FacebookService.LogoutWithUI();
-            facebookUserFetcher.Logout();
+            r_FacebookUserFetcher.Logout();
             pictureBoxProfile.Image = UI.Properties.Resources.icons8_name_25;
             labelUserName.Text = string.Empty;
             clear();
             setButtons(false);
         }
 
+        private void displayDialog(Button i_Button, ICommand i_Command)
+        {
+            SetSelectionBarOnButton(i_Button);
+            i_Command.Execute();
+        }
+
         private void btnEvents_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(EventsForm)).ShowDialog();
+            displayDialog((Button)sender, m_EventsFormCommand);
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(FriendsForm)).ShowDialog();
+            displayDialog((Button)sender, m_FriendsCommand);
         }
 
         private void btnPosts_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(PostsForm)).ShowDialog();
+            displayDialog((Button)sender, m_PostsCommand);
         }
 
         private void btnAlbums_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(AlbumsForm)).ShowDialog();
+            displayDialog((Button)sender, m_AlbumsCommand);
         }
 
         private void btnGroups_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(GroupsForm)).ShowDialog();
+            displayDialog((Button)sender, m_GroupsCommand);
         }
 
         private void btnLikeRated_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(LikeRatedForm)).ShowDialog();
+            displayDialog((Button)sender, m_LikeRatedCommand);
         }
 
         private void btnPostsCounter_Click(object sender, EventArgs e)
         {
-            SetSelectionBarOnButton((Button)sender);
-            m_FormFactory.Create(typeof(PostsCounterForm)).ShowDialog();
+            displayDialog((Button)sender, m_PostsCounterCommand);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
