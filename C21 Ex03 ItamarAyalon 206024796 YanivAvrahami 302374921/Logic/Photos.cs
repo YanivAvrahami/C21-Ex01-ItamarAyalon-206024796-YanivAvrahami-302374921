@@ -6,35 +6,44 @@ using FacebookWrapper.ObjectModel;
 
 namespace Logic
 {
-    public class Photos : IEnumerator<Photo>, IEnumerable<Photo>
+    public class Photos : IEnumerable<Photo>
     {
         private readonly Collection<Photo> m_Photos;
 
-        public int Index { get; private set; } = -1;
-
         public int Count => m_Photos.Count;
+
+        public Photos()
+        {
+            m_Photos = new Collection<Photo>();
+        }
 
         public Photos(Collection<Photo> i_Photos)
         {
             m_Photos = new Collection<Photo>(i_Photos);
         }
 
-        public Photo Current
+        public IEnumerator<Photo> GetEnumerator()
         {
-            get
+            foreach (Photo photo in m_Photos)
             {
-                try
-                {
-                    return m_Photos[Index];
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    throw new InvalidOperationException();
-                }
+                yield return photo;
             }
         }
 
-        object IEnumerator.Current => Current;
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        public IEnumerator<Photo> GetEnumeratorFrom(int i_Index)
+        {
+            if (i_Index < 0 && i_Index >= m_Photos.Count)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            for (int i = i_Index; i < m_Photos.Count; i++)
+            {
+                yield return m_Photos[i_Index];
+            }
+        }
 
         public void Add(Photo i_Photo)
         {
@@ -44,30 +53,6 @@ namespace Logic
         public void Clear()
         {
             m_Photos.Clear();
-            Reset();
-        }
-
-        public IEnumerator<Photo> GetEnumerator() => this;
-
-        public bool MoveNext()
-        {
-            Index++;
-            return (Index < m_Photos.Count);
-        }
-
-        public bool MovePrev()
-        {
-            Index--;
-            return (Index >= 0);
-        }
-
-        public void Reset() => Index = -1;
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        void IDisposable.Dispose()
-        {
-            // Dispose
         }
     }
 }
