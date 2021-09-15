@@ -111,8 +111,11 @@
     <Compile Include="AlbumFacade.cs" />
     <Compile Include="AppFetcherSettings.cs" />
     <Compile Include="FacebookUserFetcher.cs" />
+    <Compile Include="Strategy\ILoginStrategy.cs" />
+    <Compile Include="Strategy\LoginWithTokenStrategy.cs" />
     <Compile Include="Photos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\RegularPopUpSignInStrategy.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

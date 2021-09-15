@@ -5,7 +5,7 @@ using FacebookWrapper.ObjectModel;
 
 namespace Logic
 {
-    public class FacebookUserFetcher
+    public sealed class FacebookUserFetcher
     {
         private static readonly object myLock = new object();
         private static readonly object fetchLock = new object();
@@ -32,6 +32,7 @@ namespace Logic
         }
 
         private readonly AppFetcherSettings m_AppSettings;
+        private readonly List<ILoginStrategy> r_LoginStrategies;
 
         public User User { get; private set; }
 
@@ -40,50 +41,45 @@ namespace Logic
         private FacebookUserFetcher()
         {
             m_AppSettings = new AppFetcherSettings();
+
+            r_LoginStrategies = new List<ILoginStrategy>();
+            r_LoginStrategies.Add(new LoginWithTokenStrategy());
+            r_LoginStrategies.Add(new RegularPopUpSignInStrategy(m_AppSettings.AppID, m_AppSettings.PermissionsToRequest));
         }
 
         public LoginResult Login()
         {
-            lock (fetchLock)
+            LoginResult loginResult = null;
+
+            foreach (ILoginStrategy loginStrategy in r_LoginStrategies)
             {
-                LoginResult loginResult = connect();
+                loginResult = loginStrategy.TryLogin();
 
-                if (loginResult == null)
+                if (loginResult != null)
                 {
-                    loginResult = FacebookService.Login(m_AppSettings.AppID, m_AppSettings.PermissionsToRequest);
+                    break;
                 }
-
-                if (!string.IsNullOrEmpty(loginResult.AccessToken))
-                {
-                    User = loginResult.LoggedInUser;
-                }
-
-                Properties.Settings.Default.Token = loginResult.AccessToken;
-                Properties.Settings.Default.Save();
-
-                return loginResult;
             }
+
+            if (!string.IsNullOrEmpty(loginResult?.AccessToken))
+            {
+                User = loginResult.LoggedInUser;
+            }
+
+            Properties.Settings.Default.Token = loginResult.AccessToken;
+            Properties.Settings.Default.Save();
+
+            return loginResult;
         }
 
-        private LoginResult connect()
+        public void InsertLoginStratrgy(int i_Index, ILoginStrategy i_LoginStrategy)
         {
-            lock (fetchLock)
+            if (i_Index < 0 || i_Index > r_LoginStrategies.Count)
             {
-                if (Properties.Settings.Default.RememberMe &&
-                    !string.IsNullOrEmpty(Properties.Settings.Default.Token))
-                {
-                    try
-                    {
-                        return FacebookService.Connect(Properties.Settings.Default.Token);
-                    }
-                    catch (Exception)
-                    {
-                        return null;
-                    }
-                }
-
-                return null;
+                throw new IndexOutOfRangeException();
             }
+
+            r_LoginStrategies.Insert(i_Index, i_LoginStrategy);
         }
 
         public void Logout()
