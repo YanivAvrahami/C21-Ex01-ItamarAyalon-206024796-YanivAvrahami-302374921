@@ -42,9 +42,11 @@ namespace Logic
         {
             m_AppSettings = new AppFetcherSettings();
 
-            r_LoginStrategies = new List<ILoginStrategy>();
-            r_LoginStrategies.Add(new LoginWithTokenStrategy());
-            r_LoginStrategies.Add(new RegularPopUpSignInStrategy(m_AppSettings.AppID, m_AppSettings.PermissionsToRequest));
+            r_LoginStrategies = new List<ILoginStrategy>
+            {
+                new LoginWithTokenStrategy(),
+                new RegularPopUpSignInStrategy(m_AppSettings.AppID, m_AppSettings.PermissionsToRequest)
+            };
         }
 
         public LoginResult Login()

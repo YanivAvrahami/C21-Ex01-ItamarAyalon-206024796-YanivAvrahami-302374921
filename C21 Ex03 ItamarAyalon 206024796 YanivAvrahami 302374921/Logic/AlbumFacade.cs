@@ -1,6 +1,6 @@
-﻿using FacebookWrapper.ObjectModel;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using FacebookWrapper.ObjectModel;
 
 namespace Logic
 {
